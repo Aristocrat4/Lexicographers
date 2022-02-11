@@ -182,7 +182,6 @@ body {
     .container{
       @include flex-jc(space-between);
 
-      // align-items: center;
       .left-block-social{
         .logo-conc{
           @include flex-ai(center);
@@ -242,7 +241,6 @@ body {
             margin-bottom: 48px;
           }
           .partners-logo{
-            // margin-top: 48px;
             display: flex;
             justify-content: space-between;
             .div-logo{
