@@ -160,6 +160,15 @@ a {
   margin: 0 auto;
 }
 
+.logo {
+  margin-right: 30px;
+}
+
+.logo img {
+  width: 30px;
+  height: 67px;
+}
+
 body {
   background-color: #f9f7f5;
 }
@@ -188,15 +197,6 @@ body header .container .main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-body header .container .main .logo {
-  margin-right: 30px;
-}
-
-body header .container .main .logo img {
-  width: 30px;
-  height: 67px;
 }
 
 body header .container .main h1 {
@@ -292,7 +292,7 @@ body main .poster .container .text p {
   font-family: "BPGVenuri2010";
 }
 
-body .words .container {
+body main .words .container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -305,16 +305,16 @@ body .words .container {
           align-items: center;
 }
 
-body .words .container .words-title {
+body main .words .container .words-title {
   font-size: 40px;
   color: #1d2933;
 }
 
-body .words .container .words-title h2 {
+body main .words .container .words-title h2 {
   font-family: "BPGVenuri2010";
 }
 
-body .words .container .word-blocks {
+body main .words .container .word-blocks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,7 +325,7 @@ body .words .container .word-blocks {
       flex-wrap: wrap;
 }
 
-body .words .container .word-blocks a {
+body main .words .container .word-blocks a {
   max-width: 511px;
   width: 33%;
   padding: 30px 180px 36px 45px;
@@ -334,17 +334,237 @@ body .words .container .word-blocks a {
           box-shadow: #00000029 0 3px 5px;
 }
 
-body .words .container .word-blocks a h2 {
+body main .words .container .word-blocks a h2 {
   color: #798996;
   font-size: 46px;
   text-transform: capitalize;
   margin-bottom: 17px;
 }
 
-body .words .container .word-blocks a span {
+body main .words .container .word-blocks a span {
   background-color: #eed370;
   padding: 5px 20px;
   font-size: 16px;
   text-transform: capitalize;
+}
+
+body main .about-project {
+  margin-top: 178px;
+  margin-bottom: 134px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .about-project .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .about-project .container .left-block {
+  max-width: 768px;
+  width: 100%;
+}
+
+body main .about-project .container .left-block .about-project-text {
+  border-left: 4px solid #eed370;
+  padding-left: 30px;
+}
+
+body main .about-project .container .left-block .about-project-text h5 {
+  font-size: 40px;
+  font-family: "BPGVenuri2010";
+  line-height: 45px;
+  color: #1d2933;
+}
+
+body main .about-project .container .left-block .about-project-text p {
+  max-width: 724px;
+  margin: 45px 0;
+  font-family: "DejaVuSans";
+  font-size: 18px;
+  color: #1d2933;
+  line-height: 26px;
+}
+
+body main .about-project .container .btn-your-term {
+  margin-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 351px;
+  width: 100%;
+  height: 61px;
+  background-color: #798996;
+}
+
+body main .about-project .container .btn-your-term:hover {
+  cursor: pointer;
+  background-color: #eed370;
+}
+
+body main .about-project .container .btn-your-term:hover p {
+  color: #000000;
+}
+
+body main .about-project .container .btn-your-term p {
+  font-family: "DejaVuSans";
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+body footer {
+  width: 100%;
+  padding: 90px 0;
+  -webkit-box-shadow: 0px -3px 6px #00000029;
+          box-shadow: 0px -3px 6px #00000029;
+}
+
+body footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body footer .container .left-block-social .logo-conc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+}
+
+body footer .container .left-block-social .logo-conc p {
+  font-family: "BPGVenuri2010";
+  font-size: 28px;
+  line-height: 32px;
+}
+
+body footer .container .left-block-social .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+
+body footer .container .left-block-social .social-icons .circle {
+  margin-right: 70px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #707070;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer .container .left-block-social .social-icons .circle img {
+  width: 25px;
+  height: 25px;
+}
+
+body footer .container .middle-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer .container .middle-block .contact-info p {
+  font-size: 18px;
+  font-family: "DejaVuSans";
+}
+
+body footer .container .middle-block .contact-info p:nth-child(1) {
+  margin-bottom: 32px;
+}
+
+body footer .container .middle-block .contact-info p:nth-child(2) {
+  font-weight: 600;
+}
+
+body footer .container .right-block-partners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body footer .container .right-block-partners .partners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body footer .container .right-block-partners .partners p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  font-family: "DejaVuSans";
+  margin-bottom: 48px;
+}
+
+body footer .container .right-block-partners .partners .partners-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body footer .container .right-block-partners .partners .partners-logo .div-logo {
+  width: 46px;
+  height: 46px;
+  background-color: #798996;
+  border-radius: 50%;
+}
+
+body footer .container .right-block-partners .partners .partners-logo :nth-child(2) {
+  margin-left: 60px;
+  margin-right: 60px;
 }
 /*# sourceMappingURL=global.css.map */
