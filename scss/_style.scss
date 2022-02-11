@@ -3,6 +3,11 @@
   width: 100%;
   margin: 0 auto;
 }
+// mere wasashlelia es img
+img{
+  height: 400px;
+}
+
 body {
   background-color: $bgcolor;
   header {
@@ -43,7 +48,7 @@ body {
             }
             .last-one {
               margin-right: 0;
-              background-color: #798996;
+              background-color: $btnGray;
               padding: 10px 30px;
               border-radius: 5px;
               &:hover {
@@ -68,8 +73,6 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        max-width: 1536px;
-        width: 100%;
         .text {
           max-width: 469px;
           width: 100%;
@@ -113,6 +116,60 @@ body {
             font-size: 16px;
             text-transform: capitalize;
           }
+        }
+      }
+    }
+  }
+  .about-project{
+    margin-top: 178px;
+    margin-bottom: 134px;
+    @include flex-jc(center);
+    .container{
+      @include flex-ai(center);
+      justify-content: space-between;
+      .left-block{
+        max-width: 768px;
+        width: 100%;
+
+        .about-project-text{
+          border-left: 4px solid $tagsyellow;
+          padding-left: 30px;
+
+          h5{
+            font-size: 40px;
+            font-family: "BPG Venuri 2010";
+            line-height: 45px;
+            color: $darkBlue;
+            
+          }
+          p{
+            max-width: 724px;
+            margin: 45px 0;
+            font-family: "DejaVu Sans";
+            font-size: 18px;
+            color: $darkBlue;
+            line-height: 26px;
+          }
+        }
+      }
+      .btn-your-term{
+        margin-left: 30px;
+        @include flex-jc-ai(center, center);
+        max-width:351px;
+        width: 100%;
+        height: 61px;
+        background-color: $btnGray;
+        &:hover{
+          cursor: pointer;
+          background-color: $tagsyellow;
+          p{
+            color: #000000;
+          }
+        }
+        p{
+          font-family: "DejaVu Sans";
+          font-size: 18px;
+          color: #FFFFFF;
         }
       }
     }

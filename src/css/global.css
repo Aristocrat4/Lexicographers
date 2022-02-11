@@ -160,6 +160,10 @@ a {
   margin: 0 auto;
 }
 
+img {
+  height: 400px;
+}
+
 body {
   background-color: #f9f7f5;
 }
@@ -263,8 +267,6 @@ body main .poster .container {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  max-width: 1536px;
-  width: 100%;
 }
 
 body main .poster .container .text {
@@ -329,5 +331,86 @@ body .words .container .word-blocks .block span {
   padding: 5px 20px;
   font-size: 16px;
   text-transform: capitalize;
+}
+
+body .about-project {
+  margin-top: 178px;
+  margin-bottom: 134px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .about-project .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .about-project .container .left-block {
+  max-width: 768px;
+  width: 100%;
+}
+
+body .about-project .container .left-block .about-project-text {
+  border-left: 4px solid #eed370;
+  padding-left: 30px;
+}
+
+body .about-project .container .left-block .about-project-text h5 {
+  font-size: 40px;
+  font-family: "BPG Venuri 2010";
+  line-height: 45px;
+  color: #1d2933;
+}
+
+body .about-project .container .left-block .about-project-text p {
+  max-width: 724px;
+  margin: 45px 0;
+  font-family: "DejaVu Sans";
+  font-size: 18px;
+  color: #1d2933;
+  line-height: 26px;
+}
+
+body .about-project .container .btn-your-term {
+  margin-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 351px;
+  width: 100%;
+  height: 61px;
+  background-color: #798996;
+}
+
+body .about-project .container .btn-your-term:hover {
+  cursor: pointer;
+  background-color: #eed370;
+}
+
+body .about-project .container .btn-your-term:hover p {
+  color: #000000;
+}
+
+body .about-project .container .btn-your-term p {
+  font-family: "DejaVu Sans";
+  font-size: 18px;
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=global.css.map */
