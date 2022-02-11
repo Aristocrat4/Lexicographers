@@ -22,12 +22,26 @@ body {
             height: 67px;
           }
         }
+        h1 {
+          a {
+            color: $darkBlue;
+            font-size: 28px;
+          }
+        }
       }
       nav {
         display: flex;
+        align-items: center;
         ul {
           display: flex;
           justify-content: center;
+          li {
+            margin: 0 45px 0 0;
+            a {
+              color: $darkBlue;
+              font-size: 18px;
+            }
+          }
         }
       }
     }

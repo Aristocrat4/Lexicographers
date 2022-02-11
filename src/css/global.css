@@ -197,10 +197,18 @@ body header .container .main .logo img {
   height: 67px;
 }
 
+body header .container .main h1 a {
+  color: #1d2933;
+  font-size: 28px;
+}
+
 body header .container nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body header .container nav ul {
@@ -210,6 +218,15 @@ body header .container nav ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+body header .container nav ul li {
+  margin: 0 45px 0 0;
+}
+
+body header .container nav ul li a {
+  color: #1d2933;
+  font-size: 18px;
 }
 
 body main .poster {
