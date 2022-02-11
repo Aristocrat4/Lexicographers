@@ -1,8 +1,10 @@
 .container {
   max-width: 1536px;
   width: 100%;
+  margin: 0 auto;
 }
 body {
+  background-color: $bgcolor;
   header {
     width: 100%;
     .container {
@@ -45,16 +47,48 @@ body {
         justify-content: space-around;
         max-width: 1536px;
         width: 100%;
-
         .text {
           max-width: 469px;
           width: 100%;
           p {
-            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
-              sans-serif;
             font-size: 66px;
             line-height: 76px;
             color: $lightYellow;
+          }
+        }
+      }
+    }
+  }
+  .words {
+    .container {
+      flex-direction: column;
+      @include flex-ai(center);
+      .words-title {
+        font-size: 40px;
+        letter-spacing: 5px;
+        color: #1d2933;
+      }
+      .word-blocks {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .block {
+          max-width: 511px;
+          width: 33%;
+          padding: 30px 180px 36px 45px;
+          margin: 35px 0;
+          box-shadow: #00000029 0 3px 5px;
+          h2 {
+            color: #798996;
+            font-size: 46px;
+            text-transform: capitalize;
+            margin-bottom: 17px;
+          }
+          span {
+            background-color: $tagsyellow;
+            padding: 5px 20px;
+            font-size: 16px;
+            text-transform: capitalize;
           }
         }
       }
