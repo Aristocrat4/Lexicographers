@@ -177,15 +177,16 @@ body {
   }
   footer{
     width: 100%;
-    height: 320px;
+    padding: 90px 0;
     box-shadow: 0px -3px 6px #00000029;
-    @include flex-jc-ai(center, center);
     .container{
       @include flex-jc(space-between);
-      align-items: center;
+
+      // align-items: center;
       .left-block-social{
         .logo-conc{
           @include flex-ai(center);
+          display: flex;
           p{
             font-family: "BPG Venuri 2010";
             font-size: 28px;
@@ -211,6 +212,8 @@ body {
         }
       }
       .middle-block{
+        display: flex;
+        align-items: center;
         .contact-info{
           p{
             font-size: 18px;
@@ -225,25 +228,33 @@ body {
         }
       }
       .right-block-partners{
-        .partners{
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
+        .partners{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
           p{
+            display: flex;
             font-size: 18px;
             font-family: "DejaVu Sans";
             margin-bottom: 48px;
           }
           .partners-logo{
+            // margin-top: 48px;
             display: flex;
-            height: 60px;
-            width: 100px;
-            background-color: yellow;
+            justify-content: space-between;
             .div-logo{
               width: 46px;
               height: 46px;
-              background-color: red;
+              background-color: $btnGray;
               border-radius: 50%;
+              
+            }
+            :nth-child(2){
+              margin-left: 60px;
+              margin-right: 60px;
             }
           }
         }
