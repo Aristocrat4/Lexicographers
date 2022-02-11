@@ -3,6 +3,14 @@
   width: 100%;
   margin: 0 auto;
 }
+.logo {
+  margin-right: 30px;
+  img {
+    width: 30px;
+    height: 67px;
+  }
+}
+
 // mere wasashlelia es img
 img{
   height: 400px;
@@ -20,13 +28,6 @@ body {
       .main {
         display: flex;
         align-items: center;
-        .logo {
-          margin-right: 30px;
-          img {
-            width: 30px;
-            height: 67px;
-          }
-        }
         h1 {
           a {
             color: $darkBlue;
@@ -170,6 +171,81 @@ body {
           font-family: "DejaVu Sans";
           font-size: 18px;
           color: #FFFFFF;
+        }
+      }
+    }
+  }
+  footer{
+    width: 100%;
+    height: 320px;
+    box-shadow: 0px -3px 6px #00000029;
+    @include flex-jc-ai(center, center);
+    .container{
+      @include flex-jc(space-between);
+      align-items: center;
+      .left-block-social{
+        .logo-conc{
+          @include flex-ai(center);
+          p{
+            font-family: "BPG Venuri 2010";
+            font-size: 28px;
+            line-height: 32px;
+          }
+        }
+        .social-icons{
+          display: flex;
+          margin-top: 20px;
+  
+          .circle{
+            margin-right: 70px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background-color: $lightGray;
+            @include flex-jc-ai(center, center);
+            img{
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+      }
+      .middle-block{
+        .contact-info{
+          p{
+            font-size: 18px;
+            font-family: "DejaVu Sans";
+          }
+          p:nth-child(1){
+            margin-bottom: 32px;
+          }
+          p:nth-child(2){
+            font-weight: 600;
+          }
+        }
+      }
+      .right-block-partners{
+        .partners{
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          p{
+            font-size: 18px;
+            font-family: "DejaVu Sans";
+            margin-bottom: 48px;
+          }
+          .partners-logo{
+            display: flex;
+            height: 60px;
+            width: 100px;
+            background-color: yellow;
+            .div-logo{
+              width: 46px;
+              height: 46px;
+              background-color: red;
+              border-radius: 50%;
+            }
+          }
         }
       }
     }
