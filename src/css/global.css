@@ -48,7 +48,60 @@ table {
   border-spacing: 0;
 }
 
-main .poster {
+.container {
+  max-width: 1536px;
+  width: 100%;
+}
+
+body header {
+  width: 100%;
+}
+
+body header .container {
+  border: 1px solid red;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body header .container .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .container .main .logo {
+  margin-right: 30px;
+}
+
+body header .container .main .logo img {
+  width: 30px;
+  height: 67px;
+}
+
+body header .container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body header .container nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .poster {
   border: 1px solid #707070;
   margin-bottom: 162px;
   width: 100%;
@@ -62,7 +115,7 @@ main .poster {
   background-color: #1D2933;
 }
 
-main .poster .container {
+body main .poster .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,12 +128,12 @@ main .poster .container {
   width: 100%;
 }
 
-main .poster .container .text {
+body main .poster .container .text {
   max-width: 469px;
   width: 100%;
 }
 
-main .poster .container .text p {
+body main .poster .container .text p {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 66px;
   line-height: 76px;
