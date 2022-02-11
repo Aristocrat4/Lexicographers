@@ -41,6 +41,15 @@ body {
               color: $darkBlue;
               font-size: 18px;
             }
+            .last-one {
+              margin-right: 0;
+              background-color: #798996;
+              padding: 10px 30px;
+              border-radius: 5px;
+              &:hover {
+                background-color: $tagsyellow;
+              }
+            }
           }
         }
       }

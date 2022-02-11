@@ -229,6 +229,17 @@ body header .container nav ul li a {
   font-size: 18px;
 }
 
+body header .container nav ul li .last-one {
+  margin-right: 0;
+  background-color: #798996;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+body header .container nav ul li .last-one:hover {
+  background-color: #eed370;
+}
+
 body main .poster {
   border: 1px solid #707070;
   margin-bottom: 162px;
