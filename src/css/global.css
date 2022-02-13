@@ -509,6 +509,10 @@ body main .about-project-section .container .project .show-more .texts .more-tex
   display: inline;
 }
 
+body main .partners-section {
+  padding: 40px;
+}
+
 body main .partners-section .container .organisation-partenrs {
   margin-bottom: 114px;
 }
