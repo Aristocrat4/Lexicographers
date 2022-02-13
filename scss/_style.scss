@@ -1,58 +1,58 @@
 .container {
   max-width: 1536px;
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
 }
-.logo{
+.logoStyle{
+  .main {
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    h2 {
+      font-family: $venuri;
+      font-size: 28px;
+      text-align: center;
+      color: $darkBlue;
+    }
+  }
+}
+.logo {
   margin-right: 30px;
-  img{
+  img {
     width: 30px;
     height: 67px;
   }
 }
 body {
   background-color: $bgcolor;
-  header{
-    padding: 39px 200px;
+  header {
+    padding: 35px 0;
     box-shadow: #00000029 0 3px 5px;
-    .container{
+    .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      .main{
-        padding-right: 10px;
-        display: flex;
-        align-items: center;
-        h1{
-          font-family: $venuri;
-          font-size: 28px;
-          text-align: center;
-          a{
-
-            color: $darkBlue;
-          }
-        }
-      }
-      nav{
+      
+      nav {
         padding-left: 10px;
         display: flex;
         align-items: center;
-        ul{
+        ul {
           display: flex;
           align-items: center;
-          li{
-
+          li {
+            line-height: 40px;
             margin-right: 45px;
             text-align: center;
-            a{
+            a {
               color: $darkBlue;
               font-size: 18px;
               font-family: $dejavu;
             }
           }
-          :last-child{
-            a{
-              margin-right: 0;
+          :last-child {
+            margin-right: 0;
+            a {
               background-color: #798996;
               color: $white;
               padding: 10px 30px;
@@ -62,14 +62,13 @@ body {
                 background-color: $tagsyellow;
               }
             }
-            
           }
         }
       }
     }
   }
   main {
-    .poster {
+    section.poster {
       border: 1px solid $lightGray;
       margin-bottom: 162px;
       width: 100%;
@@ -95,14 +94,14 @@ body {
         }
       }
     }
-    .words {
+    section.words {
       .container {
         flex-direction: column;
         @include flex-ai(center);
         .words-title {
           font-size: 40px;
           color: #1d2933;
-          h2{
+          h2 {
             font-family: $venuri;
           }
         }
@@ -132,28 +131,28 @@ body {
         }
       }
     }
-    .about-project{
+    section.about-project {
       margin-top: 178px;
       margin-bottom: 134px;
       @include flex-jc(center);
-      .container{
+      .container {
         @include flex-ai(center);
         justify-content: space-between;
-        .left-block{
+        .left-block {
           max-width: 768px;
           width: 100%;
-  
-          .about-project-text{
+
+          .about-project-text {
             border-left: 4px solid $tagsyellow;
             padding-left: 30px;
-  
-            h5{
+
+            h5 {
               font-size: 40px;
               font-family: $venuri;
               line-height: 45px;
               color: $darkBlue;
             }
-            p{
+            p {
               max-width: 724px;
               margin: 45px 0;
               font-family: $dejavu;
@@ -163,89 +162,90 @@ body {
             }
           }
         }
-        .btn-your-term{
+        .btn-your-term {
           margin-left: 30px;
           @include flex-jc-ai(center, center);
-          max-width:351px;
+          max-width: 351px;
           width: 100%;
           height: 61px;
           background-color: $btnGray;
-          &:hover{
+          transition: all 0.5s;
+          &:hover {
             cursor: pointer;
             background-color: $tagsyellow;
-            p{
+            p {
               color: #000000;
             }
           }
-          p{
+          p {
             font-family: $dejavu;
             font-size: 18px;
-            color: #FFFFFF;
+            color: #ffffff;
           }
         }
       }
     }
 
-    .chatbot{
+    .chatbot {
       position: fixed;
       bottom: 60px;
       right: 150px;
     }
 
     // Second page ----- abour project
-    .about-project-section{
+    section.about-project-section {
       padding: 40px;
-      .container{
-        .first{
+      .container {
+        .first {
           margin-top: 70px;
-          img{
+          img {
             padding-right: 160px;
           }
         }
-        .second{
+        .second {
           margin: 110px 0;
           padding-left: 120px;
-          img{
+          img {
             margin-right: 50px;
           }
         }
-        .project{
+        .project {
           @include flex-jc(space-between);
-          .text{
+          .text {
             max-width: 724px;
             width: 100%;
-            h5{
+            h5 {
               font-family: $venuri;
               font-size: 40px;
               line-height: 45px;
-              color:$lightGray;
+              color: $lightGray;
               margin-bottom: 45px;
             }
-            .texts{
-                color: $black;
-                font-family: $dejavu;
-                font-size: 18px;
-                line-height: 26px;
-                margin-bottom: 8px;
-                .more-texts{
-                  display: none;
-                }
-             }
-             .more-click{
+            .texts {
+              color: $black;
+              font-family: $dejavu;
+              font-size: 18px;
+              line-height: 26px;
+              margin-bottom: 8px;
+              .more-texts {
+                display: none;
+              }
+            }
+            .more-click {
               font-family: $venuri;
               font-size: 18px;
               color: $btnGray;
               text-decoration: underline;
               line-height: 22px;
               cursor: pointer;
-              &:hover{
+              &:hover {
                 color: $black;
               }
             }
           }
-          .show-more{
-            .texts{
-              .more-texts{
+          .show-more {
+            .texts {
+              .more-texts {
                 display: inline;
               }
             }
@@ -254,23 +254,23 @@ body {
       }
     }
 
-    .partners-section{
+    section.partners-section {
       padding: 40px;
-      .container{
-        .organisation-partenrs{
+      .container {
+        .organisation-partenrs {
           margin-bottom: 114px;
-          p{
+          p {
             font-family: $venuri;
             font-size: 40px;
             line-height: 45px;
             color: $lightGray;
             margin-bottom: 45px;
           }
-          .partner-logo{
-              @include flex-jc(space-between);
-              max-width: 731px;
-              width: 100%;
-            .logos{
+          .partner-logo {
+            @include flex-jc(space-between);
+            max-width: 731px;
+            width: 100%;
+            .logos {
               width: 180px;
               height: 180px;
               border-radius: 50%;
@@ -281,85 +281,157 @@ body {
       }
     }
     // End of second page
-    
-  }
-  
-  footer{
-    width: 100%;
-    padding: 90px 0;
-    box-shadow: 0px -3px 6px #00000029;
-    .container{
-      @include flex-jc(space-between);
-
-      .left-block-social{
-        .logo-conc{
-          @include flex-ai(center);
-          display: flex;
-          p{
-            font-family: $venuri;
+    // Contact
+    section.contact-form{
+      .container{
+        padding: 132px 0px;
+        @include flex-jc-ai(space-between, flex-start);
+        .contact-info{
+          color: $darkBlue;
+          h3{
             font-size: 28px;
-            line-height: 32px;
+            font-family: $venuri;
+            margin-bottom: 30px;
+          }
+          h5{
+            font-family: $dejavu;
+            font-size: 18px;
+            margin-bottom: 10px;
           }
         }
-        .social-icons{
-          display: flex;
-          margin-top: 20px;
-  
-          .circle{
-            margin-right: 70px;
-            width: 46px;
-            height: 46px;
-            border-radius: 50%;
-            background-color: $lightGray;
-            @include flex-jc-ai(center, center);
-            img{
-              width: 25px;
-              height: 25px;
+        .form{
+          width: 60%;
+          form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            input, textarea{
+              width: 100%;
+              padding: 23px 40px;
+              margin-bottom: 43px;
+              border: 1px solid $btnGray;
+              border-radius: 8px;
+            }
+            input[type=submit]{
+              width: 140px;
+              height: 62px;
+              background: $btnGray;
+              color: $white;
+              font-size: 18px;
+              font-family: $dejavu;
+              @include flex-jc-ai(center, center);
+              border: none;
+              cursor: pointer;
+              transition: all 0.5s;
+              &:hover {
+                background-color: $tagsyellow;
+                color: $darkBlue;
+              }
+            }
+            textarea{
+              position: relative;
+              height: 130px;
+            }
+            textarea::placeholder{
+              position: absolute;
+              bottom: 23px;
             }
           }
         }
       }
-      .middle-block{
+    }
+    // End of Contact
+  }
+
+  footer {
+    width: 100%;
+    padding: 90px 0;
+    box-shadow: 0px -3px 6px #00000029;
+    .container {
+      @include flex-jc(space-between);
+
+      .left-block-social {
+        a {
+          color: $darkBlue;
+          .logo-conc {
+            @include flex-ai(center);
+            display: flex;
+            p {
+              font-family: $venuri;
+              font-size: 28px;
+              line-height: 32px;
+            }
+          }
+        }
+        .social-icons {
+          display: flex;
+          margin-top: 20px;
+          .circle {
+            margin-right: 70px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background-color: $btnGray;
+            @include flex-jc-ai(center, center);
+            cursor: pointer;
+            a{
+              color: white;
+              font-size: x-large;
+            }
+          }
+          .insta:hover {
+            background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+            
+          }
+          .twitter:hover {
+            background-color: #329cea;
+          }
+          .fb:hover {
+            background: #0F90F3;
+          }
+        }
+      }
+      .middle-block {
         display: flex;
         align-items: center;
-        .contact-info{
-          p{
+        .contact-info {
+          p {
             font-size: 18px;
             font-family: $dejavu;
           }
-          p:nth-child(1){
+          p:nth-child(1) {
             margin-bottom: 32px;
           }
-          p:nth-child(2){
+          p:nth-child(2) {
             font-weight: 600;
           }
         }
       }
-      .right-block-partners{
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-        .partners{
+      .right-block-partners {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        .partners {
           display: flex;
           flex-direction: column;
           align-items: flex-end;
-          p{
+          p {
             display: flex;
             font-size: 18px;
             font-family: $dejavu;
             margin-bottom: 48px;
           }
-          .partners-logo{
+          .partners-logo {
             display: flex;
             justify-content: space-between;
-            .div-logo{
+            .div-logo {
               width: 46px;
               height: 46px;
               background-color: $btnGray;
               border-radius: 50%;
-              
             }
-            :nth-child(2){
+            :nth-child(2) {
               margin-left: 60px;
               margin-right: 60px;
             }
