@@ -175,6 +175,8 @@ body {
 
 body header {
   padding: 39px 200px;
+  -webkit-box-shadow: #00000029 0 3px 5px;
+          box-shadow: #00000029 0 3px 5px;
 }
 
 body header .container {
@@ -427,6 +429,114 @@ body main .about-project .container .btn-your-term p {
   font-family: "DejaVuSans";
   font-size: 18px;
   color: #FFFFFF;
+}
+
+body main .chatbot {
+  position: fixed;
+  bottom: 60px;
+  right: 150px;
+}
+
+body main .about-project-section {
+  padding: 40px;
+}
+
+body main .about-project-section .container .first {
+  margin-top: 70px;
+}
+
+body main .about-project-section .container .first img {
+  padding-right: 160px;
+}
+
+body main .about-project-section .container .second {
+  margin: 110px 0;
+  padding-left: 120px;
+}
+
+body main .about-project-section .container .second img {
+  margin-right: 50px;
+}
+
+body main .about-project-section .container .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .about-project-section .container .project .text {
+  max-width: 724px;
+  width: 100%;
+}
+
+body main .about-project-section .container .project .text h5 {
+  font-family: "BPGVenuri2010";
+  font-size: 40px;
+  line-height: 45px;
+  color: #707070;
+  margin-bottom: 45px;
+}
+
+body main .about-project-section .container .project .text .texts {
+  color: #000000;
+  font-family: "DejaVuSans";
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 8px;
+}
+
+body main .about-project-section .container .project .text .texts .more-texts {
+  display: none;
+}
+
+body main .about-project-section .container .project .text .more-click {
+  font-family: "BPGVenuri2010";
+  font-size: 18px;
+  color: #798996;
+  text-decoration: underline;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+body main .about-project-section .container .project .text .more-click:hover {
+  color: #000000;
+}
+
+body main .about-project-section .container .project .show-more .texts .more-texts {
+  display: inline;
+}
+
+body main .partners-section .container .organisation-partenrs {
+  margin-bottom: 114px;
+}
+
+body main .partners-section .container .organisation-partenrs p {
+  font-family: "BPGVenuri2010";
+  font-size: 40px;
+  line-height: 45px;
+  color: #707070;
+  margin-bottom: 45px;
+}
+
+body main .partners-section .container .organisation-partenrs .partner-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 731px;
+  width: 100%;
+}
+
+body main .partners-section .container .organisation-partenrs .partner-logo .logos {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: #798996;
 }
 
 body footer {

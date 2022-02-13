@@ -14,6 +14,7 @@ body {
   background-color: $bgcolor;
   header{
     padding: 39px 200px;
+    box-shadow: #00000029 0 3px 5px;
     .container{
       display: flex;
       justify-content: space-between;
@@ -184,6 +185,102 @@ body {
         }
       }
     }
+
+    .chatbot{
+      position: fixed;
+      bottom: 60px;
+      right: 150px;
+    }
+
+    // Second page ----- abour project
+    .about-project-section{
+      padding: 40px;
+      .container{
+        .first{
+          margin-top: 70px;
+          img{
+            padding-right: 160px;
+          }
+        }
+        .second{
+          margin: 110px 0;
+          padding-left: 120px;
+          img{
+            margin-right: 50px;
+          }
+        }
+        .project{
+          @include flex-jc(space-between);
+          .text{
+            max-width: 724px;
+            width: 100%;
+            h5{
+              font-family: $venuri;
+              font-size: 40px;
+              line-height: 45px;
+              color:$lightGray;
+              margin-bottom: 45px;
+            }
+            .texts{
+                color: $black;
+                font-family: $dejavu;
+                font-size: 18px;
+                line-height: 26px;
+                margin-bottom: 8px;
+                .more-texts{
+                  display: none;
+                }
+             }
+             .more-click{
+              font-family: $venuri;
+              font-size: 18px;
+              color: $btnGray;
+              text-decoration: underline;
+              line-height: 22px;
+              cursor: pointer;
+              &:hover{
+                color: $black;
+              }
+            }
+          }
+          .show-more{
+            .texts{
+              .more-texts{
+                display: inline;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .partners-section{
+      .container{
+        .organisation-partenrs{
+          margin-bottom: 114px;
+          p{
+            font-family: $venuri;
+            font-size: 40px;
+            line-height: 45px;
+            color: $lightGray;
+            margin-bottom: 45px;
+          }
+          .partner-logo{
+              @include flex-jc(space-between);
+              max-width: 731px;
+              width: 100%;
+            .logos{
+              width: 180px;
+              height: 180px;
+              border-radius: 50%;
+              background-color: $btnGray;
+            }
+          }
+        }
+      }
+    }
+    // End of second page
+    
   }
   
   footer{
