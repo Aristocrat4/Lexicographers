@@ -186,6 +186,14 @@ a {
   height: 67px;
 }
 
+.hidden {
+  display: none;
+}
+
+.errorBorder {
+  border: 1px solid #FE4444 !important;
+}
+
 body {
   background-color: #f9f7f5;
 }
@@ -595,15 +603,22 @@ body main section.contact-form .container .form form {
           flex-direction: column;
 }
 
+body main section.contact-form .container .form form span {
+  width: 100%;
+  color: #FE4444;
+  font-family: "DejaVuSans";
+}
+
 body main section.contact-form .container .form form input, body main section.contact-form .container .form form textarea {
   width: 100%;
   padding: 23px 40px;
-  margin-bottom: 43px;
+  margin-bottom: 5px;
+  margin-top: 43px;
   border: 1px solid #798996;
   border-radius: 8px;
 }
 
-body main section.contact-form .container .form form input[type=submit] {
+body main section.contact-form .container .form form input[type=button] {
   width: 140px;
   height: 62px;
   background: #798996;
@@ -625,7 +640,7 @@ body main section.contact-form .container .form form input[type=submit] {
   transition: all 0.5s;
 }
 
-body main section.contact-form .container .form form input[type=submit]:hover {
+body main section.contact-form .container .form form input[type=button]:hover {
   background-color: #eed370;
   color: #1d2933;
 }
