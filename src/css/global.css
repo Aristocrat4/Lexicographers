@@ -618,6 +618,10 @@ body main section.contact-form .container .form form input, body main section.co
   border-radius: 8px;
 }
 
+body main section.contact-form .container .form form :first-child {
+  margin-top: 0;
+}
+
 body main section.contact-form .container .form form input[type=button] {
   width: 140px;
   height: 62px;

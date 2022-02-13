@@ -325,6 +325,9 @@ body {
               border: 1px solid $btnGray;
               border-radius: 8px;
             }
+            :first-child{
+              margin-top: 0;
+            }
             input[type=button]{
               width: 140px;
               height: 62px;
