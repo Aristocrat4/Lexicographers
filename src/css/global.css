@@ -156,8 +156,25 @@ a {
 
 .container {
   max-width: 1536px;
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
+}
+
+.logoStyle .main {
+  padding-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logoStyle .main h2 {
+  font-family: "BPGVenuri2010";
+  font-size: 28px;
+  text-align: center;
+  color: #1d2933;
 }
 
 .logo {
@@ -169,12 +186,22 @@ a {
   height: 67px;
 }
 
+.hidden {
+  display: none;
+}
+
+.errorBorder {
+  border: 1px solid #FE4444 !important;
+}
+
 body {
   background-color: #f9f7f5;
 }
 
 body header {
-  padding: 39px 200px;
+  padding: 35px 0;
+  -webkit-box-shadow: #00000029 0 3px 5px;
+          box-shadow: #00000029 0 3px 5px;
 }
 
 body header .container {
@@ -187,26 +214,6 @@ body header .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-body header .container .main {
-  padding-right: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body header .container .main h1 {
-  font-family: "BPGVenuri2010";
-  font-size: 28px;
-  text-align: center;
-}
-
-body header .container .main h1 a {
-  color: #1d2933;
 }
 
 body header .container nav {
@@ -229,6 +236,7 @@ body header .container nav ul {
 }
 
 body header .container nav ul li {
+  line-height: 40px;
   margin-right: 45px;
   text-align: center;
 }
@@ -239,8 +247,11 @@ body header .container nav ul li a {
   font-family: "DejaVuSans";
 }
 
-body header .container nav ul :last-child a {
+body header .container nav ul :last-child {
   margin-right: 0;
+}
+
+body header .container nav ul :last-child a {
   background-color: #798996;
   color: #fff;
   padding: 10px 30px;
@@ -253,7 +264,7 @@ body header .container nav ul :last-child a:hover {
   background-color: #eed370;
 }
 
-body main .poster {
+body main section.poster {
   border: 1px solid #707070;
   margin-bottom: 162px;
   width: 100%;
@@ -267,7 +278,7 @@ body main .poster {
   background-color: #1d2933;
 }
 
-body main .poster .container {
+body main section.poster .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -280,19 +291,19 @@ body main .poster .container {
   width: 100%;
 }
 
-body main .poster .container .text {
+body main section.poster .container .text {
   max-width: 469px;
   width: 100%;
 }
 
-body main .poster .container .text p {
+body main section.poster .container .text p {
   font-size: 66px;
   line-height: 76px;
   color: #fff9b4;
   font-family: "BPGVenuri2010";
 }
 
-body main .words .container {
+body main section.words .container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -305,16 +316,16 @@ body main .words .container {
           align-items: center;
 }
 
-body main .words .container .words-title {
+body main section.words .container .words-title {
   font-size: 40px;
   color: #1d2933;
 }
 
-body main .words .container .words-title h2 {
+body main section.words .container .words-title h2 {
   font-family: "BPGVenuri2010";
 }
 
-body main .words .container .word-blocks {
+body main section.words .container .word-blocks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,7 +336,7 @@ body main .words .container .word-blocks {
       flex-wrap: wrap;
 }
 
-body main .words .container .word-blocks a {
+body main section.words .container .word-blocks a {
   max-width: 511px;
   width: 33%;
   padding: 30px 180px 36px 45px;
@@ -334,21 +345,21 @@ body main .words .container .word-blocks a {
           box-shadow: #00000029 0 3px 5px;
 }
 
-body main .words .container .word-blocks a h2 {
+body main section.words .container .word-blocks a h2 {
   color: #798996;
   font-size: 46px;
   text-transform: capitalize;
   margin-bottom: 17px;
 }
 
-body main .words .container .word-blocks a span {
+body main section.words .container .word-blocks a span {
   background-color: #eed370;
   padding: 5px 20px;
   font-size: 16px;
   text-transform: capitalize;
 }
 
-body main .about-project {
+body main section.about-project {
   margin-top: 178px;
   margin-bottom: 134px;
   display: -webkit-box;
@@ -359,7 +370,7 @@ body main .about-project {
           justify-content: center;
 }
 
-body main .about-project .container {
+body main section.about-project .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -371,24 +382,24 @@ body main .about-project .container {
           justify-content: space-between;
 }
 
-body main .about-project .container .left-block {
+body main section.about-project .container .left-block {
   max-width: 768px;
   width: 100%;
 }
 
-body main .about-project .container .left-block .about-project-text {
+body main section.about-project .container .left-block .about-project-text {
   border-left: 4px solid #eed370;
   padding-left: 30px;
 }
 
-body main .about-project .container .left-block .about-project-text h5 {
+body main section.about-project .container .left-block .about-project-text h5 {
   font-size: 40px;
   font-family: "BPGVenuri2010";
   line-height: 45px;
   color: #1d2933;
 }
 
-body main .about-project .container .left-block .about-project-text p {
+body main section.about-project .container .left-block .about-project-text p {
   max-width: 724px;
   margin: 45px 0;
   font-family: "DejaVuSans";
@@ -397,7 +408,7 @@ body main .about-project .container .left-block .about-project-text p {
   line-height: 26px;
 }
 
-body main .about-project .container .btn-your-term {
+body main section.about-project .container .btn-your-term {
   margin-left: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -412,21 +423,255 @@ body main .about-project .container .btn-your-term {
   width: 100%;
   height: 61px;
   background-color: #798996;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-body main .about-project .container .btn-your-term:hover {
+body main section.about-project .container .btn-your-term:hover {
   cursor: pointer;
   background-color: #eed370;
 }
 
-body main .about-project .container .btn-your-term:hover p {
+body main section.about-project .container .btn-your-term:hover p {
   color: #000000;
 }
 
-body main .about-project .container .btn-your-term p {
+body main section.about-project .container .btn-your-term p {
   font-family: "DejaVuSans";
   font-size: 18px;
-  color: #FFFFFF;
+  color: #ffffff;
+}
+
+body main .chatbot {
+  position: fixed;
+  bottom: 60px;
+  right: 150px;
+}
+
+body main section.about-project-section {
+  padding: 40px;
+}
+
+body main section.about-project-section .container .first {
+  margin-top: 70px;
+}
+
+body main section.about-project-section .container .first img {
+  padding-right: 160px;
+}
+
+body main section.about-project-section .container .second {
+  margin: 110px 0;
+  padding-left: 120px;
+}
+
+body main section.about-project-section .container .second img {
+  margin-right: 50px;
+}
+
+body main section.about-project-section .container .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main section.about-project-section .container .project .text {
+  max-width: 724px;
+  width: 100%;
+}
+
+body main section.about-project-section .container .project .text h5 {
+  font-family: "BPGVenuri2010";
+  font-size: 40px;
+  line-height: 45px;
+  color: #707070;
+  margin-bottom: 45px;
+}
+
+body main section.about-project-section .container .project .text .texts {
+  color: #000000;
+  font-family: "DejaVuSans";
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 8px;
+}
+
+body main section.about-project-section .container .project .text .texts .more-texts {
+  display: none;
+}
+
+body main section.about-project-section .container .project .text .more-click {
+  font-family: "BPGVenuri2010";
+  font-size: 18px;
+  color: #798996;
+  text-decoration: underline;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+body main section.about-project-section .container .project .text .more-click:hover {
+  color: #000000;
+}
+
+body main section.about-project-section .container .project .show-more .texts .more-texts {
+  display: inline;
+}
+
+body main section.partners-section {
+  padding: 40px;
+}
+
+body main section.partners-section .container .organisation-partenrs {
+  margin-bottom: 114px;
+}
+
+body main section.partners-section .container .organisation-partenrs p {
+  font-family: "BPGVenuri2010";
+  font-size: 40px;
+  line-height: 45px;
+  color: #707070;
+  margin-bottom: 45px;
+}
+
+body main section.partners-section .container .organisation-partenrs .partner-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 731px;
+  width: 100%;
+}
+
+body main section.partners-section .container .organisation-partenrs .partner-logo .logos {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: #798996;
+}
+
+body main section.contact-form .container {
+  padding: 132px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body main section.contact-form .container .contact-info {
+  color: #1d2933;
+}
+
+body main section.contact-form .container .contact-info h3 {
+  font-size: 28px;
+  font-family: "BPGVenuri2010";
+  margin-bottom: 30px;
+}
+
+body main section.contact-form .container .contact-info h5 {
+  font-family: "DejaVuSans";
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+body main section.contact-form .container .form {
+  width: 60%;
+}
+
+body main section.contact-form .container .form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main section.contact-form .container .form form span {
+  width: 100%;
+  color: #FE4444;
+  font-family: "DejaVuSans";
+}
+
+body main section.contact-form .container .form form input, body main section.contact-form .container .form form textarea {
+  width: 100%;
+  padding: 23px 40px;
+  margin-bottom: 5px;
+  margin-top: 43px;
+  border: 1px solid #798996;
+  border-radius: 8px;
+}
+
+body main section.contact-form .container .form form :first-child {
+  margin-top: 0;
+}
+
+body main section.contact-form .container .form form input[type=button] {
+  width: 140px;
+  height: 62px;
+  background: #798996;
+  color: #fff;
+  font-size: 18px;
+  font-family: "DejaVuSans";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body main section.contact-form .container .form form input[type=button]:hover {
+  background-color: #eed370;
+  color: #1d2933;
+}
+
+body main section.contact-form .container .form form textarea {
+  position: relative;
+  height: 130px;
+}
+
+body main section.contact-form .container .form form textarea::-webkit-input-placeholder {
+  position: absolute;
+  bottom: 23px;
+}
+
+body main section.contact-form .container .form form textarea:-ms-input-placeholder {
+  position: absolute;
+  bottom: 23px;
+}
+
+body main section.contact-form .container .form form textarea::-ms-input-placeholder {
+  position: absolute;
+  bottom: 23px;
+}
+
+body main section.contact-form .container .form form textarea::placeholder {
+  position: absolute;
+  bottom: 23px;
 }
 
 body footer {
@@ -445,7 +690,11 @@ body footer .container {
           justify-content: space-between;
 }
 
-body footer .container .left-block-social .logo-conc {
+body footer .container .left-block-social a {
+  color: #1d2933;
+}
+
+body footer .container .left-block-social a .logo-conc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -455,7 +704,7 @@ body footer .container .left-block-social .logo-conc {
   display: flex;
 }
 
-body footer .container .left-block-social .logo-conc p {
+body footer .container .left-block-social a .logo-conc p {
   font-family: "BPGVenuri2010";
   font-size: 28px;
   line-height: 32px;
@@ -473,7 +722,7 @@ body footer .container .left-block-social .social-icons .circle {
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  background-color: #707070;
+  background-color: #798996;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -483,11 +732,24 @@ body footer .container .left-block-social .social-icons .circle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
-body footer .container .left-block-social .social-icons .circle img {
-  width: 25px;
-  height: 25px;
+body footer .container .left-block-social .social-icons .circle a {
+  color: white;
+  font-size: x-large;
+}
+
+body footer .container .left-block-social .social-icons .insta:hover {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+body footer .container .left-block-social .social-icons .twitter:hover {
+  background-color: #329cea;
+}
+
+body footer .container .left-block-social .social-icons .fb:hover {
+  background: #0F90F3;
 }
 
 body footer .container .middle-block {
