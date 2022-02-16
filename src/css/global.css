@@ -194,6 +194,11 @@ a {
   border: 1px solid #FE4444 !important;
 }
 
+.activeNav {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
 body {
   background-color: #f9f7f5;
 }
@@ -265,7 +270,7 @@ body header .container nav ul :last-child a:hover {
 }
 
 body main section.poster {
-  border: 1px solid #707070;
+  border: 1px solid #C0D0DE;
   margin-bottom: 162px;
   width: 100%;
   height: 523px;
@@ -487,7 +492,7 @@ body main section.about-project-section .container .project .text h5 {
   font-family: "BPGVenuri2010";
   font-size: 40px;
   line-height: 45px;
-  color: #707070;
+  color: #C0D0DE;
   margin-bottom: 45px;
 }
 
@@ -532,7 +537,7 @@ body main section.partners-section .container .organisation-partenrs p {
   font-family: "BPGVenuri2010";
   font-size: 40px;
   line-height: 45px;
-  color: #707070;
+  color: #C0D0DE;
   margin-bottom: 45px;
 }
 
@@ -552,6 +557,80 @@ body main section.partners-section .container .organisation-partenrs .partner-lo
   height: 180px;
   border-radius: 50%;
   background-color: #798996;
+}
+
+body main section.new-term .container {
+  padding: 100px 0px;
+}
+
+body main section.new-term .container h2 {
+  display: block;
+  font-size: 40px;
+  font-family: "BPGVenuri2010";
+  color: #1d2933;
+  border-bottom: 1px solid #000000;
+}
+
+body main section.new-term .container .inputs-container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 107px 0;
+}
+
+body main section.new-term .container .inputs-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.new-term .container .inputs-container form input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding-bottom: 10.6px;
+  border-bottom: 1px solid #1d2933;
+  margin-bottom: 105.4px;
+}
+
+body main section.new-term .container .inputs-container form input ::-webkit-input-placeholder {
+  font-family: "DejaVuSans";
+  font-size: 18px;
+  color: #798996;
+}
+
+body main section.new-term .container .inputs-container form input :-ms-input-placeholder {
+  font-family: "DejaVuSans";
+  font-size: 18px;
+  color: #798996;
+}
+
+body main section.new-term .container .inputs-container form input ::-ms-input-placeholder {
+  font-family: "DejaVuSans";
+  font-size: 18px;
+  color: #798996;
+}
+
+body main section.new-term .container .inputs-container form input ::placeholder {
+  font-family: "DejaVuSans";
+  font-size: 18px;
+  color: #798996;
+}
+
+body main section.new-term .container .inputs-container form button {
+  background: #C0D0DE;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 18px 26px;
 }
 
 body main section.contact-form .container {
