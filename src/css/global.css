@@ -638,6 +638,7 @@ body main section.contact-form .container {
 
 body main section.contact-form .container .contact-info {
   color: #1d2933;
+  margin-right: auto;
 }
 
 body main section.contact-form .container .contact-info h3 {
@@ -756,6 +757,40 @@ body main section.contact-form .container .form form textarea::-ms-input-placeho
 body main section.contact-form .container .form form textarea::placeholder {
   position: absolute;
   bottom: 23px;
+}
+
+body main section.contact-form .container .form-hide {
+  display: none;
+}
+
+body main section.contact-form .for-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main section.contact-form .for-contact .success-msg {
+  display: none;
+}
+
+body main section.contact-form .for-contact .not-hide {
+  display: block;
+  padding-top: 170px;
+  padding-bottom: 50px;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #1d2933;
+}
+
+body main section.contact-form .for-contact .not-hide div p {
+  font-size: 40px;
+  font-family: "BPGVenuri2010";
+  line-height: 45px;
+  color: #1d2933;
+  margin-bottom: 30px;
 }
 
 body footer {

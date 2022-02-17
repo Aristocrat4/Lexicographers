@@ -68,3 +68,28 @@ if (sendButton) {
 //     });
 // }
 // end of new term script
+
+
+
+// function for success send message
+
+function callIsEmpty(){
+    isEmpty();
+}
+
+function isEmpty(){
+    let nameEl = document.getElementById("name").value;
+    let emailEl= document.getElementById("email").value;
+    let messageEl = document.getElementById("message").value;
+
+    if(nameEl != "" && emailEl != "" && messageEl != ""){
+        var element=document.querySelector(".contact-info");
+        var element2 =document.querySelector(".form");
+        var element3=document.querySelector(".success-msg");
+        element.classList.add("form-hide");
+        element2.classList.add("form-hide");
+        element3.classList.add("not-hide");
+    }
+}
+
+// end off isEMpty() functiob

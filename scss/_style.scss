@@ -340,6 +340,7 @@ body {
         @include flex-jc-ai(space-between, flex-start);
         .contact-info{
           color: $darkBlue;
+          margin-right: auto;
           h3{
             font-size: 28px;
             font-family: $venuri;
@@ -407,6 +408,34 @@ body {
             textarea::placeholder{
               position: absolute;
               bottom: 23px;
+            }
+          }
+        }
+        .form-hide{
+          display: none;
+        }
+        
+      }
+      .for-contact{
+        display: flex;
+        justify-content: center;
+        .success-msg{
+          display: none;
+        }
+        .not-hide{
+          display: block;
+          padding-top: 170px;
+          padding-bottom: 50px;
+          width: 100%;
+          text-align: center;
+          border-top: 1px solid $darkBlue;
+          div{
+            p{
+              font-size: 40px;
+              font-family: $venuri;
+              line-height: 45px;
+              color: $darkBlue;
+              margin-bottom: 30px;
             }
           }
         }

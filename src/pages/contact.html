@@ -38,7 +38,7 @@
     </header>
     <main>
       <section class="contact-form">
-        <div class="container">
+        <div class="container for-contact">
           <div class="contact-info">
             <h3>საკონტაქტო ინფორმაცია</h3>
             <h5>lexicographercontest@unilab.iliauni.edu.ge</h5>
@@ -59,8 +59,15 @@
 
               <textarea cols="30" placeholder="შეტყობინება*" id="message"></textarea>
               <span class="error hidden"><div><img src="../../assets/images/error-svg.svg" alt="error"><p>შეტყობინება სავალდებულოა</p></div></span>
-              <input type="button" value="გაგზავნა" id="sendButton" />
+              <input type="button" value="გაგზავნა" id="sendButton" onclick="callIsEmpty()"/>
             </form>
+          </div>
+         
+          <div class="success-msg">
+            <div>
+              <p>შეტყობინება წარმატებით გაიგზავნა</p>
+              <img src="../../assets/images/tick-mark.svg" alt="tick-mark">
+            </div>
           </div>
         </div>
       </section>
