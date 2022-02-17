@@ -673,19 +673,23 @@ body main section.contact-form .container .form form {
 }
 
 body main section.contact-form .container .form form span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  vertical-align: middle;
   margin-top: 10px;
   width: 100%;
   color: #FE4444;
   font-family: "DejaVuSans";
 }
 
-body main section.contact-form .container .form form span img {
+body main section.contact-form .container .form form span div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.contact-form .container .form form span div img {
   margin-right: 15px;
 }
 
