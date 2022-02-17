@@ -204,23 +204,19 @@ body {
 
     // Second page ----- abour project
     section.about-project-section {
-      padding: 40px;
       .container {
         .first {
           margin-top: 70px;
-          img {
-            padding-right: 160px;
-          }
         }
         .second {
           margin: 110px 0;
-          padding-left: 120px;
-          img {
-            margin-right: 50px;
-          }
         }
         .project {
           @include flex-jc(space-between);
+          margin-right: 10%;
+          @media(max-width: 1500px){
+            margin-right: 0;
+          }
           .text {
             max-width: 724px;
             width: 100%;
@@ -265,7 +261,6 @@ body {
     }
 
     section.partners-section {
-      padding: 40px;
       .container {
         .organisation-partenrs {
           margin-bottom: 114px;
@@ -364,9 +359,15 @@ body {
             align-items: center;
             flex-direction: column;
             span{
+              display: flex;
+              align-items: center;
+              margin-top: 10px;
               width: 100%;
               color: $error;
               font-family: $dejavu;
+              img{
+                margin-right: 15px;
+              }
             }
             input, textarea{
               width: 100%;

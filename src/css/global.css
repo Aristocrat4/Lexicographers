@@ -453,25 +453,12 @@ body main .chatbot {
   right: 150px;
 }
 
-body main section.about-project-section {
-  padding: 40px;
-}
-
 body main section.about-project-section .container .first {
   margin-top: 70px;
 }
 
-body main section.about-project-section .container .first img {
-  padding-right: 160px;
-}
-
 body main section.about-project-section .container .second {
   margin: 110px 0;
-  padding-left: 120px;
-}
-
-body main section.about-project-section .container .second img {
-  margin-right: 50px;
 }
 
 body main section.about-project-section .container .project {
@@ -481,6 +468,13 @@ body main section.about-project-section .container .project {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-right: 10%;
+}
+
+@media (max-width: 1500px) {
+  body main section.about-project-section .container .project {
+    margin-right: 0;
+  }
 }
 
 body main section.about-project-section .container .project .text {
@@ -523,10 +517,6 @@ body main section.about-project-section .container .project .text .more-click:ho
 
 body main section.about-project-section .container .project .show-more .texts .more-texts {
   display: inline;
-}
-
-body main section.partners-section {
-  padding: 40px;
 }
 
 body main section.partners-section .container .organisation-partenrs {
@@ -683,9 +673,20 @@ body main section.contact-form .container .form form {
 }
 
 body main section.contact-form .container .form form span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
   width: 100%;
   color: #FE4444;
   font-family: "DejaVuSans";
+}
+
+body main section.contact-form .container .form form span img {
+  margin-right: 15px;
 }
 
 body main section.contact-form .container .form form input, body main section.contact-form .container .form form textarea {
