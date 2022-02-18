@@ -56,19 +56,18 @@ if (sendButton) {
 // End of Form Validation
 
 // new term script
-// const newTermInput = document.getElementById('new-term');
-// const btnAddNewTerm = document.getElementById('addNewTerm');
-// if (newTermInput) {
-//     newTermInput.addEventListener('change', (event) => {
-//         console.log(event.target.value);
-//         if (newTermInput.value) {
-//             btnAddNewTerm.disabled = false;
-//         } else {
-//             btnAddNewTerm.disabled = true;
-//         }
+const newTermInput = document.getElementById('new-term');
+const btnAddNewTerm = document.getElementById('addNewTerm');
+if (newTermInput) {
+    newTermInput.addEventListener('input', (event) => {
+        if (newTermInput.value) {
+            btnAddNewTerm.disabled = false;
+        } else {
+            btnAddNewTerm.disabled = true;
+        }
 
-//     });
-// }
+    });
+}
 // end of new term script
 
 // function for success send message
@@ -101,22 +100,27 @@ const signUpBtn = document.querySelector(".btn-signup");
 const signInForm = document.querySelector(".login");
 const signUpForm = document.querySelector(".signup");
 // click on buttons
-signUpBtn.addEventListener("click", () => {
-  console.log(signUpBtn);
-  signUpBtn.style.background = "transparent";
-  signInBtn.style.background = "#798996";
-  signUpBtn.style.color = "#798996";
-  signInBtn.style.color = "#FFF";
-  signInForm.style.display = "none";
-  signUpForm.style.display = "flex";
-});
-signInBtn.addEventListener("click", () => {
-  console.log(signUpBtn);
-  signInBtn.style.background = "transparent";
-  signUpBtn.style.background = "#798996";
-  signInBtn.style.color = "#798996";
-  signUpBtn.style.color = "#FFF";
-  signUpForm.style.display = "none";
-  signInForm.style.display = "flex";
-});
+if (signUpBtn) {
+  signUpBtn.addEventListener("click", () => {
+    console.log(signUpBtn);
+    signUpBtn.style.background = "transparent";
+    signInBtn.style.background = "#798996";
+    signUpBtn.style.color = "#798996";
+    signInBtn.style.color = "#FFF";
+    signInForm.style.display = "none";
+    signUpForm.style.display = "flex";
+  });
+}
+if (signInBtn) {
+  signInBtn.addEventListener("click", () => {
+    console.log(signUpBtn);
+    signInBtn.style.background = "transparent";
+    signUpBtn.style.background = "#798996";
+    signInBtn.style.color = "#798996";
+    signUpBtn.style.color = "#FFF";
+    signUpForm.style.display = "none";
+    signInForm.style.display = "flex";
+  });
+}
+
 // -------- end of toggle login and signup forms -------

@@ -693,7 +693,7 @@ body main section.about-project .container .left-block .about-project-text p {
   line-height: 26px;
 }
 
-body main section.about-project .container .btn-your-term {
+body main section.about-project .container a .btn-your-term {
   border-radius: 4px;
   margin-left: 30px;
   display: -webkit-box;
@@ -713,16 +713,15 @@ body main section.about-project .container .btn-your-term {
   transition: all 0.5s;
 }
 
-body main section.about-project .container .btn-your-term:hover {
-  cursor: pointer;
+body main section.about-project .container a .btn-your-term:hover {
   background-color: #eed370;
 }
 
-body main section.about-project .container .btn-your-term:hover p {
+body main section.about-project .container a .btn-your-term:hover p {
   color: #000000;
 }
 
-body main section.about-project .container .btn-your-term p {
+body main section.about-project .container a .btn-your-term p {
   font-family: "DejaVuSans";
   font-size: 18px;
   color: #ffffff;
