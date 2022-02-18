@@ -3,7 +3,7 @@
   width: 95%;
   margin: 0 auto;
 }
-.logoStyle{
+.logoStyle {
   .main {
     padding-right: 10px;
     display: flex;
@@ -23,13 +23,13 @@
     height: 67px;
   }
 }
-.hidden{
+.hidden {
   display: none;
 }
-.errorBorder{
+.errorBorder {
   border: 1px solid $error !important;
 }
-.activeNav{
+.activeNav {
   text-decoration: underline;
   text-underline-offset: 6px;
 }
@@ -42,7 +42,7 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      
+
       nav {
         padding-left: 10px;
         display: flex;
@@ -100,6 +100,178 @@ body {
             line-height: 76px;
             color: $lightYellow;
             font-family: $venuri;
+          }
+        }
+      }
+    }
+    section.signup-login {
+      padding: 100px 0 124px 0;
+      .container {
+        @include flex-jc-ai(center, center);
+        .toggle-form {
+          max-width: 1297px;
+          width: 85%;
+          box-shadow: #00000029 0 3px 6px;
+          .titles {
+            display: flex;
+            .btn-login {
+              width: 50%;
+              background: transparent;
+              outline: none;
+              border: none;
+              cursor: pointer;
+              padding: 15px;
+              font-size: 40px;
+              font-family: $venuri;
+              color: $darkBlue;
+            }
+            .btn-signup {
+              width: 50%;
+              background: $btnGray;
+              outline: none;
+              border: none;
+              cursor: pointer;
+              padding: 15px;
+              font-size: 40px;
+              font-family: $venuri;
+              text-align: center;
+              color: $white;
+            }
+          }
+          .login {
+            .remember-psw {
+              width: 75%;
+              margin-bottom: 45px;
+              a {
+                color: $btnGray;
+                font-size: 18px;
+                font-family: $dejavu;
+                text-decoration: underline;
+                // border-bottom: 1px $btnGray solid;
+              }
+              .check-remember {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                label {
+                  font-family: $dejavu;
+                  font-size: 18px;
+                  color: $btnGray;
+                  margin-left: 8px;
+                }
+                #remember {
+                  width: 30px;
+                  height: 30px;
+                  border-radius: 10px;
+                  // border: #798996 1px solid;
+                  color: #ffffff;
+                  margin-bottom: 0;
+                }
+              }
+              @include flex-jc(space-between);
+            }
+            padding: 50px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            input {
+              background: none;
+              border: $btnGray 1px solid;
+              border-radius: 8px;
+              outline: none;
+              width: 75%;
+              padding: 23px 40px;
+              margin-bottom: 58px;
+              ::placeholder {
+                font-family: $dejavu;
+                font-size: 18px;
+                color: $btnGray;
+              }
+            }
+            button {
+              background: $btnGray;
+              outline: none;
+              border: none;
+              cursor: pointer;
+              border-radius: 4px;
+              padding: 18px 26px;
+              color: #ffffff;
+              font-family: $dejavu;
+              font-size: 18px;
+              margin-bottom: 55px;
+            }
+            span {
+              font-family: $dejavu;
+              font-size: 18px;
+              width: 75%;
+              color: $btnGray;
+              a {
+                color: $btnGray;
+                text-decoration: underline;
+              }
+            }
+          }
+          .signup {
+            padding: 50px 0;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            input {
+              background: none;
+              border: $btnGray 1px solid;
+              border-radius: 8px;
+              outline: none;
+              width: 75%;
+              padding: 23px 40px;
+              margin-bottom: 58px;
+              ::placeholder {
+                font-family: $dejavu;
+                font-size: 18px;
+                color: $btnGray;
+              }
+            }
+            button {
+              background: $btnGray;
+              outline: none;
+              border: none;
+              cursor: pointer;
+              border-radius: 4px;
+              padding: 18px 26px;
+              color: #ffffff;
+              font-family: $dejavu;
+              font-size: 18px;
+              margin-bottom: 55px;
+              margin-top: 58px;
+            }
+            .robot-rules {
+              width: 75%;
+              @include flex-jc-ai(space-between, center);
+              span {
+                font-family: $dejavu;
+                font-size: 18px;
+                color: $btnGray;
+              }
+              .rules {
+                display: flex;
+                align-items: center;
+                #rules {
+                  margin: 0;
+                  padding: 0;
+                  width: 30px;
+                  height: 30px;
+                  margin-right: 8px;
+                }
+                label {
+                  a {
+                    color: $btnGray;
+                    font-size: 18px;
+                    font-family: $dejavu;
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -215,7 +387,7 @@ body {
         .project {
           @include flex-jc(space-between);
           margin-right: 10%;
-          @media(max-width: 1500px){
+          @media (max-width: 1500px) {
             margin-right: 0;
           }
           .text {
@@ -288,25 +460,25 @@ body {
     }
     // End of second page
     // New Term
-    section.new-term{
-      .container{
+    section.new-term {
+      .container {
         padding: 100px 0px;
-        h2{
+        h2 {
           display: block;
           font-size: 40px;
           font-family: $venuri;
           color: $darkBlue;
           border-bottom: 1px solid $black;
         }
-        .inputs-container{
+        .inputs-container {
           width: 85%;
           margin: 0 auto;
           padding: 107px 0;
-          form{
+          form {
             display: flex;
             flex-direction: column;
             align-items: center;
-            input{
+            input {
               background: none;
               border: none;
               outline: none;
@@ -314,13 +486,13 @@ body {
               padding-bottom: 10.6px;
               border-bottom: 1px solid $darkBlue;
               margin-bottom: 105.4px;
-              ::placeholder{
+              ::placeholder {
                 font-family: $dejavu;
                 font-size: 18px;
                 color: $btnGray;
               }
             }
-            button{
+            button {
               background: $lightGray;
               outline: none;
               border: none;
@@ -332,50 +504,50 @@ body {
         }
       }
     }
-    // 
+    //
 
     // Contact
-    section.contact-form{
-      .container{
+    section.contact-form {
+      .container {
         padding: 132px 0px;
         @include flex-jc-ai(space-between, flex-start);
-        .contact-info{
+        .contact-info {
           color: $darkBlue;
           margin-right: auto;
-          h3{
+          h3 {
             font-size: 28px;
             font-family: $venuri;
             margin-bottom: 30px;
           }
-          h5{
+          h5 {
             font-family: $dejavu;
             font-size: 18px;
             margin-bottom: 10px;
           }
         }
-        .form{
+        .form {
           width: 60%;
-          form{
+          form {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            span{
+            span {
               vertical-align: middle;
               margin-top: 10px;
               width: 100%;
               color: $error;
               font-family: $dejavu;
-              div{
+              div {
                 display: flex;
                 align-items: center;
-                img{
-                margin-right: 15px;
+                img {
+                  margin-right: 15px;
                 }
               }
-              
             }
-            input, textarea{
+            input,
+            textarea {
               width: 100%;
               padding: 23px 40px;
               margin-bottom: 5px;
@@ -383,10 +555,10 @@ body {
               border: 1px solid $btnGray;
               border-radius: 8px;
             }
-            :first-child{
+            :first-child {
               margin-top: 0;
             }
-            input[type=button]{
+            input[type="button"] {
               width: 140px;
               height: 62px;
               background: $btnGray;
@@ -402,36 +574,35 @@ body {
                 color: $darkBlue;
               }
             }
-            textarea{
+            textarea {
               position: relative;
               height: 130px;
             }
-            textarea::placeholder{
+            textarea::placeholder {
               position: absolute;
               bottom: 23px;
             }
           }
         }
-        .form-hide{
+        .form-hide {
           display: none;
         }
-        
       }
-      .for-contact{
+      .for-contact {
         display: flex;
         justify-content: center;
-        .success-msg{
+        .success-msg {
           display: none;
         }
-        .not-hide{
+        .not-hide {
           display: block;
           padding-top: 170px;
           padding-bottom: 50px;
           width: 100%;
           text-align: center;
           border-top: 1px solid $darkBlue;
-          div{
-            p{
+          div {
+            p {
               font-size: 40px;
               font-family: $venuri;
               line-height: 45px;
@@ -445,32 +616,32 @@ body {
     // End of Contact
 
     // error-page
-    .error-page{
-      .container{
+    .error-page {
+      .container {
         display: flex;
         justify-content: center;
-        .error-container{
+        .error-container {
           padding: 110px 0 222px 0;
           max-width: 1120px;
           width: 100%;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          .error-text{
-            .text-404{
+          .error-text {
+            .text-404 {
               font-size: 96px;
               line-height: 120px;
               color: $darkBlue;
             }
-            .not-found{
+            .not-found {
               font-size: 40px;
               line-height: 45px;
               color: $darkBlue;
               font-family: $venuri;
               margin: 30px 0;
             }
-            a{
-              div{
+            a {
+              div {
                 @include flex-jc-ai(center, center);
                 max-width: 272px;
                 width: 100%;
@@ -478,7 +649,7 @@ body {
                 background-color: $btnGray;
                 transition: all 0.5s;
                 border-radius: 4px;
-                p{
+                p {
                   color: white;
                   font-size: 18px;
                   font-family: $dejavu;
@@ -530,20 +701,27 @@ body {
             background-color: $btnGray;
             @include flex-jc-ai(center, center);
             cursor: pointer;
-            a{
+            a {
               color: white;
               font-size: x-large;
             }
           }
           .insta:hover {
-            background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-            
+            background: linear-gradient(
+              45deg,
+              #405de6,
+              #5851db,
+              #833ab4,
+              #c13584,
+              #e1306c,
+              #fd1d1d
+            );
           }
           .twitter:hover {
             background-color: #329cea;
           }
           .fb:hover {
-            background: #0F90F3;
+            background: #0f90f3;
           }
         }
       }
