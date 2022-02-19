@@ -11,7 +11,7 @@
       src="https://kit.fontawesome.com/79fbebef68.js"
       crossorigin="anonymous"
     ></script>
-    <title>ტერმინების ბანკი</title>
+    <title>შემოგვთავაზე შენი ტერმინი</title>
     <link rel="stylesheet" href="../css/global.css" />
   </head>
   <body>
@@ -28,15 +28,29 @@
         <nav>
           <ul>
             <li><a href="./about.html">პროექტის შესახებ</a></li>
-            <li><a href="./termins_bank.html" class="activeNav">ტერმინების ბანკი</a></li>
-            <li><a href="./new_term.html">შემოგვთავაზე შენი ტერმინი</a></li>
+            <li><a href="./termins_bank.html">ტერმინების ბანკი</a></li>
+            <li><a href="./new_term.html" class="activeNav">შემოგვთავაზე შენი ტერმინი</a></li>
             <li><a href="./contact.html">კონტაქტი</a></li>
             <li><a href="./termins_bank.html" class="last-one">შესვლა</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <main></main>
+    <main>
+        <section class="new-term">
+            <div class="container">
+                <h2>შემოგვთავაზე შენი ტერმინი</h2>
+                <div class="inputs-container">
+                    <form>
+                        <input type="text" placeholder="შემოგვთავაზე შენი ტერმინი*" id="new-term">
+                        <input type="text" placeholder="ციტატა, სადაც გამოყენებულია ეს ტერმინი">
+                        <input type="text" placeholder="აირჩიე თემა">
+                        <button type="button" disabled id="addNewTerm">დამატება</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
       <div class="container">
         <div class="left-block-social">
