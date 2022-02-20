@@ -70,18 +70,13 @@ if (newTermInput) {
 }
 // end of new term script
 
-// function for success send message
-
+// ------ function for success send message ---------
 function callIsEmpty() {
-  isEmpty();
-}
-
-function isEmpty() {
   let nameEl = document.getElementById("name").value;
   let emailEl = document.getElementById("email").value;
   let messageEl = document.getElementById("message").value;
 
-  if (nameEl != "" && emailEl != "" && messageEl != "") {
+  if (nameEl !== "" && emailEl !== "" && messageEl !== "") {
     var element = document.querySelector(".contact-info");
     var element2 = document.querySelector(".form");
     var element3 = document.querySelector(".success-msg");
@@ -90,8 +85,7 @@ function isEmpty() {
     element3.classList.add("not-hide");
   }
 }
-
-// end off isEMpty() functiob
+// -------- end of isEMpty() function --------
 
 // -------- toggle login and signup forms -------
 // select elements
@@ -100,7 +94,7 @@ const signUpBtn = document.querySelector(".btn-signup");
 const signInForm = document.querySelector(".login");
 const signUpForm = document.querySelector(".signup");
 // click on buttons
-if (signUpBtn) {
+if (signUpBtn){
   signUpBtn.addEventListener("click", () => {
     console.log(signUpBtn);
     signUpBtn.style.background = "transparent";
@@ -124,3 +118,15 @@ if (signInBtn) {
 }
 
 // -------- end of toggle login and signup forms -------
+
+
+// -------- change autorisation form to registration form --------
+function changeAutoToRegistr(){
+  signUpBtn.style.background = "transparent";
+  signInBtn.style.background = "#798996";
+  signUpBtn.style.color = "#798996";
+  signInBtn.style.color = "#FFF";
+  signInForm.style.display = "none";
+  signUpForm.style.display = "flex";
+}
+// -------- end of function --------

@@ -33,6 +33,7 @@
   text-decoration: underline;
   text-underline-offset: 6px;
 }
+
 body {
   background-color: $bgcolor;
   header {
@@ -51,6 +52,7 @@ body {
           display: flex;
           align-items: center;
           li {
+            position: relative;
             line-height: 40px;
             margin-right: 45px;
             text-align: center;
@@ -58,6 +60,10 @@ body {
               color: $darkBlue;
               font-size: 18px;
               font-family: $dejavu;
+              &:hover{
+                text-decoration: underline;
+                text-underline-offset: 6px;
+              }
             }
           }
           :last-child {
@@ -70,6 +76,7 @@ body {
               transition: all 0.5s;
               &:hover {
                 background-color: $tagsyellow;
+                text-decoration: none;
               }
             }
           }
@@ -206,10 +213,15 @@ body {
               font-size: 18px;
               width: 75%;
               color: $btnGray;
-              a {
+              #not-acount {
+                cursor: pointer;
                 color: $btnGray;
                 text-decoration: underline;
+                &:hover{
+                  color: $black;
+                }
               }
+
             }
           }
           .signup {
@@ -373,8 +385,8 @@ body {
 
     .chatbot {
       position: fixed;
-      bottom: 60px;
-      right: 150px;
+      bottom: 70px;
+      right: 50px;
     }
 
     // Second page ----- abour project

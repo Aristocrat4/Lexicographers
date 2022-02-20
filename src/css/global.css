@@ -241,6 +241,7 @@ body header .container nav ul {
 }
 
 body header .container nav ul li {
+  position: relative;
   line-height: 40px;
   margin-right: 45px;
   text-align: center;
@@ -250,6 +251,11 @@ body header .container nav ul li a {
   color: #1d2933;
   font-size: 18px;
   font-family: "DejaVuSans";
+}
+
+body header .container nav ul li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
 
 body header .container nav ul :last-child {
@@ -267,6 +273,7 @@ body header .container nav ul :last-child a {
 
 body header .container nav ul :last-child a:hover {
   background-color: #eed370;
+  text-decoration: none;
 }
 
 body main section.poster {
@@ -478,9 +485,14 @@ body main section.signup-login .container .toggle-form .login span {
   color: #798996;
 }
 
-body main section.signup-login .container .toggle-form .login span a {
+body main section.signup-login .container .toggle-form .login span #not-acount {
+  cursor: pointer;
   color: #798996;
   text-decoration: underline;
+}
+
+body main section.signup-login .container .toggle-form .login span #not-acount:hover {
+  color: #000000;
 }
 
 body main section.signup-login .container .toggle-form .signup {
@@ -729,8 +741,8 @@ body main section.about-project .container a .btn-your-term p {
 
 body main .chatbot {
   position: fixed;
-  bottom: 60px;
-  right: 150px;
+  bottom: 70px;
+  right: 50px;
 }
 
 body main section.about-project-section .container .first {
