@@ -60,7 +60,7 @@ body {
               color: $darkBlue;
               font-size: 18px;
               font-family: $dejavu;
-              &:hover{
+              &:hover {
                 text-decoration: underline;
                 text-underline-offset: 6px;
               }
@@ -131,7 +131,7 @@ body {
               padding: 15px;
               font-size: 40px;
               font-family: $venuri;
-              color: $darkBlue;
+              color: $btnGray;
             }
             .btn-signup {
               width: 50%;
@@ -149,7 +149,9 @@ body {
           .login {
             .remember-psw {
               width: 75%;
-              margin-bottom: 45px;
+              margin: 55px 0 45px 0;
+              display: flex;
+              align-items: center;
               a {
                 color: $btnGray;
                 font-size: 18px;
@@ -174,11 +176,12 @@ body {
                   // border: #798996 1px solid;
                   color: #ffffff;
                   margin-bottom: 0;
+                  margin-top: 0;
                 }
               }
               @include flex-jc(space-between);
             }
-            padding: 50px 0;
+            padding: 0 0 50px 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -190,7 +193,7 @@ body {
               outline: none;
               width: 75%;
               padding: 23px 40px;
-              margin-bottom: 58px;
+              margin-top: 43px;
               ::placeholder {
                 font-family: $dejavu;
                 font-size: 18px;
@@ -204,12 +207,18 @@ body {
               cursor: pointer;
               border-radius: 4px;
               padding: 18px 26px;
-              color: $white;;
+              color: $white;
               font-family: $dejavu;
               font-size: 18px;
               margin-bottom: 55px;
+              transition: all 0.5s;
+              &:hover {
+                background-color: $tagsyellow;
+                text-decoration: none;
+                color: $black;
+              }
             }
-            span {
+            .no-account {
               font-family: $dejavu;
               font-size: 18px;
               width: 75%;
@@ -218,19 +227,46 @@ body {
                 cursor: pointer;
                 color: $btnGray;
                 text-decoration: underline;
-                &:hover{
+                &:hover {
                   color: $black;
                 }
               }
-
+            }
+            span {
+              vertical-align: middle;
+              margin-top: 10px;
+              width: 75%;
+              color: $error;
+              font-family: $dejavu;
+              div {
+                display: flex;
+                align-items: center;
+                img {
+                  margin-right: 15px;
+                }
+              }
             }
           }
           .signup {
-            padding: 50px 0;
+            padding: 0 0 50px 0;
             display: none;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            span {
+              vertical-align: middle;
+              margin-top: 10px;
+              width: 75%;
+              color: $error;
+              font-family: $dejavu;
+              div {
+                display: flex;
+                align-items: center;
+                img {
+                  margin-right: 15px;
+                }
+              }
+            }
             input {
               background: none;
               border: $btnGray 1px solid;
@@ -238,7 +274,7 @@ body {
               outline: none;
               width: 75%;
               padding: 23px 40px;
-              margin-bottom: 58px;
+              margin-top: 45px;
               ::placeholder {
                 font-family: $dejavu;
                 font-size: 18px;
@@ -257,9 +293,16 @@ body {
               font-size: 18px;
               margin-bottom: 55px;
               margin-top: 58px;
+              transition: all 0.5s;
+              &:hover {
+                background-color: $tagsyellow;
+                text-decoration: none;
+                color: $black;
+              }
             }
             .robot-rules {
               width: 75%;
+              margin-top: 55px;
               @include flex-jc-ai(space-between, center);
               span {
                 font-family: $dejavu;
@@ -357,30 +400,29 @@ body {
             }
           }
         }
-        a{
+        a {
           .btn-your-term {
-          border-radius: 4px;
-          margin-left: 30px;
-          @include flex-jc-ai(center, center);
-          max-width: 351px;
-          width: 100%;
-          height: 61px;
-          background-color: $btnGray;
-          transition: all 0.5s;
-          &:hover {
-            background-color: $tagsyellow;
+            border-radius: 4px;
+            margin-left: 30px;
+            @include flex-jc-ai(center, center);
+            max-width: 351px;
+            width: 100%;
+            height: 61px;
+            background-color: $btnGray;
+            transition: all 0.5s;
+            &:hover {
+              background-color: $tagsyellow;
+              p {
+                color: #000000;
+              }
+            }
             p {
-              color: #000000;
+              font-family: $dejavu;
+              font-size: 18px;
+              color: #ffffff;
             }
           }
-          p {
-            font-family: $dejavu;
-            font-size: 18px;
-            color: #ffffff;
-          }
         }
-        }
-        
       }
     }
 
@@ -668,11 +710,11 @@ body {
               color: $white;
               font-size: 18px;
               font-family: $dejavu;
-                &:hover {
-                  cursor: pointer;
-                  background-color: $tagsyellow;
-                  color: $black;
-                }
+              &:hover {
+                cursor: pointer;
+                background-color: $tagsyellow;
+                color: $black;
+              }
             }
           }
         }

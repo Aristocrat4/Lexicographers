@@ -354,7 +354,7 @@ body main section.signup-login .container .toggle-form .titles .btn-login {
   padding: 15px;
   font-size: 40px;
   font-family: "BPGVenuri2010";
-  color: #1d2933;
+  color: #798996;
 }
 
 body main section.signup-login .container .toggle-form .titles .btn-signup {
@@ -371,7 +371,7 @@ body main section.signup-login .container .toggle-form .titles .btn-signup {
 }
 
 body main section.signup-login .container .toggle-form .login {
-  padding: 50px 0;
+  padding: 0 0 50px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -389,9 +389,13 @@ body main section.signup-login .container .toggle-form .login {
 
 body main section.signup-login .container .toggle-form .login .remember-psw {
   width: 75%;
-  margin-bottom: 45px;
+  margin: 55px 0 45px 0;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -430,6 +434,7 @@ body main section.signup-login .container .toggle-form .login .remember-psw .che
   border-radius: 10px;
   color: #ffffff;
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 body main section.signup-login .container .toggle-form .login input {
@@ -439,7 +444,7 @@ body main section.signup-login .container .toggle-form .login input {
   outline: none;
   width: 75%;
   padding: 23px 40px;
-  margin-bottom: 58px;
+  margin-top: 43px;
 }
 
 body main section.signup-login .container .toggle-form .login input ::-webkit-input-placeholder {
@@ -477,27 +482,56 @@ body main section.signup-login .container .toggle-form .login button {
   font-family: "DejaVuSans";
   font-size: 18px;
   margin-bottom: 55px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-body main section.signup-login .container .toggle-form .login span {
+body main section.signup-login .container .toggle-form .login button:hover {
+  background-color: #eed370;
+  text-decoration: none;
+  color: #000000;
+}
+
+body main section.signup-login .container .toggle-form .login .no-account {
   font-family: "DejaVuSans";
   font-size: 18px;
   width: 75%;
   color: #798996;
 }
 
-body main section.signup-login .container .toggle-form .login span #not-acount {
+body main section.signup-login .container .toggle-form .login .no-account #not-acount {
   cursor: pointer;
   color: #798996;
   text-decoration: underline;
 }
 
-body main section.signup-login .container .toggle-form .login span #not-acount:hover {
+body main section.signup-login .container .toggle-form .login .no-account #not-acount:hover {
   color: #000000;
 }
 
+body main section.signup-login .container .toggle-form .login span {
+  vertical-align: middle;
+  margin-top: 10px;
+  width: 75%;
+  color: #fe4444;
+  font-family: "DejaVuSans";
+}
+
+body main section.signup-login .container .toggle-form .login span div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.signup-login .container .toggle-form .login span div img {
+  margin-right: 15px;
+}
+
 body main section.signup-login .container .toggle-form .signup {
-  padding: 50px 0;
+  padding: 0 0 50px 0;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -511,6 +545,27 @@ body main section.signup-login .container .toggle-form .signup {
           align-items: center;
 }
 
+body main section.signup-login .container .toggle-form .signup span {
+  vertical-align: middle;
+  margin-top: 10px;
+  width: 75%;
+  color: #fe4444;
+  font-family: "DejaVuSans";
+}
+
+body main section.signup-login .container .toggle-form .signup span div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.signup-login .container .toggle-form .signup span div img {
+  margin-right: 15px;
+}
+
 body main section.signup-login .container .toggle-form .signup input {
   background: none;
   border: #798996 1px solid;
@@ -518,7 +573,7 @@ body main section.signup-login .container .toggle-form .signup input {
   outline: none;
   width: 75%;
   padding: 23px 40px;
-  margin-bottom: 58px;
+  margin-top: 45px;
 }
 
 body main section.signup-login .container .toggle-form .signup input ::-webkit-input-placeholder {
@@ -557,10 +612,19 @@ body main section.signup-login .container .toggle-form .signup button {
   font-size: 18px;
   margin-bottom: 55px;
   margin-top: 58px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body main section.signup-login .container .toggle-form .signup button:hover {
+  background-color: #eed370;
+  text-decoration: none;
+  color: #000000;
 }
 
 body main section.signup-login .container .toggle-form .signup .robot-rules {
   width: 75%;
+  margin-top: 55px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
