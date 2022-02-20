@@ -1124,7 +1124,7 @@ body main .error-page .container .error-container .error-text .not-found {
   margin: 30px 0;
 }
 
-body main .error-page .container .error-container .error-text a div {
+body main .error-page .container .error-container .error-text a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1141,20 +1141,14 @@ body main .error-page .container .error-container .error-text a div {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   border-radius: 4px;
-}
-
-body main .error-page .container .error-container .error-text a div p {
-  color: white;
+  color: #fff;
   font-size: 18px;
   font-family: "DejaVuSans";
 }
 
-body main .error-page .container .error-container .error-text a div:hover {
+body main .error-page .container .error-container .error-text a:hover {
   cursor: pointer;
   background-color: #eed370;
-}
-
-body main .error-page .container .error-container .error-text a div:hover p {
   color: #000000;
 }
 

@@ -77,9 +77,9 @@ function callIsEmpty() {
   const messageEl = document.getElementById("message").value;
 
   if (nameEl !== "" && emailEl !== "" && messageEl !== "") {
-    var element = document.querySelector(".contact-info");
-    var element2 = document.querySelector(".form");
-    var element3 = document.querySelector(".success-msg");
+    const element = document.querySelector(".contact-info");
+    const element2 = document.querySelector(".form");
+    const element3 = document.querySelector(".success-msg");
     element.classList.add("form-hide");
     element2.classList.add("form-hide");
     element3.classList.add("not-hide");
