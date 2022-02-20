@@ -72,9 +72,9 @@ if (newTermInput) {
 
 // ------ function for success send message ---------
 function callIsEmpty() {
-  let nameEl = document.getElementById("name").value;
-  let emailEl = document.getElementById("email").value;
-  let messageEl = document.getElementById("message").value;
+  const nameEl = document.getElementById("name").value;
+  const emailEl = document.getElementById("email").value;
+  const messageEl = document.getElementById("message").value;
 
   if (nameEl !== "" && emailEl !== "" && messageEl !== "") {
     var element = document.querySelector(".contact-info");
@@ -130,3 +130,4 @@ function changeAutoToRegistr(){
   signUpForm.style.display = "flex";
 }
 // -------- end of function --------
+
