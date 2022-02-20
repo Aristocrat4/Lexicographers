@@ -160,6 +160,17 @@ a {
   margin: 0 auto;
 }
 
+.active-tab {
+  border: 2px solid #798996 !important;
+  background-color: transparent !important;
+  color: #798996 !important;
+}
+
+.inactive-tab {
+  background-color: #798996 !important;
+  color: #fff !important;
+}
+
 .logoStyle .main {
   padding-right: 10px;
   display: -webkit-box;
@@ -187,7 +198,7 @@ a {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .errorBorder {
@@ -195,8 +206,7 @@ a {
 }
 
 .activeNav {
-  text-decoration: underline;
-  text-underline-offset: 6px;
+  border-bottom: 2px solid #1d2933;
 }
 
 body {
@@ -251,11 +261,12 @@ body header .container nav ul li a {
   color: #1d2933;
   font-size: 18px;
   font-family: "DejaVuSans";
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
 }
 
 body header .container nav ul li a:hover {
-  text-decoration: underline;
-  text-underline-offset: 6px;
+  border-bottom: 2px solid #1d2933;
 }
 
 body header .container nav ul :last-child {
@@ -275,6 +286,7 @@ body header .container nav ul :last-child a:hover {
   background-color: #eed370;
   text-decoration: none;
   color: #000000;
+  border: none;
 }
 
 body main section.poster {
@@ -347,7 +359,6 @@ body main section.signup-login .container .toggle-form .titles {
 
 body main section.signup-login .container .toggle-form .titles .btn-login {
   width: 50%;
-  background: transparent;
   outline: none;
   border: none;
   cursor: pointer;
@@ -355,11 +366,12 @@ body main section.signup-login .container .toggle-form .titles .btn-login {
   font-size: 40px;
   font-family: "BPGVenuri2010";
   color: #798996;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
 }
 
 body main section.signup-login .container .toggle-form .titles .btn-signup {
   width: 50%;
-  background: #798996;
   outline: none;
   border: none;
   cursor: pointer;
@@ -368,6 +380,8 @@ body main section.signup-login .container .toggle-form .titles .btn-signup {
   font-family: "BPGVenuri2010";
   text-align: center;
   color: #fff;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
 }
 
 body main section.signup-login .container .toggle-form .login {
@@ -447,6 +461,10 @@ body main section.signup-login .container .toggle-form .login input {
   margin-top: 43px;
 }
 
+body main section.signup-login .container .toggle-form .login input:focus {
+  border: 3px solid;
+}
+
 body main section.signup-login .container .toggle-form .login input ::-webkit-input-placeholder {
   font-family: "DejaVuSans";
   font-size: 18px;
@@ -499,13 +517,14 @@ body main section.signup-login .container .toggle-form .login .no-account {
   color: #798996;
 }
 
-body main section.signup-login .container .toggle-form .login .no-account #not-acount {
+body main section.signup-login .container .toggle-form .login .no-account #not-account {
+  vertical-align: top;
   cursor: pointer;
   color: #798996;
   text-decoration: underline;
 }
 
-body main section.signup-login .container .toggle-form .login .no-account #not-acount:hover {
+body main section.signup-login .container .toggle-form .login .no-account #not-account:hover {
   color: #000000;
 }
 
@@ -532,7 +551,9 @@ body main section.signup-login .container .toggle-form .login span div img {
 
 body main section.signup-login .container .toggle-form .signup {
   padding: 0 0 50px 0;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -574,6 +595,10 @@ body main section.signup-login .container .toggle-form .signup input {
   width: 75%;
   padding: 23px 40px;
   margin-top: 45px;
+}
+
+body main section.signup-login .container .toggle-form .signup input:focus {
+  border: 3px solid;
 }
 
 body main section.signup-login .container .toggle-form .signup input ::-webkit-input-placeholder {
@@ -947,6 +972,10 @@ body main section.new-term .container .inputs-container form input {
   margin-bottom: 105.4px;
 }
 
+body main section.new-term .container .inputs-container form input:focus {
+  border-bottom: 3px solid;
+}
+
 body main section.new-term .container .inputs-container form input ::-webkit-input-placeholder {
   font-family: "DejaVuSans";
   font-size: 18px;
@@ -1053,12 +1082,18 @@ body main section.contact-form .container .form form span div img {
 
 body main section.contact-form .container .form form input,
 body main section.contact-form .container .form form textarea {
+  resize: none;
   width: 100%;
   padding: 23px 40px;
   margin-bottom: 5px;
   margin-top: 43px;
   border: 1px solid #798996;
   border-radius: 8px;
+}
+
+body main section.contact-form .container .form form input:focus,
+body main section.contact-form .container .form form textarea:focus {
+  border: 3px solid;
 }
 
 body main section.contact-form .container .form form :first-child {

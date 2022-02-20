@@ -95,22 +95,22 @@ const signUpForm = document.querySelector(".signup");
 // click on buttons
 if (signUpBtn) {
   signUpBtn.addEventListener("click", () => {
-    signUpBtn.style.background = "transparent";
-    signInBtn.style.background = "#798996";
-    signUpBtn.style.color = "#798996";
-    signInBtn.style.color = "#FFF";
-    signInForm.style.display = "none";
-    signUpForm.style.display = "flex";
+    signUpBtn.classList.add("active-tab");
+    signUpBtn.classList.remove("inactive-tab");
+    signUpForm.classList.remove("hidden");
+    signInBtn.classList.remove("active-tab");
+    signInBtn.classList.add("inactive-tab");
+    signInForm.classList.add("hidden");
   });
 }
 if (signInBtn) {
   signInBtn.addEventListener("click", () => {
-    signInBtn.style.background = "transparent";
-    signUpBtn.style.background = "#798996";
-    signInBtn.style.color = "#798996";
-    signUpBtn.style.color = "#FFF";
-    signUpForm.style.display = "none";
-    signInForm.style.display = "flex";
+    signInBtn.classList.add("active-tab");
+    signInBtn.classList.remove("inactive-tab");
+    signInForm.classList.remove("hidden");
+    signUpBtn.classList.remove("active-tab");
+    signUpBtn.classList.add("inactive-tab");
+    signUpForm.classList.add("hidden");
   });
 }
 

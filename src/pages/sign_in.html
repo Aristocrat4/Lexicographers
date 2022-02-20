@@ -41,8 +41,8 @@
         <div class="container">
           <div class="toggle-form">
             <div class="titles">
-              <button class="btn-login">ავტორიზაცია</button>
-              <button class="btn-signup">რეგისტრაცია</button>
+              <button class="btn-login active-tab">ავტორიზაცია</button>
+              <button class="btn-signup inactive-tab">რეგისტრაცია</button>
             </div>
             <form method="post" class="login">
               <input
@@ -71,9 +71,9 @@
                 <a href="#">პაროლის აღდგენა</a>
               </div>
               <button type="button" class="submit-login">ავტორიზაცია</button>
-              <span class="no-account">არ გაქვთ პროფილი? გაიარეთ <span id="not-acount" onclick="changeAutoToRegistr()">რეგისტრაცია</span></button></span>
+              <span class="no-account">არ გაქვთ პროფილი? გაიარეთ <span id="not-account" onclick="changeAutoToRegistr()">რეგისტრაცია</span></button></span>
             </form>
-            <form method="post" class="signup">
+            <form method="post" class="hidden signup">
               <input class="email-reg" type="email" placeholder="მომხმარებლის ფოსტა*" />
               <span class="error hidden"><div><img src="../../assets/images/error-svg.svg" alt="error"><p>ელ.ფოსტა სავალდებულოა</p></div></span>
 

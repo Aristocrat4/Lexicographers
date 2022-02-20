@@ -3,6 +3,15 @@
   width: 95%;
   margin: 0 auto;
 }
+.active-tab {
+  border: 2px solid $btnGray !important;
+  background-color: transparent !important;
+  color: $btnGray !important;
+}
+.inactive-tab {
+  background-color: $btnGray !important;
+  color: $white !important;
+}
 .logoStyle {
   .main {
     padding-right: 10px;
@@ -24,14 +33,13 @@
   }
 }
 .hidden {
-  display: none;
+  display: none !important;
 }
 .errorBorder {
   border: 1px solid $error !important;
 }
 .activeNav {
-  text-decoration: underline;
-  text-underline-offset: 6px;
+  border-bottom: 2px solid $darkBlue;
 }
 
 body {
@@ -60,9 +68,9 @@ body {
               color: $darkBlue;
               font-size: 18px;
               font-family: $dejavu;
+              transition: all ease-in-out 0.2s;
               &:hover {
-                text-decoration: underline;
-                text-underline-offset: 6px;
+                border-bottom: 2px solid $darkBlue;
               }
             }
           }
@@ -78,6 +86,7 @@ body {
                 background-color: $tagsyellow;
                 text-decoration: none;
                 color: $black;
+                border: none;
               }
             }
           }
@@ -124,7 +133,6 @@ body {
             display: flex;
             .btn-login {
               width: 50%;
-              background: transparent;
               outline: none;
               border: none;
               cursor: pointer;
@@ -132,10 +140,10 @@ body {
               font-size: 40px;
               font-family: $venuri;
               color: $btnGray;
+              transition: all ease-in-out 0.5s;
             }
             .btn-signup {
               width: 50%;
-              background: $btnGray;
               outline: none;
               border: none;
               cursor: pointer;
@@ -144,6 +152,7 @@ body {
               font-family: $venuri;
               text-align: center;
               color: $white;
+              transition: all ease-in-out 0.5s;
             }
           }
           .login {
@@ -194,6 +203,9 @@ body {
               width: 75%;
               padding: 23px 40px;
               margin-top: 43px;
+              &:focus {
+                border: 3px solid;
+              }
               ::placeholder {
                 font-family: $dejavu;
                 font-size: 18px;
@@ -223,7 +235,8 @@ body {
               font-size: 18px;
               width: 75%;
               color: $btnGray;
-              #not-acount {
+              #not-account {
+                vertical-align: top;
                 cursor: pointer;
                 color: $btnGray;
                 text-decoration: underline;
@@ -249,7 +262,7 @@ body {
           }
           .signup {
             padding: 0 0 50px 0;
-            display: none;
+            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -275,6 +288,9 @@ body {
               width: 75%;
               padding: 23px 40px;
               margin-top: 45px;
+              &:focus {
+                border: 3px solid;
+              }
               ::placeholder {
                 font-family: $dejavu;
                 font-size: 18px;
@@ -543,6 +559,9 @@ body {
               padding-bottom: 10.6px;
               border-bottom: 1px solid $darkBlue;
               margin-bottom: 105.4px;
+              &:focus {
+                border-bottom: 3px solid;
+              }
               ::placeholder {
                 font-family: $dejavu;
                 font-size: 18px;
@@ -606,12 +625,16 @@ body {
             }
             input,
             textarea {
+              resize: none;
               width: 100%;
               padding: 23px 40px;
               margin-bottom: 5px;
               margin-top: 43px;
               border: 1px solid $btnGray;
               border-radius: 8px;
+              &:focus {
+                border: 3px solid;
+              }
             }
             :first-child {
               margin-top: 0;
