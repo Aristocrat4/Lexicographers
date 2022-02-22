@@ -56,42 +56,37 @@ if (sendButton) {
 // End of Form Validation
 
 // new term script
-const newTermInput = document.getElementById('new-term');
-const btnAddNewTerm = document.getElementById('addNewTerm');
+const newTermInput = document.getElementById("new-term");
+const btnAddNewTerm = document.getElementById("addNewTerm");
 if (newTermInput) {
-    newTermInput.addEventListener('input', (event) => {
-        if (newTermInput.value) {
-            btnAddNewTerm.disabled = false;
-        } else {
-            btnAddNewTerm.disabled = true;
-        }
-
-    });
+  btnAddNewTerm.addEventListener("click", () => {
+    if (!newTermInput.value) {
+      newTermInput.classList.add("errorBorder");
+      newTermInput.nextSibling.nextSibling.classList.remove("hidden");
+    } else {
+      newTermInput.classList.remove("errorBorder");
+      newTermInput.nextSibling.nextSibling.classList.add("hidden");
+    }
+  });
 }
 // end of new term script
 
-// function for success send message
-
+// ------ function for success send message ---------
 function callIsEmpty() {
-  isEmpty();
-}
+  const nameEl = document.getElementById("name").value;
+  const emailEl = document.getElementById("email").value;
+  const messageEl = document.getElementById("message").value;
 
-function isEmpty() {
-  let nameEl = document.getElementById("name").value;
-  let emailEl = document.getElementById("email").value;
-  let messageEl = document.getElementById("message").value;
-
-  if (nameEl != "" && emailEl != "" && messageEl != "") {
-    var element = document.querySelector(".contact-info");
-    var element2 = document.querySelector(".form");
-    var element3 = document.querySelector(".success-msg");
+  if (nameEl !== "" && emailEl !== "" && messageEl !== "") {
+    const element = document.querySelector(".contact-info");
+    const element2 = document.querySelector(".form");
+    const element3 = document.querySelector(".success-msg");
     element.classList.add("form-hide");
     element2.classList.add("form-hide");
     element3.classList.add("not-hide");
   }
 }
-
-// end off isEMpty() functiob
+// -------- end of isEMpty() function --------
 
 // -------- toggle login and signup forms -------
 // select elements
@@ -102,25 +97,91 @@ const signUpForm = document.querySelector(".signup");
 // click on buttons
 if (signUpBtn) {
   signUpBtn.addEventListener("click", () => {
-    console.log(signUpBtn);
-    signUpBtn.style.background = "transparent";
-    signInBtn.style.background = "#798996";
-    signUpBtn.style.color = "#798996";
-    signInBtn.style.color = "#FFF";
-    signInForm.style.display = "none";
-    signUpForm.style.display = "flex";
+    signUpBtn.classList.add("active-tab");
+    signUpBtn.classList.remove("inactive-tab");
+    signUpForm.classList.remove("hidden");
+    signInBtn.classList.remove("active-tab");
+    signInBtn.classList.add("inactive-tab");
+    signInForm.classList.add("hidden");
   });
 }
 if (signInBtn) {
   signInBtn.addEventListener("click", () => {
-    console.log(signUpBtn);
-    signInBtn.style.background = "transparent";
-    signUpBtn.style.background = "#798996";
-    signInBtn.style.color = "#798996";
-    signUpBtn.style.color = "#FFF";
-    signUpForm.style.display = "none";
-    signInForm.style.display = "flex";
+    signInBtn.classList.add("active-tab");
+    signInBtn.classList.remove("inactive-tab");
+    signInForm.classList.remove("hidden");
+    signUpBtn.classList.remove("active-tab");
+    signUpBtn.classList.add("inactive-tab");
+    signUpForm.classList.add("hidden");
   });
 }
 
 // -------- end of toggle login and signup forms -------
+
+// -------- change autorisation form to registration form --------
+function changeAutoToRegistr() {
+  signUpBtn.classList.add("active-tab");
+  signUpBtn.classList.remove("inactive-tab");
+  signUpForm.classList.remove("hidden");
+  signInBtn.classList.remove("active-tab");
+  signInBtn.classList.add("inactive-tab");
+  signInForm.classList.add("hidden");
+}
+// -------- end of function --------
+
+// -------- Login Validation -------
+const loginBtn = document.querySelector(".submit-login");
+if (loginBtn) {
+  loginBtn.addEventListener("click", () => {
+    const usernameInput = document.querySelector(".username");
+    const passwordInput = document.querySelector(".psw");
+    const emptyInput = [usernameInput, passwordInput].filter(
+      (item) => !item.value
+    );
+    const filledInput = [usernameInput, passwordInput].filter(
+      (item) => item.value
+    );
+    emptyInput.forEach((item) => {
+      item.classList.add("errorBorder");
+      item.nextSibling.nextSibling.classList.remove("hidden");
+    });
+    filledInput.forEach((item) => {
+      item.classList.remove("errorBorder");
+      item.nextSibling.nextSibling.classList.add("hidden");
+    });
+  });
+}
+// --------- Registration Validation ------------
+const registrationBtn = document.querySelector(".submit-registration");
+if (registrationBtn) {
+  registrationBtn.addEventListener("click", () => {
+    const emailRegInput = document.querySelector(".email-reg");
+    const nameRegInput = document.querySelector(".name-reg");
+    const phoneRegInput = document.querySelector(".phone-reg");
+    const pswRegInput = document.querySelector(".psw-reg");
+    const pswRepeatRegInput = document.querySelector(".psw-repeat-reg");
+    const emptyRegInputs = [
+      emailRegInput,
+      nameRegInput,
+      phoneRegInput,
+      pswRegInput,
+      pswRepeatRegInput,
+    ].filter((item) => !item.value);
+    const FilledRegInputs = [
+      emailRegInput,
+      nameRegInput,
+      phoneRegInput,
+      pswRegInput,
+      pswRepeatRegInput,
+    ].filter((item) => item.value);
+
+    emptyRegInputs.forEach((item) => {
+      item.classList.add("errorBorder");
+      item.nextSibling.nextSibling.classList.remove("hidden");
+    });
+    FilledRegInputs.forEach((item) => {
+      item.classList.remove("errorBorder");
+      item.nextSibling.nextSibling.classList.add("hidden");
+    });
+  });
+}
