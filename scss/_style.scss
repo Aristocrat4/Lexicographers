@@ -121,6 +121,190 @@ body {
         }
       }
     }
+    section.bank-section {
+      padding: 58px 0;
+      .container {
+        .alphabets-search {
+          .bank-tags {
+            @include flex-jc-ai(flex-start, center);
+            div {
+              margin-right: 15px;
+              padding: 5px 20px;
+              background-color: $btnGray;
+              cursor: pointer;
+              &:first-child {
+                background-color: $tagsyellow;
+                a {
+                  color: $darkBlue;
+                }
+              }
+              a {
+                font-family: $venuri;
+                font-size: 16px;
+                color: #f9f7f5;
+              }
+            }
+          }
+          .double {
+            @include flex-jc-ai(space-between, flex-start);
+            margin: 17px 0 30px 0;
+            .left-alphabet {
+              width: 75%;
+              .en-alphabet {
+                margin: 15px 0 25px 0;
+                display: flex;
+                flex-wrap: wrap;
+              }
+              .ge-alphabet {
+                display: flex;
+                flex-wrap: wrap;
+              }
+              span {
+                font-family: $venuri;
+                font-size: 24px;
+                margin-right: 15px;
+                text-transform: uppercase;
+              }
+            }
+            .right-search {
+              @include flex-jc-ai(center, center);
+              width: 25%;
+              border-radius: 10px;
+              border: 1px solid $btnGray;
+              background-color: $white;
+              input {
+                width: 100%;
+                height: 50px;
+                border: none;
+                margin-right: 5px;
+                &:focus-visible {
+                  outline: none;
+                }
+              }
+              img {
+                margin: 12px 5px 12px 15px;
+              }
+            }
+          }
+          .title-bank {
+            border-bottom: 1px solid $darkBlue;
+            h2 {
+              font-family: $venuri;
+              font-size: 40px;
+              color: $darkBlue;
+            }
+          }
+        }
+      }
+    }
+    section.bank-results {
+      margin-bottom: 58px;
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .result {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .termin-tag-social {
+            width: 100%;
+            border-bottom: 1px solid $darkBlue;
+            padding-bottom: 7px;
+            .tagandsocial {
+              @include flex-jc-ai(flex-end, center);
+              .termintag {
+                margin-right: 35px;
+                padding: 5px 20px;
+                background-color: $tagsyellow;
+                cursor: pointer;
+                a {
+                  font-family: $venuri;
+                  font-size: 16px;
+                  color: $darkBlue;
+                }
+              }
+              .fb-icon {
+                width: 41px;
+                height: 41px;
+                @include flex-jc-ai(center, center);
+                background-color: $btnGray;
+                border-radius: 50%;
+              }
+            }
+            h2 {
+              font-family: $dejavu;
+              font-size: 40px;
+              color: $darkBlue;
+              text-transform: uppercase;
+            }
+            @include flex-jc-ai(space-between, center);
+          }
+          .description {
+            width: 90%;
+            background-color: $terminsGrayBg;
+            margin: 30px 0 60px 0;
+            padding: 20px 0 20px 20px;
+            position: relative;
+            .like {
+              @include flex-jc-ai(center, center);
+              width: 41px;
+              height: 41px;
+              background-color: $bgcolor;
+              border-radius: 50%;
+              position: absolute;
+              z-index: 9;
+              top: 50%;
+              right: 0;
+              transform: translate(+50%, -50%);
+              img {
+                color: $btnGray;
+                width: 41px;
+                height: 41px;
+              }
+            }
+            h2 {
+              font-family: $dejavu;
+              font-size: 40px;
+              color: $darkBlue;
+              margin-bottom: 12px;
+            }
+            .spans {
+              .author {
+                font-family: $dejavu;
+                font-size: 18px;
+                color: $darkBlue;
+              }
+              .date {
+                font-family: $venuri;
+                font-size: 14px;
+                color: $btnGray;
+              }
+            }
+          }
+        }
+        .pagination {
+          @include flex-jc-ai(center, center);
+          div {
+            cursor: pointer;
+            margin-right: 3px;
+            width: 40px;
+            height: 40px;
+            color: $darkBlue;
+            background-color: transparent;
+            font-size: 30px;
+            font-family: $dejavu;
+            @include flex-jc-ai(center, center);
+            &:first-child {
+              background-color: $tagsyellow;
+            }
+          }
+        }
+      }
+    }
     section.signup-login {
       padding: 100px 0 124px 0;
       .container {

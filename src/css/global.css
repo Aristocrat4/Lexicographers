@@ -328,6 +328,316 @@ body main section.poster .container .text p {
   font-family: "BPGVenuri2010";
 }
 
+body main section.bank-section {
+  padding: 58px 0;
+}
+
+body main section.bank-section .container .alphabets-search .bank-tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.bank-section .container .alphabets-search .bank-tags div {
+  margin-right: 15px;
+  padding: 5px 20px;
+  background-color: #798996;
+  cursor: pointer;
+}
+
+body main section.bank-section .container .alphabets-search .bank-tags div:first-child {
+  background-color: #eed370;
+}
+
+body main section.bank-section .container .alphabets-search .bank-tags div:first-child a {
+  color: #1d2933;
+}
+
+body main section.bank-section .container .alphabets-search .bank-tags div a {
+  font-family: "BPGVenuri2010";
+  font-size: 16px;
+  color: #f9f7f5;
+}
+
+body main section.bank-section .container .alphabets-search .double {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 17px 0 30px 0;
+}
+
+body main section.bank-section .container .alphabets-search .double .left-alphabet {
+  width: 75%;
+}
+
+body main section.bank-section .container .alphabets-search .double .left-alphabet .en-alphabet {
+  margin: 15px 0 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main section.bank-section .container .alphabets-search .double .left-alphabet .ge-alphabet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main section.bank-section .container .alphabets-search .double .left-alphabet span {
+  font-family: "BPGVenuri2010";
+  font-size: 24px;
+  margin-right: 15px;
+  text-transform: uppercase;
+}
+
+body main section.bank-section .container .alphabets-search .double .right-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25%;
+  border-radius: 10px;
+  border: 1px solid #798996;
+  background-color: #fff;
+}
+
+body main section.bank-section .container .alphabets-search .double .right-search input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  margin-right: 5px;
+}
+
+body main section.bank-section .container .alphabets-search .double .right-search input:focus-visible {
+  outline: none;
+}
+
+body main section.bank-section .container .alphabets-search .double .right-search img {
+  margin: 12px 5px 12px 15px;
+}
+
+body main section.bank-section .container .alphabets-search .title-bank {
+  border-bottom: 1px solid #1d2933;
+}
+
+body main section.bank-section .container .alphabets-search .title-bank h2 {
+  font-family: "BPGVenuri2010";
+  font-size: 40px;
+  color: #1d2933;
+}
+
+body main section.bank-results {
+  margin-bottom: 58px;
+}
+
+body main section.bank-results .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.bank-results .container .result {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.bank-results .container .result .termin-tag-social {
+  width: 100%;
+  border-bottom: 1px solid #1d2933;
+  padding-bottom: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.bank-results .container .result .termin-tag-social .tagandsocial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.bank-results .container .result .termin-tag-social .tagandsocial .termintag {
+  margin-right: 35px;
+  padding: 5px 20px;
+  background-color: #eed370;
+  cursor: pointer;
+}
+
+body main section.bank-results .container .result .termin-tag-social .tagandsocial .termintag a {
+  font-family: "BPGVenuri2010";
+  font-size: 16px;
+  color: #1d2933;
+}
+
+body main section.bank-results .container .result .termin-tag-social .tagandsocial .fb-icon {
+  width: 41px;
+  height: 41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #798996;
+  border-radius: 50%;
+}
+
+body main section.bank-results .container .result .termin-tag-social h2 {
+  font-family: "DejaVuSans";
+  font-size: 40px;
+  color: #1d2933;
+  text-transform: uppercase;
+}
+
+body main section.bank-results .container .result .description {
+  width: 90%;
+  background-color: #e9e9ed;
+  margin: 30px 0 60px 0;
+  padding: 20px 0 20px 20px;
+  position: relative;
+}
+
+body main section.bank-results .container .result .description .like {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 41px;
+  height: 41px;
+  background-color: #f9f7f5;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+body main section.bank-results .container .result .description .like img {
+  color: #798996;
+  width: 41px;
+  height: 41px;
+}
+
+body main section.bank-results .container .result .description h2 {
+  font-family: "DejaVuSans";
+  font-size: 40px;
+  color: #1d2933;
+  margin-bottom: 12px;
+}
+
+body main section.bank-results .container .result .description .spans .author {
+  font-family: "DejaVuSans";
+  font-size: 18px;
+  color: #1d2933;
+}
+
+body main section.bank-results .container .result .description .spans .date {
+  font-family: "BPGVenuri2010";
+  font-size: 14px;
+  color: #798996;
+}
+
+body main section.bank-results .container .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.bank-results .container .pagination div {
+  cursor: pointer;
+  margin-right: 3px;
+  width: 40px;
+  height: 40px;
+  color: #1d2933;
+  background-color: transparent;
+  font-size: 30px;
+  font-family: "DejaVuSans";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.bank-results .container .pagination div:first-child {
+  background-color: #eed370;
+}
+
 body main section.signup-login {
   padding: 100px 0 124px 0;
 }
