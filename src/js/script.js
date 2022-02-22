@@ -59,11 +59,13 @@ if (sendButton) {
 const newTermInput = document.getElementById("new-term");
 const btnAddNewTerm = document.getElementById("addNewTerm");
 if (newTermInput) {
-  newTermInput.addEventListener("input", (event) => {
-    if (newTermInput.value) {
-      btnAddNewTerm.disabled = false;
+  btnAddNewTerm.addEventListener("click", () => {
+    if (!newTermInput.value) {
+      newTermInput.classList.add("errorBorder");
+      newTermInput.nextSibling.nextSibling.classList.remove("hidden");
     } else {
-      btnAddNewTerm.disabled = true;
+      newTermInput.classList.remove("errorBorder");
+      newTermInput.nextSibling.nextSibling.classList.add("hidden");
     }
   });
 }
@@ -118,12 +120,12 @@ if (signInBtn) {
 
 // -------- change autorisation form to registration form --------
 function changeAutoToRegistr() {
-    signUpBtn.classList.add("active-tab");
-    signUpBtn.classList.remove("inactive-tab");
-    signUpForm.classList.remove("hidden");
-    signInBtn.classList.remove("active-tab");
-    signInBtn.classList.add("inactive-tab");
-    signInForm.classList.add("hidden");
+  signUpBtn.classList.add("active-tab");
+  signUpBtn.classList.remove("inactive-tab");
+  signUpForm.classList.remove("hidden");
+  signInBtn.classList.remove("active-tab");
+  signInBtn.classList.add("inactive-tab");
+  signInForm.classList.add("hidden");
 }
 // -------- end of function --------
 

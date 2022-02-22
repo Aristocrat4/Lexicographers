@@ -4,13 +4,13 @@
   margin: 0 auto;
 }
 .active-tab {
-  border: 2px solid $btnGray !important;
+  border-top: 3px solid $tagsyellow !important;
   background-color: transparent !important;
-  color: $btnGray !important;
+  color: $darkBlue !important;
 }
 .inactive-tab {
-  background-color: $btnGray !important;
-  color: $white !important;
+  background-color: $terminsGrayBg !important;
+  color: #b3b5b7 !important;
 }
 .logoStyle {
   .main {
@@ -315,6 +315,7 @@ body {
           box-shadow: #00000029 0 3px 6px;
           .titles {
             display: flex;
+            transition: all ease-in-out 0.5s;
             .btn-login {
               width: 50%;
               outline: none;
@@ -735,16 +736,30 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
-            input {
-              background: none;
-              border: none;
-              outline: none;
+            span {
+              vertical-align: middle;
+              margin-top: 10px;
               width: 100%;
-              padding-bottom: 10.6px;
-              border-bottom: 1px solid $darkBlue;
-              margin-bottom: 105.4px;
+              color: $error;
+              font-family: $dejavu;
+              div {
+                display: flex;
+                align-items: center;
+                img {
+                  margin-right: 15px;
+                }
+              }
+            }
+            input {
+              resize: none;
+              width: 100%;
+              padding: 23px 40px;
+              margin-bottom: 5px;
+              margin-top: 43px;
+              border: 1px solid $btnGray;
+              border-radius: 8px;
               &:focus {
-                border-bottom: 3px solid;
+                border: 3px solid;
               }
               ::placeholder {
                 font-family: $dejavu;
@@ -754,12 +769,20 @@ body {
               // TODO
             }
             button {
-              background: $lightGray;
+              background: $btnGray;
+              font-family: $dejavu;
+              color: $bgcolor;
               outline: none;
               border: none;
               cursor: pointer;
               border-radius: 4px;
               padding: 18px 26px;
+              margin-top: 45px;
+              transition: all ease-in-out 0.5s;
+              &:hover {
+                background-color: $tagsyellow;
+                color: $darkBlue;
+              }
             }
           }
         }

@@ -161,14 +161,14 @@ a {
 }
 
 .active-tab {
-  border: 2px solid #798996 !important;
+  border-top: 3px solid #eed370 !important;
   background-color: transparent !important;
-  color: #798996 !important;
+  color: #1d2933 !important;
 }
 
 .inactive-tab {
-  background-color: #798996 !important;
-  color: #fff !important;
+  background-color: #e9e9ed !important;
+  color: #b3b5b7 !important;
 }
 
 .logoStyle .main {
@@ -665,6 +665,8 @@ body main section.signup-login .container .toggle-form .titles {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
 }
 
 body main section.signup-login .container .toggle-form .titles .btn-login {
@@ -1272,18 +1274,39 @@ body main section.new-term .container .inputs-container form {
           align-items: center;
 }
 
-body main section.new-term .container .inputs-container form input {
-  background: none;
-  border: none;
-  outline: none;
+body main section.new-term .container .inputs-container form span {
+  vertical-align: middle;
+  margin-top: 10px;
   width: 100%;
-  padding-bottom: 10.6px;
-  border-bottom: 1px solid #1d2933;
-  margin-bottom: 105.4px;
+  color: #fe4444;
+  font-family: "DejaVuSans";
+}
+
+body main section.new-term .container .inputs-container form span div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.new-term .container .inputs-container form span div img {
+  margin-right: 15px;
+}
+
+body main section.new-term .container .inputs-container form input {
+  resize: none;
+  width: 100%;
+  padding: 23px 40px;
+  margin-bottom: 5px;
+  margin-top: 43px;
+  border: 1px solid #798996;
+  border-radius: 8px;
 }
 
 body main section.new-term .container .inputs-container form input:focus {
-  border-bottom: 3px solid;
+  border: 3px solid;
 }
 
 body main section.new-term .container .inputs-container form input ::-webkit-input-placeholder {
@@ -1311,12 +1334,22 @@ body main section.new-term .container .inputs-container form input ::placeholder
 }
 
 body main section.new-term .container .inputs-container form button {
-  background: #c0d0de;
+  background: #798996;
+  font-family: "DejaVuSans";
+  color: #f9f7f5;
   outline: none;
   border: none;
   cursor: pointer;
   border-radius: 4px;
   padding: 18px 26px;
+  margin-top: 45px;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+body main section.new-term .container .inputs-container form button:hover {
+  background-color: #eed370;
+  color: #1d2933;
 }
 
 body main section.contact-form .container {

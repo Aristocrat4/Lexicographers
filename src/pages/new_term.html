@@ -51,12 +51,19 @@
                 placeholder="შემოგვთავაზე შენი ტერმინი*"
                 id="new-term"
               />
+              <span class="error hidden"
+                ><div>
+                  <img src="../../assets/images/error-svg.svg" alt="error" />
+                  <p>ველი სავალდებულოა</p>
+                </div></span
+              >
+
               <input
                 type="text"
                 placeholder="ციტატა, სადაც გამოყენებულია ეს ტერმინი"
               />
               <input type="text" placeholder="აირჩიე თემა" />
-              <button type="button" disabled id="addNewTerm">დამატება</button>
+              <button type="button" id="addNewTerm">დამატება</button>
             </form>
           </div>
         </div>
