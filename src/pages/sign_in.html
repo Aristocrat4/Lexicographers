@@ -22,7 +22,7 @@
             <div class="logo">
               <img src="../../assets/images/logo.svg" alt="logo" />
             </div>
-            <h2>ტერმინების კონკურსი</h2>
+            <h2>შექმენი ქართული ტერმინი</h2>
           </div>
         </a>
         <nav>
@@ -41,8 +41,8 @@
         <div class="container">
           <div class="toggle-form">
             <div class="titles">
-              <button class="btn-login">ავტორიზაცია</button>
-              <button class="btn-signup">რეგისტრაცია</button>
+              <button class="btn-login active-tab">ავტორიზაცია</button>
+              <button class="btn-signup inactive-tab">რეგისტრაცია</button>
             </div>
             <form method="post" class="login">
               <input
@@ -50,13 +50,19 @@
                 name="email"
                 id="email"
                 placeholder="მომხმარებლის ფოსტა*"
+                class="username"
               />
+              <span class="error hidden"><div><img src="../../assets/images/error-svg.svg" alt="error"><p>ელ.ფოსტა სავალდებულოა</p></div></span>
+
               <input
                 type="password"
                 name="password"
                 id="password"
                 placeholder="პაროლი*"
+                class="psw"
               />
+              <span class="error hidden"><div><img src="../../assets/images/error-svg.svg" alt="error"><p>პაროლი სავალდებულოა</p></div></span>
+
               <div class="remember-psw">
                 <div class="check-remember">
                   <input type="checkbox" name="remember" id="remember" />
@@ -64,15 +70,25 @@
                 </div>
                 <a href="#">პაროლის აღდგენა</a>
               </div>
-              <button type="submit" class="btn">ავტორიზაცია</button>
-              <span>არ გაქვთ პროფილი? გაიარეთ <a href="#">რეგისტრაცია</a></span>
+              <button type="button" class="submit-login">ავტორიზაცია</button>
+              <span class="no-account">არ გაქვთ პროფილი? გაიარეთ <span id="not-account" onclick="changeAutoToRegistr()">რეგისტრაცია</span></button></span>
             </form>
-            <form method="post" class="signup">
-              <input type="email" placeholder="მომხმარებლის ფოსტა*" />
-              <input type="text" placeholder="მომხმარებლის სახელი*" />
-              <input type="number" placeholder="ტელეფონის ნომერი*" />
-              <input type="password" placeholder="პაროლი*" />
-              <input type="password" placeholder="პაროლის გამეორება*" />
+            <form method="post" class="hidden signup">
+              <input class="email-reg" type="email" placeholder="მომხმარებლის ფოსტა*" />
+              <span class="error hidden"><div><img src="../../assets/images/error-svg.svg" alt="error"><p>ელ.ფოსტა სავალდებულოა</p></div></span>
+
+              <input class="name-reg" type="text" placeholder="მომხმარებლის სახელი*" />
+              <span class="error hidden"><div><img src="../../assets/images/error-svg.svg" alt="error"><p>სახელი სავალდებულოა</p></div></span>
+
+              <input class="phone-reg" type="number" placeholder="ტელეფონის ნომერი*" />
+              <span class="error hidden"><div><img src="../../assets/images/error-svg.svg" alt="error"><p>ნომერი სავალდებულოა</p></div></span>
+
+              <input class="psw-reg" type="password" placeholder="პაროლი*" />
+              <span class="error hidden"><div><img src="../../assets/images/error-svg.svg" alt="error"><p>პაროლი სავალდებულოა</p></div></span>
+
+              <input class="psw-repeat-reg" type="password" placeholder="პაროლის გამეორება*" />
+              <span class="error hidden"><div><img src="../../assets/images/error-svg.svg" alt="error"><p>პაროლი სავალდებულოა</p></div></span>
+
               <div class="robot-rules">
                 <span>I'm not a Robot</span>
                 <div class="rules">
@@ -82,7 +98,7 @@
                   >
                 </div>
               </div>
-              <button class="btn">რეგისტრაცია</button>
+              <button type="button" class="submit-registration">რეგისტრაცია</button>
             </form>
           </div>
         </div>
@@ -96,7 +112,7 @@
               <div class="logo">
                 <img src="../../assets/images/logo.svg" alt="logo" />
               </div>
-              <h2>ტერმინების კონკურსი</h2>
+              <h2>შექმენი ქართული ტერმინი</h2>
             </div>
           </a>
           <div class="social-icons">
