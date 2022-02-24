@@ -185,3 +185,34 @@ if (registrationBtn) {
     });
   });
 }
+
+
+//------------- recovery password validation--------------//
+const recoveryButton = document.querySelector(".submit-recovery");
+if (recoveryButton) {
+  recoveryButton.addEventListener("click", () => {
+    const recoverPass = document.querySelector(".psw-recovery");
+    const recoveryPassRpt = document.querySelector(".psw-recovery-rpt");
+    const emptyValue = [recoverPass, recoveryPassRpt].filter(
+      (item) => !item.value
+    );
+    const filledValue = [recoverPass, recoveryPassRpt].filter(
+      (item) => item.value
+    );
+    emptyValue.forEach((item) => {
+      item.classList.add("errorBorder");
+      item.nextSibling.nextSibling.classList.remove("hidden");
+    });
+    filledValue.forEach((item) => {
+      item.classList.remove("errorBorder");
+      item.nextSibling.nextSibling.classList.add("hidden");
+    });
+  });
+}
+// click text "პაროლის აღდგენა"
+const tglFrom = document.querySelector(".toggle-form");
+const recPassForm = document.querySelector(".recovery-password");
+function showRecPass(){
+  tglFrom.classList.add("click-recovery");
+  recPassForm.classList.add("show-recovery-form");
+}

@@ -313,6 +313,7 @@ body {
           max-width: 1297px;
           width: 85%;
           box-shadow: #00000029 0 3px 6px;
+          background-color: $bgFrom;
           .titles {
             display: flex;
             transition: all ease-in-out 0.5s;
@@ -346,12 +347,15 @@ body {
               margin: 55px 0 45px 0;
               display: flex;
               align-items: center;
-              a {
+              .rec-text {
                 color: $btnGray;
                 font-size: 18px;
                 font-family: $dejavu;
                 text-decoration: underline;
-                // border-bottom: 1px $btnGray solid;
+                &:hover{
+                  color: $black;
+                  cursor: pointer;
+                }
               }
               .check-remember {
                 display: flex;
@@ -530,6 +534,84 @@ body {
               }
             }
           }
+        }
+        .click-recovery{
+          display: none;
+        }
+        .recovery-password{
+          display: none;
+          max-width: 1297px;
+          width: 85%;
+          box-shadow: #00000029 0 3px 6px;
+          background-color: $bgFrom;
+          // display: flex;
+          // justify-content: center;
+          // flex-direction: column;
+          text-align: center;
+          padding: 43px 0 74px 0;
+          .recovery-title{
+            font-family: $venuri;
+            font-size: 40px;
+            color: $darkBlue;
+          }
+          .password-form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            input {
+              background: none;
+              border: $btnGray 1px solid;
+              border-radius: 8px;
+              outline: none;
+              width: 75%;
+              padding: 23px 40px;
+              margin-top: 43px;
+              font-size: 18px;
+              &:focus {
+                border: 3px solid;
+              }
+              ::placeholder {
+                font-family: $dejavu;
+                color: $btnGray;
+              }
+            }
+            span {
+              vertical-align: middle;
+              margin-top: 10px;
+              width: 75%;
+              color: $error;
+              font-family: $dejavu;
+              div {
+                display: flex;
+                align-items: center;
+                img {
+                  margin-right: 15px;
+                }
+              }
+            }
+            button {
+              background: $btnGray;
+              outline: none;
+              border: none;
+              cursor: pointer;
+              border-radius: 4px;
+              padding: 18px 26px;
+              color: $white;
+              font-family: $dejavu;
+              font-size: 18px;
+              margin-top: 43px;
+              transition: all 0.5s;
+              &:hover {
+                background-color: $tagsyellow;
+                text-decoration: none;
+                color: $black;
+              }
+            }
+          }
+
+        }
+        .show-recovery-form{
+          display: block;
         }
       }
     }

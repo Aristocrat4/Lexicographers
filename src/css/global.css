@@ -659,6 +659,7 @@ body main section.signup-login .container .toggle-form {
   width: 85%;
   -webkit-box-shadow: #00000029 0 3px 6px;
           box-shadow: #00000029 0 3px 6px;
+  background-color: #FEFCFB;
 }
 
 body main section.signup-login .container .toggle-form .titles {
@@ -728,11 +729,16 @@ body main section.signup-login .container .toggle-form .login .remember-psw {
           justify-content: space-between;
 }
 
-body main section.signup-login .container .toggle-form .login .remember-psw a {
+body main section.signup-login .container .toggle-form .login .remember-psw .rec-text {
   color: #798996;
   font-size: 18px;
   font-family: "DejaVuSans";
   text-decoration: underline;
+}
+
+body main section.signup-login .container .toggle-form .login .remember-psw .rec-text:hover {
+  color: #000000;
+  cursor: pointer;
 }
 
 body main section.signup-login .container .toggle-form .login .remember-psw .check-remember {
@@ -1000,6 +1006,121 @@ body main section.signup-login .container .toggle-form .signup .robot-rules .rul
   color: #798996;
   font-size: 18px;
   font-family: "DejaVuSans";
+}
+
+body main section.signup-login .container .click-recovery {
+  display: none;
+}
+
+body main section.signup-login .container .recovery-password {
+  display: none;
+  max-width: 1297px;
+  width: 85%;
+  -webkit-box-shadow: #00000029 0 3px 6px;
+          box-shadow: #00000029 0 3px 6px;
+  background-color: #FEFCFB;
+  text-align: center;
+  padding: 43px 0 74px 0;
+}
+
+body main section.signup-login .container .recovery-password .recovery-title {
+  font-family: "BPGVenuri2010";
+  font-size: 40px;
+  color: #1d2933;
+}
+
+body main section.signup-login .container .recovery-password .password-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.signup-login .container .recovery-password .password-form input {
+  background: none;
+  border: #798996 1px solid;
+  border-radius: 8px;
+  outline: none;
+  width: 75%;
+  padding: 23px 40px;
+  margin-top: 43px;
+  font-size: 18px;
+}
+
+body main section.signup-login .container .recovery-password .password-form input:focus {
+  border: 3px solid;
+}
+
+body main section.signup-login .container .recovery-password .password-form input ::-webkit-input-placeholder {
+  font-family: "DejaVuSans";
+  color: #798996;
+}
+
+body main section.signup-login .container .recovery-password .password-form input :-ms-input-placeholder {
+  font-family: "DejaVuSans";
+  color: #798996;
+}
+
+body main section.signup-login .container .recovery-password .password-form input ::-ms-input-placeholder {
+  font-family: "DejaVuSans";
+  color: #798996;
+}
+
+body main section.signup-login .container .recovery-password .password-form input ::placeholder {
+  font-family: "DejaVuSans";
+  color: #798996;
+}
+
+body main section.signup-login .container .recovery-password .password-form span {
+  vertical-align: middle;
+  margin-top: 10px;
+  width: 75%;
+  color: #fe4444;
+  font-family: "DejaVuSans";
+}
+
+body main section.signup-login .container .recovery-password .password-form span div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.signup-login .container .recovery-password .password-form span div img {
+  margin-right: 15px;
+}
+
+body main section.signup-login .container .recovery-password .password-form button {
+  background: #798996;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 18px 26px;
+  color: #fff;
+  font-family: "DejaVuSans";
+  font-size: 18px;
+  margin-top: 43px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body main section.signup-login .container .recovery-password .password-form button:hover {
+  background-color: #eed370;
+  text-decoration: none;
+  color: #000000;
+}
+
+body main section.signup-login .container .show-recovery-form {
+  display: block;
 }
 
 body main section.words .container {
