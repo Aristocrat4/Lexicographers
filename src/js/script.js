@@ -216,3 +216,12 @@ function showRecPass(){
   tglFrom.classList.add("click-recovery");
   recPassForm.classList.add("show-recovery-form");
 }
+
+// Dropdown menu
+const profile = document.getElementById("profile");
+const profileMenu = document.getElementById("profile-menu");
+if (profile) {
+  profile.addEventListener('click', () => {
+    profileMenu.classList.toggle('hidden');
+  })
+}

@@ -229,6 +229,7 @@ body header .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 body header .container nav {
@@ -269,11 +270,7 @@ body header .container nav ul li a:hover {
   border-bottom: 2px solid #1d2933;
 }
 
-body header .container nav ul :last-child {
-  margin-right: 0;
-}
-
-body header .container nav ul :last-child a {
+body header .container .sign-in-btn a {
   background-color: #798996;
   color: #fff;
   padding: 10px 30px;
@@ -282,11 +279,65 @@ body header .container nav ul :last-child a {
   transition: all 0.5s;
 }
 
-body header .container nav ul :last-child a:hover {
+body header .container .sign-in-btn a:hover {
   background-color: #eed370;
   text-decoration: none;
   color: #000000;
   border: none;
+}
+
+body header .container .profile {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .container .profile h5.user {
+  margin-right: 22px;
+  font-family: "DejaVuSans";
+  font-size: 18px;
+  color: #1d2933;
+}
+
+body header .container .profile .image {
+  width: 86px;
+  height: 86px;
+  background: #e9e9ed;
+  border-radius: 50px;
+}
+
+body header .container .profile-menu {
+  position: absolute;
+  right: 0;
+  bottom: -35px;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  padding: 22px 29px;
+  background: #FEFCFB;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+}
+
+body header .container .profile-menu ul li {
+  margin-top: 31px;
+  text-align: right;
+}
+
+body header .container .profile-menu ul li a {
+  font-family: "DejaVuSans";
+  color: #798996;
+  font-size: 18px;
+}
+
+body header .container .profile-menu ul :first-child {
+  margin-top: 0;
 }
 
 body main section.poster {
@@ -1766,6 +1817,8 @@ body footer .container .left-block-social .social-icons .circle {
   height: 46px;
   border-radius: 50%;
   background-color: #798996;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1784,7 +1837,7 @@ body footer .container .left-block-social .social-icons .circle a {
 }
 
 body footer .container .left-block-social .social-icons .insta:hover {
-  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  background-color: #833ab4;
 }
 
 body footer .container .left-block-social .social-icons .twitter:hover {
