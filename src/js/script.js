@@ -151,6 +151,14 @@ if (loginBtn) {
     });
   });
 }
+// Email validation
+const validateEmail = (email) => {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
 // --------- Registration Validation ------------
 const registrationBtn = document.querySelector(".submit-registration");
 if (registrationBtn) {
@@ -160,6 +168,8 @@ if (registrationBtn) {
     const phoneRegInput = document.querySelector(".phone-reg");
     const pswRegInput = document.querySelector(".psw-reg");
     const pswRepeatRegInput = document.querySelector(".psw-repeat-reg");
+    const emailErrorP = document.querySelector("#email-error-text");
+    
     const emptyRegInputs = [
       emailRegInput,
       nameRegInput,
@@ -174,18 +184,37 @@ if (registrationBtn) {
       pswRegInput,
       pswRepeatRegInput,
     ].filter((item) => item.value);
-
     emptyRegInputs.forEach((item) => {
+      item.nextSibling.nextSibling.children[0].children[1].innerText = "ველი სავალდებულოა";
       item.classList.add("errorBorder");
       item.nextSibling.nextSibling.classList.remove("hidden");
     });
     FilledRegInputs.forEach((item) => {
       item.classList.remove("errorBorder");
       item.nextSibling.nextSibling.classList.add("hidden");
+      if (emailRegInput.value && !validateEmail(emailRegInput.value)) {
+        emailErrorP.innerText = "ელ.ფოსტა არ არის ვალიდური";
+        item.classList.add("errorBorder");
+        item.nextSibling.nextSibling.classList.remove("hidden");
+      }
+      if (phoneRegInput.value && phoneRegInput.value.length != 9) {
+        phoneRegInput.nextSibling.nextSibling.children[0].children[1].innerText = "ნომერი არ არის ვალიდური";
+        phoneRegInput.classList.add("errorBorder");
+        phoneRegInput.nextSibling.nextSibling.classList.remove("hidden");
+      } 
+      if (pswRegInput.value && pswRegInput.value.length < 8) {
+        pswRegInput.nextSibling.nextSibling.children[0].children[1].innerText = "შეიყვანეთ მინიმუმ 8 სიმბოლო";
+        pswRegInput.classList.add("errorBorder");
+        pswRegInput.nextSibling.nextSibling.classList.remove("hidden");
+      } 
+      if (pswRepeatRegInput.value && pswRegInput.value !== pswRepeatRegInput.value) {
+        pswRepeatRegInput.nextSibling.nextSibling.children[0].children[1].innerText = "პაროლები არ ემთხვევა";
+        pswRepeatRegInput.classList.add("errorBorder");
+        pswRepeatRegInput.nextSibling.nextSibling.classList.remove("hidden");
+      } 
     });
   });
 }
-
 
 //------------- recovery password validation--------------//
 const recoveryButton = document.querySelector(".submit-recovery");
@@ -212,7 +241,7 @@ if (recoveryButton) {
 // click text "პაროლის აღდგენა"
 const tglFrom = document.querySelector(".toggle-form");
 const recPassForm = document.querySelector(".recovery-password");
-function showRecPass(){
+function showRecPass() {
   tglFrom.classList.add("click-recovery");
   recPassForm.classList.add("show-recovery-form");
 }
@@ -221,7 +250,7 @@ function showRecPass(){
 const profile = document.getElementById("profile");
 const profileMenu = document.getElementById("profile-menu");
 if (profile) {
-  profile.addEventListener('click', () => {
-    profileMenu.classList.toggle('hidden');
-  })
+  profile.addEventListener("click", () => {
+    profileMenu.classList.toggle("hidden");
+  });
 }

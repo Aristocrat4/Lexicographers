@@ -188,6 +188,10 @@ a {
   color: #1d2933;
 }
 
+.logoStyle .main h2:hover {
+  color: #eed370;
+}
+
 .logo {
   margin-right: 30px;
 }
@@ -267,7 +271,11 @@ body header .container nav ul li a {
 }
 
 body header .container nav ul li a:hover {
-  border-bottom: 2px solid #1d2933;
+  color: #eed370;
+}
+
+body header .container nav ul :last-child {
+  margin-right: 0;
 }
 
 body header .container .sign-in-btn a {
@@ -994,6 +1002,12 @@ body main section.signup-login .container .toggle-form .signup input ::placehold
   color: #798996;
 }
 
+body main section.signup-login .container .toggle-form .signup input::-webkit-outer-spin-button,
+body main section.signup-login .container .toggle-form .signup input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 body main section.signup-login .container .toggle-form .signup button {
   background: #798996;
   outline: none;
@@ -1207,27 +1221,34 @@ body main section.words .container .word-blocks {
       flex-wrap: wrap;
 }
 
-body main section.words .container .word-blocks a {
+body main section.words .container .word-blocks .block-div {
   max-width: 511px;
   width: 33%;
   padding: 30px 180px 36px 45px;
   margin: 35px 0;
   -webkit-box-shadow: #00000029 0 3px 5px;
           box-shadow: #00000029 0 3px 5px;
+  background: #FEFCFB;
+  cursor: pointer;
 }
 
-body main section.words .container .word-blocks a h2 {
+body main section.words .container .word-blocks .block-div a h2 {
   color: #798996;
   font-size: 46px;
   text-transform: capitalize;
   margin-bottom: 17px;
 }
 
-body main section.words .container .word-blocks a span {
+body main section.words .container .word-blocks .block-div a span {
   background-color: #eed370;
   padding: 5px 20px;
   font-size: 16px;
   text-transform: capitalize;
+}
+
+body main section.words .container .word-blocks .block-div:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 body main section.about-project {
