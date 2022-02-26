@@ -22,8 +22,12 @@
       font-size: 28px;
       text-align: center;
       color: $darkBlue;
+      &:hover{
+        color: $tagsyellow;
+      }
     }
   }
+  
 }
 .logo {
   margin-right: 30px;
@@ -47,11 +51,12 @@ body {
   header {
     padding: 35px 0;
     box-shadow: #00000029 0 3px 5px;
+
     .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-
+      position: relative;
       nav {
         padding-left: 10px;
         display: flex;
@@ -70,30 +75,72 @@ body {
               font-family: $dejavu;
               transition: all ease-in-out 0.2s;
               &:hover {
-                border-bottom: 2px solid $darkBlue;
+                color: $tagsyellow;
               }
             }
           }
           :last-child {
             margin-right: 0;
+          }
+        }
+      }
+      .sign-in-btn {
+        a {
+          background-color: $btnGray;
+          color: $white;
+          padding: 10px 30px;
+          border-radius: 4px;
+          transition: all 0.5s;
+          &:hover {
+            background-color: $tagsyellow;
+            text-decoration: none;
+            color: $black;
+            border: none;
+          }
+        }
+      }
+      .profile {
+        cursor: pointer;
+        @include flex-jc-ai(center, center);
+        h5.user {
+          margin-right: 22px;
+          font-family: $dejavu;
+          font-size: 18px;
+          color: $darkBlue;
+        }
+        .image {
+          width: 86px;
+          height: 86px;
+          background: $terminsGrayBg;
+          border-radius: 50px;
+        }
+      }
+      .profile-menu {
+        position: absolute;
+        right: 0;
+        bottom: -35px;
+        transform: translateY(100%);
+        padding: 22px 29px;
+        background: $bgFrom;
+        box-shadow: 0px 3px 6px #00000029;
+        ul {
+          li {
+            margin-top: 31px;
+            text-align: right;
             a {
-              background-color: $btnGray;
-              color: $white;
-              padding: 10px 30px;
-              border-radius: 4px;
-              transition: all 0.5s;
-              &:hover {
-                background-color: $tagsyellow;
-                text-decoration: none;
-                color: $black;
-                border: none;
-              }
+              font-family: $dejavu;
+              color: $btnGray;
+              font-size: 18px;
             }
+          }
+          :first-child {
+            margin-top: 0;
           }
         }
       }
     }
   }
+
   main {
     section.poster {
       border: 1px solid $lightGray;
@@ -313,6 +360,7 @@ body {
           max-width: 1297px;
           width: 85%;
           box-shadow: #00000029 0 3px 6px;
+          background-color: $bgFrom;
           .titles {
             display: flex;
             transition: all ease-in-out 0.5s;
@@ -346,12 +394,15 @@ body {
               margin: 55px 0 45px 0;
               display: flex;
               align-items: center;
-              a {
+              .rec-text {
                 color: $btnGray;
                 font-size: 18px;
                 font-family: $dejavu;
                 text-decoration: underline;
-                // border-bottom: 1px $btnGray solid;
+                &:hover {
+                  color: $black;
+                  cursor: pointer;
+                }
               }
               .check-remember {
                 display: flex;
@@ -482,6 +533,11 @@ body {
                 color: $btnGray;
               }
             }
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
             button {
               background: $btnGray;
               outline: none;
@@ -531,6 +587,83 @@ body {
             }
           }
         }
+        .click-recovery {
+          display: none;
+        }
+        .recovery-password {
+          display: none;
+          max-width: 1297px;
+          width: 85%;
+          box-shadow: #00000029 0 3px 6px;
+          background-color: $bgFrom;
+          // display: flex;
+          // justify-content: center;
+          // flex-direction: column;
+          text-align: center;
+          padding: 43px 0 74px 0;
+          .recovery-title {
+            font-family: $venuri;
+            font-size: 40px;
+            color: $darkBlue;
+          }
+          .password-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            input {
+              background: none;
+              border: $btnGray 1px solid;
+              border-radius: 8px;
+              outline: none;
+              width: 75%;
+              padding: 23px 40px;
+              margin-top: 43px;
+              font-size: 18px;
+              &:focus {
+                border: 3px solid;
+              }
+              ::placeholder {
+                font-family: $dejavu;
+                color: $btnGray;
+              }
+            }
+            span {
+              vertical-align: middle;
+              margin-top: 10px;
+              width: 75%;
+              color: $error;
+              font-family: $dejavu;
+              div {
+                display: flex;
+                align-items: center;
+                img {
+                  margin-right: 15px;
+                }
+              }
+            }
+            button {
+              background: $btnGray;
+              outline: none;
+              border: none;
+              cursor: pointer;
+              border-radius: 4px;
+              padding: 18px 26px;
+              color: $white;
+              font-family: $dejavu;
+              font-size: 18px;
+              margin-top: 43px;
+              transition: all 0.5s;
+              &:hover {
+                background-color: $tagsyellow;
+                text-decoration: none;
+                color: $black;
+              }
+            }
+          }
+        }
+        .show-recovery-form {
+          display: block;
+        }
       }
     }
     section.words {
@@ -548,23 +681,30 @@ body {
           display: flex;
           justify-content: center;
           flex-wrap: wrap;
-          a {
+          .block-div {
             max-width: 511px;
             width: 33%;
             padding: 30px 180px 36px 45px;
             margin: 35px 0;
             box-shadow: #00000029 0 3px 5px;
-            h2 {
-              color: #798996;
-              font-size: 46px;
-              text-transform: capitalize;
-              margin-bottom: 17px;
+            background: $bgFrom;
+            cursor: pointer;
+            a {
+              h2 {
+                color: #798996;
+                font-size: 46px;
+                text-transform: capitalize;
+                margin-bottom: 17px;
+              }
+              span {
+                background-color: $tagsyellow;
+                padding: 5px 20px;
+                font-size: 16px;
+                text-transform: capitalize;
+              }
             }
-            span {
-              background-color: $tagsyellow;
-              padding: 5px 20px;
-              font-size: 16px;
-              text-transform: capitalize;
+            &:hover {
+              transform: scale(1.1);
             }
           }
         }
@@ -976,12 +1116,14 @@ body {
         .social-icons {
           display: flex;
           margin-top: 20px;
+
           .circle {
             margin-right: 70px;
             width: 46px;
             height: 46px;
             border-radius: 50%;
             background-color: $btnGray;
+            transition: all ease-in-out 0.3s;
             @include flex-jc-ai(center, center);
             cursor: pointer;
             a {
@@ -990,15 +1132,7 @@ body {
             }
           }
           .insta:hover {
-            background: linear-gradient(
-              45deg,
-              #405de6,
-              #5851db,
-              #833ab4,
-              #c13584,
-              #e1306c,
-              #fd1d1d
-            );
+            background-color: #833ab4;
           }
           .twitter:hover {
             background-color: #329cea;
