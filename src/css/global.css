@@ -188,6 +188,10 @@ a {
   color: #1d2933;
 }
 
+.logoStyle .main h2:hover {
+  color: #eed370;
+}
+
 .logo {
   margin-right: 30px;
 }
@@ -229,6 +233,7 @@ body header .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 body header .container nav {
@@ -266,14 +271,14 @@ body header .container nav ul li a {
 }
 
 body header .container nav ul li a:hover {
-  border-bottom: 2px solid #1d2933;
+  color: #eed370;
 }
 
 body header .container nav ul :last-child {
   margin-right: 0;
 }
 
-body header .container nav ul :last-child a {
+body header .container .sign-in-btn a {
   background-color: #798996;
   color: #fff;
   padding: 10px 30px;
@@ -282,11 +287,65 @@ body header .container nav ul :last-child a {
   transition: all 0.5s;
 }
 
-body header .container nav ul :last-child a:hover {
+body header .container .sign-in-btn a:hover {
   background-color: #eed370;
   text-decoration: none;
   color: #000000;
   border: none;
+}
+
+body header .container .profile {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .container .profile h5.user {
+  margin-right: 22px;
+  font-family: "DejaVuSans";
+  font-size: 18px;
+  color: #1d2933;
+}
+
+body header .container .profile .image {
+  width: 86px;
+  height: 86px;
+  background: #e9e9ed;
+  border-radius: 50px;
+}
+
+body header .container .profile-menu {
+  position: absolute;
+  right: 0;
+  bottom: -35px;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  padding: 22px 29px;
+  background: #FEFCFB;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+}
+
+body header .container .profile-menu ul li {
+  margin-top: 31px;
+  text-align: right;
+}
+
+body header .container .profile-menu ul li a {
+  font-family: "DejaVuSans";
+  color: #798996;
+  font-size: 18px;
+}
+
+body header .container .profile-menu ul :first-child {
+  margin-top: 0;
 }
 
 body main section.poster {
@@ -659,6 +718,7 @@ body main section.signup-login .container .toggle-form {
   width: 85%;
   -webkit-box-shadow: #00000029 0 3px 6px;
           box-shadow: #00000029 0 3px 6px;
+  background-color: #FEFCFB;
 }
 
 body main section.signup-login .container .toggle-form .titles {
@@ -728,11 +788,16 @@ body main section.signup-login .container .toggle-form .login .remember-psw {
           justify-content: space-between;
 }
 
-body main section.signup-login .container .toggle-form .login .remember-psw a {
+body main section.signup-login .container .toggle-form .login .remember-psw .rec-text {
   color: #798996;
   font-size: 18px;
   font-family: "DejaVuSans";
   text-decoration: underline;
+}
+
+body main section.signup-login .container .toggle-form .login .remember-psw .rec-text:hover {
+  color: #000000;
+  cursor: pointer;
 }
 
 body main section.signup-login .container .toggle-form .login .remember-psw .check-remember {
@@ -937,6 +1002,12 @@ body main section.signup-login .container .toggle-form .signup input ::placehold
   color: #798996;
 }
 
+body main section.signup-login .container .toggle-form .signup input::-webkit-outer-spin-button,
+body main section.signup-login .container .toggle-form .signup input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 body main section.signup-login .container .toggle-form .signup button {
   background: #798996;
   outline: none;
@@ -1002,6 +1073,121 @@ body main section.signup-login .container .toggle-form .signup .robot-rules .rul
   font-family: "DejaVuSans";
 }
 
+body main section.signup-login .container .click-recovery {
+  display: none;
+}
+
+body main section.signup-login .container .recovery-password {
+  display: none;
+  max-width: 1297px;
+  width: 85%;
+  -webkit-box-shadow: #00000029 0 3px 6px;
+          box-shadow: #00000029 0 3px 6px;
+  background-color: #FEFCFB;
+  text-align: center;
+  padding: 43px 0 74px 0;
+}
+
+body main section.signup-login .container .recovery-password .recovery-title {
+  font-family: "BPGVenuri2010";
+  font-size: 40px;
+  color: #1d2933;
+}
+
+body main section.signup-login .container .recovery-password .password-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.signup-login .container .recovery-password .password-form input {
+  background: none;
+  border: #798996 1px solid;
+  border-radius: 8px;
+  outline: none;
+  width: 75%;
+  padding: 23px 40px;
+  margin-top: 43px;
+  font-size: 18px;
+}
+
+body main section.signup-login .container .recovery-password .password-form input:focus {
+  border: 3px solid;
+}
+
+body main section.signup-login .container .recovery-password .password-form input ::-webkit-input-placeholder {
+  font-family: "DejaVuSans";
+  color: #798996;
+}
+
+body main section.signup-login .container .recovery-password .password-form input :-ms-input-placeholder {
+  font-family: "DejaVuSans";
+  color: #798996;
+}
+
+body main section.signup-login .container .recovery-password .password-form input ::-ms-input-placeholder {
+  font-family: "DejaVuSans";
+  color: #798996;
+}
+
+body main section.signup-login .container .recovery-password .password-form input ::placeholder {
+  font-family: "DejaVuSans";
+  color: #798996;
+}
+
+body main section.signup-login .container .recovery-password .password-form span {
+  vertical-align: middle;
+  margin-top: 10px;
+  width: 75%;
+  color: #fe4444;
+  font-family: "DejaVuSans";
+}
+
+body main section.signup-login .container .recovery-password .password-form span div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.signup-login .container .recovery-password .password-form span div img {
+  margin-right: 15px;
+}
+
+body main section.signup-login .container .recovery-password .password-form button {
+  background: #798996;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 18px 26px;
+  color: #fff;
+  font-family: "DejaVuSans";
+  font-size: 18px;
+  margin-top: 43px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body main section.signup-login .container .recovery-password .password-form button:hover {
+  background-color: #eed370;
+  text-decoration: none;
+  color: #000000;
+}
+
+body main section.signup-login .container .show-recovery-form {
+  display: block;
+}
+
 body main section.words .container {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1035,27 +1221,34 @@ body main section.words .container .word-blocks {
       flex-wrap: wrap;
 }
 
-body main section.words .container .word-blocks a {
+body main section.words .container .word-blocks .block-div {
   max-width: 511px;
   width: 33%;
   padding: 30px 180px 36px 45px;
   margin: 35px 0;
   -webkit-box-shadow: #00000029 0 3px 5px;
           box-shadow: #00000029 0 3px 5px;
+  background: #FEFCFB;
+  cursor: pointer;
 }
 
-body main section.words .container .word-blocks a h2 {
+body main section.words .container .word-blocks .block-div a h2 {
   color: #798996;
   font-size: 46px;
   text-transform: capitalize;
   margin-bottom: 17px;
 }
 
-body main section.words .container .word-blocks a span {
+body main section.words .container .word-blocks .block-div a span {
   background-color: #eed370;
   padding: 5px 20px;
   font-size: 16px;
   text-transform: capitalize;
+}
+
+body main section.words .container .word-blocks .block-div:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 body main section.about-project {
@@ -1645,6 +1838,8 @@ body footer .container .left-block-social .social-icons .circle {
   height: 46px;
   border-radius: 50%;
   background-color: #798996;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1663,7 +1858,7 @@ body footer .container .left-block-social .social-icons .circle a {
 }
 
 body footer .container .left-block-social .social-icons .insta:hover {
-  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  background-color: #833ab4;
 }
 
 body footer .container .left-block-social .social-icons .twitter:hover {
