@@ -236,6 +236,16 @@ if (recoveryButton) {
       item.classList.remove("errorBorder");
       item.nextSibling.nextSibling.classList.add("hidden");
     });
+    if (recoverPass.value && recoverPass.value.length < 8) {
+      recoverPass.nextSibling.nextSibling.children[0].children[1].innerText = "შეიყვანეთ მინიმუმ 8 სიმბოლო";
+      recoverPass.classList.add("errorBorder");
+      recoverPass.nextSibling.nextSibling.classList.remove("hidden");
+    } 
+    if (recoveryPassRpt.value && recoverPass.value !== recoveryPassRpt.value) {
+      recoveryPassRpt.nextSibling.nextSibling.children[0].children[1].innerText = "პაროლები არ ემთხვევა";
+      recoveryPassRpt.classList.add("errorBorder");
+      recoveryPassRpt.nextSibling.nextSibling.classList.remove("hidden");
+    }
   });
 }
 // click text "პაროლის აღდგენა"
