@@ -1789,6 +1789,93 @@ body main .error-page .container .error-container .error-text a:hover {
   color: #000000;
 }
 
+body main .profile-section {
+  padding: 70px 0 200px 0;
+}
+
+body main .profile-section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .profile-section .container .profile-nav {
+  width: 35%;
+}
+
+body main .profile-section .container .profile-nav .user-photo {
+  width: 230px;
+  height: 230px;
+  background-color: #e9e9ed;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+body main .profile-section .container .profile-nav .user-photo .corner-img {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+
+body main .profile-section .container .profile-nav .text-nav .user-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 50px 0;
+}
+
+body main .profile-section .container .profile-nav .text-nav .user-name h2 {
+  margin-right: 20px;
+  font-family: "BPGVenuri2010";
+  font-size: 28px;
+  color: #1d2933;
+}
+
+body main .profile-section .container .profile-nav .text-nav .user-name img {
+  cursor: pointer;
+}
+
+body main .profile-section .container .profile-nav .text-nav .nav-ul li {
+  font-family: "DejaVuSans";
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 18px;
+  cursor: pointer;
+}
+
+body main .profile-section .container .profile-nav .text-nav .nav-ul li .sub-ul-definition li,
+body main .profile-section .container .profile-nav .text-nav .nav-ul li .sub-ul-termin li {
+  margin-left: 42px;
+  font-family: "DejaVuSans";
+  color: #798996;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+body main .profile-section .container .right-inner {
+  width: 500px;
+  height: 500px;
+  border: solid 1px red;
+}
+
 body footer {
   width: 100%;
   padding: 90px 0;

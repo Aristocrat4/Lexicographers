@@ -1091,7 +1091,79 @@ body {
       }
     }
     // end of error page
+
+    // profile page
+
+    .profile-section{
+      padding: 70px 0 200px 0;
+      .container{
+        @include flex-jc-ai(space-between,center);
+        .profile-nav{
+          width: 35%;
+          .user-photo{
+            width: 230px;
+            height: 230px;
+            background-color: $terminsGrayBg;
+            border-radius: 50%;
+            @include flex-jc-ai(center,center);
+            position: relative;
+            .corner-img{
+              position: absolute;
+              bottom: 10px;
+              right: 20px;
+            }
+          }
+          .text-nav{
+            
+            .user-name{
+              @include flex-ai(center);
+              margin: 50px 0;
+              h2{
+                margin-right: 20px;
+                font-family: $venuri;
+                font-size: 28px;
+                color: $darkBlue;
+              }
+              img{
+                cursor: pointer;
+              }
+            }
+            .nav-ul{
+              li{
+                font-family: $dejavu;
+                font-size: 18px;
+                color: $black;
+                margin-bottom: 18px;
+                cursor: pointer;
+                .sub-ul-definition,
+                .sub-ul-termin{
+                  li{
+                    margin-left: 42px;
+                    font-family: $dejavu;
+                    color: $btnGray;
+                    margin-top: 10px;
+                    cursor: pointer;
+                  }
+                  
+                }
+              }
+            }
+            
+          }
+        }
+        .right-inner{
+          width: 500px;
+          height: 500px;
+          border:solid 1px red;
+        }
+      }
+    }
+
+    // end of profile page
   }
+
+
+
 
   footer {
     width: 100%;
