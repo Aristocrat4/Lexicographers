@@ -12,6 +12,12 @@
   background-color: $terminsGrayBg !important;
   color: #b3b5b7 !important;
 }
+.profile-active-nav {
+  border-bottom: 1px solid $darkBlue;
+}
+.profile-active-sub-nav {
+  border-bottom: 1px solid $btnGray;
+}
 .logoStyle {
   .main {
     padding-right: 10px;
@@ -22,12 +28,12 @@
       font-size: 28px;
       text-align: center;
       color: $darkBlue;
-      &:hover{
+      transition: all ease-in-out 0.3s;
+      &:hover {
         color: $tagsyellow;
       }
     }
   }
-  
 }
 .logo {
   margin-right: 30px;
@@ -688,6 +694,7 @@ body {
             margin: 35px 0;
             box-shadow: #00000029 0 3px 5px;
             background: $bgFrom;
+            transition: all ease-in-out 0.5s;
             cursor: pointer;
             a {
               h2 {
@@ -701,6 +708,7 @@ body {
                 padding: 5px 20px;
                 font-size: 16px;
                 text-transform: capitalize;
+                color: $darkBlue;
               }
             }
             &:hover {
@@ -730,6 +738,11 @@ body {
               font-family: $venuri;
               line-height: 45px;
               color: $darkBlue;
+              transition: all ease-in-out 0.2s;
+              cursor: pointer;
+              &:hover {
+                color: $tagsyellow;
+              }
             }
             p {
               max-width: 724px;
@@ -1091,8 +1104,189 @@ body {
       }
     }
     // end of error page
-  }
 
+    // profile page
+
+    .profile-section {
+      padding: 70px 0 200px 0;
+      .container {
+        @include flex-jc-ai(space-between, flex-start);
+        .profile-nav {
+          // width: 35%;
+          .user-photo {
+            width: 230px;
+            height: 230px;
+            background-color: $terminsGrayBg;
+            border-radius: 50%;
+            @include flex-jc-ai(center, center);
+            position: relative;
+            .corner-img {
+              position: absolute;
+              bottom: 10px;
+              right: 20px;
+            }
+          }
+          .text-nav {
+            .user-name {
+              @include flex-ai(center);
+              margin: 50px 0;
+              h2 {
+                margin-right: 20px;
+                font-family: $venuri;
+                font-size: 28px;
+                color: $darkBlue;
+              }
+              img {
+                cursor: pointer;
+              }
+            }
+            .nav-ul {
+              max-width: 230px;
+              width: 100%;
+              li {
+                font-family: $dejavu;
+                font-size: 18px;
+                color: $black;
+                margin-bottom: 18px;
+                cursor: pointer;
+                .sub-ul-definition,
+                .sub-ul-termin {
+                  li {
+                    margin-left: 42px;
+                    font-family: $dejavu;
+                    color: $btnGray;
+                    margin-top: 10px;
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .right-inner {
+          width: 60%;
+          .profile-termins-result {
+            .result {
+              padding-top: 50px;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              .termin-tag-social {
+                width: 100%;
+                border-bottom: 1px solid $darkBlue;
+                padding-bottom: 7px;
+                .tagandsocial {
+                  @include flex-jc-ai(flex-end, center);
+                  .fb-icon {
+                    width: 41px;
+                    height: 41px;
+                    @include flex-jc-ai(center, center);
+                    background-color: $btnGray;
+                    border-radius: 50%;
+                  }
+                }
+                h2 {
+                  font-family: $dejavu;
+                  font-size: 40px;
+                  color: $darkBlue;
+                  text-transform: uppercase;
+                }
+                @include flex-jc-ai(space-between, center);
+              }
+              .description {
+                width: 100%;
+                background-color: $terminsGrayBg;
+                margin: 30px 0 70px 0;
+                padding: 20px 0 20px 20px;
+                position: relative;
+                .like {
+                  @include flex-jc-ai(center, center);
+                  width: 41px;
+                  height: 41px;
+                  background-color: $bgcolor;
+                  border-radius: 50%;
+                  position: absolute;
+                  z-index: 9;
+                  top: 50%;
+                  right: 0;
+                  transform: translate(+50%, -50%);
+                  img {
+                    color: $btnGray;
+                    width: 41px;
+                    height: 41px;
+                  }
+                }
+                h2 {
+                  font-family: $dejavu;
+                  font-size: 40px;
+                  color: $darkBlue;
+                  margin-bottom: 17px;
+                }
+                .spans {
+                  .date {
+                    font-family: $venuri;
+                    font-size: 14px;
+                    color: $btnGray;
+                  }
+                }
+              }
+            }
+          }
+          .profile-edit {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            padding-top: 50px;
+            input {
+              background: none;
+              border: $btnGray 1px solid;
+              border-radius: 8px;
+              outline: none;
+              width: 100%;
+              padding: 23px 40px;
+              margin-top: 20px;
+              &:focus {
+                border: 3px solid;
+              }
+              ::placeholder {
+                font-family: $dejavu;
+                font-size: 18px;
+                color: $btnGray;
+              }
+            }
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+            button {
+              background: $btnGray;
+              outline: none;
+              border: none;
+              cursor: pointer;
+              border-radius: 4px;
+              padding: 18px 26px;
+              color: #ffffff;
+              font-family: $dejavu;
+              font-size: 18px;
+              margin-top: 45px;
+              transition: all 0.5s;
+              &:hover {
+                background-color: $tagsyellow;
+                text-decoration: none;
+                color: $black;
+              }
+            }
+          }
+        }
+      }
+
+      // end of profile page
+    }
+  }
   footer {
     width: 100%;
     padding: 90px 0;
@@ -1149,6 +1343,11 @@ body {
           p {
             font-size: 18px;
             font-family: $dejavu;
+            transition: all ease-in-out 0.2s;
+            cursor: pointer;
+            &:hover {
+              color: $tagsyellow;
+            }
           }
           p:nth-child(1) {
             margin-bottom: 32px;
@@ -1171,6 +1370,11 @@ body {
             font-size: 18px;
             font-family: $dejavu;
             margin-bottom: 48px;
+            transition: all ease-in-out 0.2s;
+            cursor: pointer;
+            &:hover {
+              color: $tagsyellow;
+            }
           }
           .partners-logo {
             display: flex;

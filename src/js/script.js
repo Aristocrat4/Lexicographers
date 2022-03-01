@@ -162,6 +162,7 @@ const validateEmail = (email) => {
 // --------- Registration Validation ------------
 const registrationBtn = document.querySelector(".submit-registration");
 if (registrationBtn) {
+  registrationBtn.setAttribute('onclick', "location.href='success.html'");
   registrationBtn.addEventListener("click", () => {
     const emailRegInput = document.querySelector(".email-reg");
     const nameRegInput = document.querySelector(".name-reg");
@@ -192,27 +193,34 @@ if (registrationBtn) {
     FilledRegInputs.forEach((item) => {
       item.classList.remove("errorBorder");
       item.nextSibling.nextSibling.classList.add("hidden");
+      
+
       if (emailRegInput.value && !validateEmail(emailRegInput.value)) {
         emailErrorP.innerText = "ელ.ფოსტა არ არის ვალიდური";
         item.classList.add("errorBorder");
         item.nextSibling.nextSibling.classList.remove("hidden");
+        registrationBtn.removeAttribute('onclick');
       }
       if (phoneRegInput.value && phoneRegInput.value.length != 9) {
         phoneRegInput.nextSibling.nextSibling.children[0].children[1].innerText = "ნომერი არ არის ვალიდური";
         phoneRegInput.classList.add("errorBorder");
         phoneRegInput.nextSibling.nextSibling.classList.remove("hidden");
+        registrationBtn.removeAttribute('onclick');
       } 
       if (pswRegInput.value && pswRegInput.value.length < 8) {
         pswRegInput.nextSibling.nextSibling.children[0].children[1].innerText = "შეიყვანეთ მინიმუმ 8 სიმბოლო";
         pswRegInput.classList.add("errorBorder");
         pswRegInput.nextSibling.nextSibling.classList.remove("hidden");
+        registrationBtn.removeAttribute('onclick');
       } 
       if (pswRepeatRegInput.value && pswRegInput.value !== pswRepeatRegInput.value) {
         pswRepeatRegInput.nextSibling.nextSibling.children[0].children[1].innerText = "პაროლები არ ემთხვევა";
         pswRepeatRegInput.classList.add("errorBorder");
         pswRepeatRegInput.nextSibling.nextSibling.classList.remove("hidden");
+        registrationBtn.removeAttribute('onclick');
       } 
     });
+    
   });
 }
 
@@ -264,3 +272,56 @@ if (profile) {
     profileMenu.classList.toggle("hidden");
   });
 }
+
+// Profile menu
+const profileMenuItems = document.querySelector("ul.nav-ul").querySelectorAll('.profile-edit');
+const definitionUl = document.querySelector(".sub-ul-definition");
+const termUl = document.querySelector(".sub-ul-termin");
+function closeDefinitionUL() {
+  if (!definitionUl.classList.contains('hidden')) {
+    definitionUl.classList.toggle('hidden');
+  }
+}
+function closeTermUL() {
+  if (!termUl.classList.contains('hidden')) {
+    termUl.classList.toggle('hidden');
+  }
+}
+
+
+profileMenuItems.forEach((item, index) => {
+  itemSpan = item.children[0];
+  itemSpan.addEventListener('click', () => {
+    const profileActiveItem = document.querySelector(".profile-active-nav");
+    const rightInnerActive = document.querySelector(".right-inner").querySelector('.active');
+    
+    profileActiveItem.classList.remove('profile-active-nav');
+    
+    item.children[0].classList.add('profile-active-nav');
+    if (index === 1 || index === 2) {
+      item.children[1].classList.remove('hidden');
+      
+    }
+    if (index === 0) {
+      closeDefinitionUL();
+      closeTermUL();
+      const myTerms = document.querySelector(".right-inner").querySelector(".profile-edit");
+      rightInnerActive.classList.toggle('active');
+      rightInnerActive.classList.toggle('hidden');
+      
+      myTerms.classList.toggle('active');
+      myTerms.classList.toggle('hidden');
+    }
+    if (index === 1) {
+      closeTermUL();
+      rightInnerActive.classList.remove('active');
+      rightInnerActive.classList.toggle('hidden');
+      const myTerms = document.querySelector(".profile-termins-result");
+      myTerms.classList.toggle('hidden');
+      myTerms.classList.toggle('active');
+    }
+    if (index === 2) {
+      closeDefinitionUL();
+    }
+  })
+})
