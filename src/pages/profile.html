@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- icon -->
-    <link rel="icon" type="image/x-icon" href="./assets/images/logo.svg">
+    <link rel="icon" type="image/x-icon" href="./assets/images/logo.svg" />
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/79fbebef68.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/79fbebef68.js"
+      crossorigin="anonymous"
+    ></script>
     <title>შექმენი ქართული ტერმინი</title>
-    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/global.css" />
   </head>
   <body>
     <header>
       <div class="container">
-        <a href="./index.html" class="logoStyle">
+        <a href="../../index.html" class="logoStyle">
           <div class="main">
             <div class="logo">
               <img src="../../assets/images/logo.svg" alt="logo" />
@@ -24,21 +27,22 @@
         </a>
         <nav>
           <ul>
-            <li><a href="src/pages/about.html">პროექტის შესახებ</a></li>
-            <li><a href="src/pages/termins_bank.html">ტერმინების ბანკი</a></li>
-            <li><a href="src/pages/new_term.html">შემოგვთავაზე შენი ტერმინი</a></li>
-            <li><a href="src/pages/contact.html">კონტაქტი</a></li>
+            <li><a href="./about.html">პროექტის შესახებ</a></li>
+            <li><a href="./termins_bank.html">ტერმინების ბანკი</a></li>
+            <li>
+              <a href="./new_term.html">შემოგვთავაზე შენი ტერმინი</a>
+            </li>
+            <li><a href="./contact.html">კონტაქტი</a></li>
           </ul>
         </nav>
-        <div class="sign-in-btn" style="display:none">
-          <a href="src/pages/sign_in.html">შესვლა</a>
+        <div class="sign-in-btn" style="display: none">
+          <a href="./sign_in.html">შესვლა</a>
         </div>
         <div class="profile" id="profile">
           <h5 class="user">თეკლა</h5>
           <div class="image"></div>
-          
         </div>
-        <div class="profile-menu hidden"  id="profile-menu">
+        <div class="profile-menu hidden" id="profile-menu">
           <ul>
             <li><a href="#">პროფილის რედაქტირება</a></li>
             <li><a href="#">ჩემი განმარტებები</a></li>
@@ -47,53 +51,158 @@
           </ul>
         </div>
       </div>
-      
     </header>
-    
+
     <main>
-        <section class="profile-section">
-            <div class="container">
-                <div class="profile-nav">
-                    <div class="user-photo">
-                        <img src="../../assets/images/add-photo.svg" alt="">
-                        <img class="corner-img" src="../../assets/images/add-photo.svg" alt="add-photo">
-                    </div>
-                    <div class="text-nav">
-                        <div class="user-name">
-                            <h2>გალაქტიონ დანელია</h2>
-                            <img src="../../assets/images/edit-icon.svg" alt="edit">
-                        </div>
-                        <ul class="nav-ul">
-                            <li class="profile-edit">პროფილის რედაქტირება</li>
-                            <li class="profile-edit">ჩემი განმარტებები
-                                <ul class="sub-ul-definition">
-                                    <li class="sub-li-definition">ყველა</li>
-                                    <li class="sub-li-definition">გამარჯვებული</li>
-                                </ul>
-                            </li>
-
-                            <li class="profile-edit">ჩემი ტერმინები
-                                <ul class="sub-ul-termin">
-                                    <li class="sub-li-termin">ყველა</li>
-                                    <li class="sub-li-termin">დადასტურებული</li>
-                                </ul>
-                            </li>
-                            <li class="profile-edit">გამოსვლა</li>
-                        </ul>
-                    </div>
-                </div>
-
-
-                <div class="right-inner">
-
-                </div>
+      <section class="profile-section">
+        <div class="container">
+          <div class="profile-nav">
+            <div class="user-photo">
+              <img src="../../assets/images/add-photo.svg" alt="" />
+              <img
+                class="corner-img"
+                src="../../assets/images/add-photo.svg"
+                alt="add-photo"
+              />
             </div>
-        </section>
+            <div class="text-nav">
+              <div class="user-name">
+                <h2>გალაქტიონ დანელია</h2>
+                <img src="../../assets/images/edit-icon.svg" alt="edit" />
+              </div>
+              <ul class="nav-ul">
+                <li class="profile-edit">
+                  <span class="nav-txt profile-active-nav"
+                    >პროფილის რედაქტირება</span
+                  >
+                </li>
+                <li class="profile-edit">
+                  <span class="nav-txt">ჩემი განმარტებები</span>
+                  <ul class="sub-ul-definition hidden">
+                    <li class="sub-li-definition">
+                      <span class="nav-txt profile-active-sub-nav">ყველა</span>
+                    </li>
+                    <li class="sub-li-definition">
+                      <span class="nav-txt">გამარჯვებული</span>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="profile-edit">
+                  <span class="nav-txt">ჩემი ტერმინები</span>
+                  <ul class="sub-ul-termin hidden">
+                    <li class="sub-li-termin">
+                      <span class="nav-txt">ყველა</span>
+                    </li>
+                    <li class="sub-li-termin">
+                      <span class="nav-txt">დადასტურებული</span>
+                    </li>
+                  </ul>
+                </li>
+                <li class="profile-edit">
+                  <span class="nav-txt">გამოსვლა</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="right-inner">
+            <div class="profile-termins-result hidden">
+              <div class="result">
+                <div class="termin-tag-social">
+                  <h2>lorem ipsum</h2>
+                  <div class="tagandsocial">
+                    <div class="fb-icon">
+                      <img src="../../assets/images/fb.svg" alt="fb" />
+                    </div>
+                  </div>
+                </div>
+                <div class="description">
+                  <div class="like">
+                    <img src="../../assets/images/chat.svg" alt="like" />
+                  </div>
+                  <h2>ათი შოკოლადი</h2>
+                  <div class="spans">
+                    <span class="date">3 კვირის წინ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="result">
+                <div class="termin-tag-social">
+                  <h2>lorem ipsum</h2>
+                  <div class="tagandsocial">
+                    <div class="fb-icon">
+                      <img src="../../assets/images/fb.svg" alt="fb" />
+                    </div>
+                  </div>
+                </div>
+                <div class="description">
+                  <div class="like">
+                    <img src="../../assets/images/chat.svg" alt="like" />
+                  </div>
+                  <h2>ათი შოკოლადი</h2>
+                  <div class="spans">
+                    <span class="date">3 კვირის წინ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="result">
+                <div class="termin-tag-social">
+                  <h2>lorem ipsum</h2>
+                  <div class="tagandsocial">
+                    <div class="fb-icon">
+                      <img src="../../assets/images/fb.svg" alt="fb" />
+                    </div>
+                  </div>
+                </div>
+                <div class="description">
+                  <div class="like">
+                    <img src="../../assets/images/chat.svg" alt="like" />
+                  </div>
+                  <h2>ათი შოკოლადი</h2>
+                  <div class="spans">
+                    <span class="date">3 კვირის წინ</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form method="post" class="profile-edit">
+              <input
+                class="email-reg"
+                type="email"
+                placeholder="მომხმარებლის ფოსტა*"
+              />
+
+              <input
+                class="name-reg"
+                type="text"
+                placeholder="მომხმარებლის სახელი*"
+              />
+
+              <input
+                class="phone-reg"
+                type="number"
+                placeholder="ტელეფონის ნომერი*"
+              />
+
+              <input class="psw-reg" type="password" placeholder="პაროლი*" />
+
+              <input
+                class="psw-repeat-reg"
+                type="password"
+                placeholder="პაროლის გამეორება*"
+              />
+
+              <button type="button" class="submit-profile-edit">შენახვა</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="container">
         <div class="left-block-social">
-          <a href="./index.html" class="logoStyle">
+          <a href="../../index.html" class="logoStyle">
             <div class="main">
               <div class="logo">
                 <img src="../../assets/images/logo.svg" alt="logo" />
@@ -102,15 +211,15 @@
             </div>
           </a>
           <div class="social-icons">
-              <div class="circle insta">
-                <a href="#"><i class="fa fa-instagram"></i></a>
-              </div>
-              <div class="circle twitter">
-                <a href="#"><i class="fa fa-twitter"></i></a>
-              </div>
-              <div class="circle fb">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-              </div>
+            <div class="circle insta">
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+            <div class="circle twitter">
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+            <div class="circle fb">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+            </div>
           </div>
         </div>
         <div class="middle-block">
