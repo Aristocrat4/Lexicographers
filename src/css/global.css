@@ -2026,7 +2026,6 @@ body main .profile-section .container .right-inner .profile-edit {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  border: solid 1px red;
   padding-top: 50px;
 }
 
