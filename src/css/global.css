@@ -331,6 +331,12 @@ body header .container .profile .image {
   border-radius: 50px;
 }
 
+body header .container .profile .image-size {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+}
+
 body header .container .profile-menu {
   position: absolute;
   right: 0;
@@ -352,6 +358,12 @@ body header .container .profile-menu ul li a {
   font-family: "DejaVuSans";
   color: #798996;
   font-size: 18px;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+body header .container .profile-menu ul li a:hover {
+  color: #eed370;
 }
 
 body header .container .profile-menu ul :first-child {
@@ -1393,7 +1405,7 @@ body main section.about-project-section .container .project .text h5 {
   font-family: "BPGVenuri2010";
   font-size: 40px;
   line-height: 45px;
-  color: #c0d0de;
+  color: #1d2933;
   margin-bottom: 45px;
 }
 
@@ -1848,6 +1860,20 @@ body main .profile-section .container .profile-nav .user-photo .corner-img {
   right: 20px;
 }
 
+body main .profile-section .container .profile-nav .user-photo .image-upload > input {
+  display: none;
+}
+
+body main .profile-section .container .profile-nav .user-photo .image-upload img {
+  cursor: pointer;
+}
+
+body main .profile-section .container .profile-nav .user-photo .change-photo {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+}
+
 body main .profile-section .container .profile-nav .text-nav .user-name {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1889,6 +1915,12 @@ body main .profile-section .container .profile-nav .text-nav .nav-ul li .sub-ul-
   color: #798996;
   margin-top: 10px;
   cursor: pointer;
+}
+
+body main .profile-section .container .profile-nav .text-nav .nav-ul li a {
+  color: #000000;
+  font-family: "DejaVuSans";
+  font-size: 18px;
 }
 
 body main .profile-section .container .right-inner {

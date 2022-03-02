@@ -120,6 +120,11 @@ body {
           background: $terminsGrayBg;
           border-radius: 50px;
         }
+        .image-size{
+          width: 86px;
+          height: 86px;
+          border-radius: 50%;
+        }
       }
       .profile-menu {
         position: absolute;
@@ -137,6 +142,10 @@ body {
               font-family: $dejavu;
               color: $btnGray;
               font-size: 18px;
+              transition: all ease-in-out 0.2s;
+              &:hover {
+                color: $tagsyellow;
+              }
             }
           }
           :first-child {
@@ -808,7 +817,7 @@ body {
               font-family: $venuri;
               font-size: 40px;
               line-height: 45px;
-              color: $lightGray;
+              color: $darkBlue;
               margin-bottom: 45px;
             }
             .texts {
@@ -1125,6 +1134,19 @@ body {
               bottom: 10px;
               right: 20px;
             }
+            .image-upload>input {
+              display: none;
+            }
+            .image-upload{
+              img{
+                cursor: pointer;
+              }
+            }
+            .change-photo{
+              width: 230px;
+              height: 230px;
+              border-radius: 50%;
+            }
           }
           .text-nav {
             .user-name {
@@ -1158,6 +1180,11 @@ body {
                     margin-top: 10px;
                     cursor: pointer;
                   }
+                }
+                a{
+                  color: $black;
+                  font-family: $dejavu;
+                  font-size: 18px;
                 }
               }
             }

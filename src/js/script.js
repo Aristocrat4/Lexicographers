@@ -325,3 +325,20 @@ profileMenuItems.forEach((item, index) => {
     }
   })
 })
+
+// add photo
+function addPhoto(){
+  const uploadBtn = document.getElementById("img-input");
+  const uploadPhoto = document.querySelector(".my-photo");
+  const headerPhoto = document.querySelector(".header-photo");
+  uploadBtn.onchange = evt =>{
+    const[file]=uploadBtn.files
+    if(file){
+      uploadPhoto.src=URL.createObjectURL(file);
+      headerPhoto.src=URL.createObjectURL(file);
+    }
+    uploadPhoto.classList.add("change-photo");
+    headerPhoto.classList.add("image-size");
+  }
+  
+}
