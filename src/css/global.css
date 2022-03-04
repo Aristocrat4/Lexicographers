@@ -2061,6 +2061,23 @@ body main .profile-section .container .right-inner .profile-edit {
   padding-top: 50px;
 }
 
+body main .profile-section .container .right-inner .profile-edit span {
+  color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 5px;
+}
+
+body main .profile-section .container .right-inner .profile-edit span img {
+  margin-right: 5px;
+}
+
 body main .profile-section .container .right-inner .profile-edit input {
   background: none;
   border: #798996 1px solid;
@@ -2069,6 +2086,8 @@ body main .profile-section .container .right-inner .profile-edit input {
   width: 100%;
   padding: 23px 40px;
   margin-top: 20px;
+  font-size: 20px;
+  font-family: "DejaVuSans";
 }
 
 body main .profile-section .container .right-inner .profile-edit input:focus {
@@ -2099,10 +2118,18 @@ body main .profile-section .container .right-inner .profile-edit input ::placeho
   color: #798996;
 }
 
-body main .profile-section .container .right-inner .profile-edit input::-webkit-outer-spin-button,
-body main .profile-section .container .right-inner .profile-edit input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+body main .profile-section .container .right-inner .profile-edit .password-input {
+  width: 100%;
+  position: relative;
+}
+
+body main .profile-section .container .right-inner .profile-edit .password-input img {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  cursor: pointer;
 }
 
 body main .profile-section .container .right-inner .profile-edit button {
@@ -2124,6 +2151,117 @@ body main .profile-section .container .right-inner .profile-edit button:hover {
   background-color: #eed370;
   text-decoration: none;
   color: #000000;
+}
+
+body main .profile-section .container .right-inner .my-terms .term {
+  margin-bottom: 50px;
+}
+
+body main .profile-section .container .right-inner .my-terms .term .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #1d2933;
+  margin-bottom: 16px;
+}
+
+body main .profile-section .container .right-inner .my-terms .term .title .term-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .profile-section .container .right-inner .my-terms .term .title .term-title h2 {
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+body main .profile-section .container .right-inner .my-terms .term .title .social-fb {
+  background: #798996;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .profile-section .container .right-inner .my-terms .term .definition .definition-header {
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+body main .profile-section .container .right-inner .my-terms .term .definition .definition-header span {
+  font-size: 18px;
+  font-family: "DejaVuSans";
+}
+
+body main .profile-section .container .right-inner .my-terms .term .definition .definition-header span::after {
+  content: "";
+  border: solid gray;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 14px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+body main .profile-section .container .right-inner .my-terms .term .definition .definition-box {
+  background: #e9e9ed;
+  font-family: "DejaVuSans";
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body main .profile-section .container .right-inner .my-terms .term .definition .definition-box .definition-info h2 {
+  font-size: 40px;
+  margin-bottom: 9px;
+}
+
+body main .profile-section .container .right-inner .my-terms .term .definition .definition-box .definition-info span {
+  font-size: 18px;
+}
+
+body main .profile-section .container .right-inner .my-terms .term .definition .definition-box .like {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .profile-section .container .right-inner .my-terms .term .definition .definition-box .like span {
+  font-size: 14px;
+  color: #798996;
 }
 
 body footer {

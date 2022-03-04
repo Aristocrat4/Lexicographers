@@ -162,7 +162,7 @@ const validateEmail = (email) => {
 // --------- Registration Validation ------------
 const registrationBtn = document.querySelector(".submit-registration");
 if (registrationBtn) {
-  registrationBtn.setAttribute('onclick', "location.href='success.html'");
+  registrationBtn.setAttribute("onclick", "location.href='success.html'");
   registrationBtn.addEventListener("click", () => {
     const emailRegInput = document.querySelector(".email-reg");
     const nameRegInput = document.querySelector(".name-reg");
@@ -170,7 +170,7 @@ if (registrationBtn) {
     const pswRegInput = document.querySelector(".psw-reg");
     const pswRepeatRegInput = document.querySelector(".psw-repeat-reg");
     const emailErrorP = document.querySelector("#email-error-text");
-    
+
     const emptyRegInputs = [
       emailRegInput,
       nameRegInput,
@@ -186,41 +186,46 @@ if (registrationBtn) {
       pswRepeatRegInput,
     ].filter((item) => item.value);
     emptyRegInputs.forEach((item) => {
-      item.nextSibling.nextSibling.children[0].children[1].innerText = "ველი სავალდებულოა";
+      item.nextSibling.nextSibling.children[0].children[1].innerText =
+        "ველი სავალდებულოა";
       item.classList.add("errorBorder");
       item.nextSibling.nextSibling.classList.remove("hidden");
     });
     FilledRegInputs.forEach((item) => {
       item.classList.remove("errorBorder");
       item.nextSibling.nextSibling.classList.add("hidden");
-      
 
       if (emailRegInput.value && !validateEmail(emailRegInput.value)) {
         emailErrorP.innerText = "ელ.ფოსტა არ არის ვალიდური";
         item.classList.add("errorBorder");
         item.nextSibling.nextSibling.classList.remove("hidden");
-        registrationBtn.removeAttribute('onclick');
+        registrationBtn.removeAttribute("onclick");
       }
       if (phoneRegInput.value && phoneRegInput.value.length != 9) {
-        phoneRegInput.nextSibling.nextSibling.children[0].children[1].innerText = "ნომერი არ არის ვალიდური";
+        phoneRegInput.nextSibling.nextSibling.children[0].children[1].innerText =
+          "ნომერი არ არის ვალიდური";
         phoneRegInput.classList.add("errorBorder");
         phoneRegInput.nextSibling.nextSibling.classList.remove("hidden");
-        registrationBtn.removeAttribute('onclick');
-      } 
+        registrationBtn.removeAttribute("onclick");
+      }
       if (pswRegInput.value && pswRegInput.value.length < 8) {
-        pswRegInput.nextSibling.nextSibling.children[0].children[1].innerText = "შეიყვანეთ მინიმუმ 8 სიმბოლო";
+        pswRegInput.nextSibling.nextSibling.children[0].children[1].innerText =
+          "შეიყვანეთ მინიმუმ 8 სიმბოლო";
         pswRegInput.classList.add("errorBorder");
         pswRegInput.nextSibling.nextSibling.classList.remove("hidden");
-        registrationBtn.removeAttribute('onclick');
-      } 
-      if (pswRepeatRegInput.value && pswRegInput.value !== pswRepeatRegInput.value) {
-        pswRepeatRegInput.nextSibling.nextSibling.children[0].children[1].innerText = "პაროლები არ ემთხვევა";
+        registrationBtn.removeAttribute("onclick");
+      }
+      if (
+        pswRepeatRegInput.value &&
+        pswRegInput.value !== pswRepeatRegInput.value
+      ) {
+        pswRepeatRegInput.nextSibling.nextSibling.children[0].children[1].innerText =
+          "პაროლები არ ემთხვევა";
         pswRepeatRegInput.classList.add("errorBorder");
         pswRepeatRegInput.nextSibling.nextSibling.classList.remove("hidden");
-        registrationBtn.removeAttribute('onclick');
-      } 
+        registrationBtn.removeAttribute("onclick");
+      }
     });
-    
   });
 }
 
@@ -245,12 +250,14 @@ if (recoveryButton) {
       item.nextSibling.nextSibling.classList.add("hidden");
     });
     if (recoverPass.value && recoverPass.value.length < 8) {
-      recoverPass.nextSibling.nextSibling.children[0].children[1].innerText = "შეიყვანეთ მინიმუმ 8 სიმბოლო";
+      recoverPass.nextSibling.nextSibling.children[0].children[1].innerText =
+        "შეიყვანეთ მინიმუმ 8 სიმბოლო";
       recoverPass.classList.add("errorBorder");
       recoverPass.nextSibling.nextSibling.classList.remove("hidden");
-    } 
+    }
     if (recoveryPassRpt.value && recoverPass.value !== recoveryPassRpt.value) {
-      recoveryPassRpt.nextSibling.nextSibling.children[0].children[1].innerText = "პაროლები არ ემთხვევა";
+      recoveryPassRpt.nextSibling.nextSibling.children[0].children[1].innerText =
+        "პაროლები არ ემთხვევა";
       recoveryPassRpt.classList.add("errorBorder");
       recoveryPassRpt.nextSibling.nextSibling.classList.remove("hidden");
     }
@@ -274,71 +281,126 @@ if (profile) {
 }
 
 // Profile menu
-const profileMenuItems = document.querySelector("ul.nav-ul").querySelectorAll('.profile-edit');
+const definitionHeader = document.querySelectorAll(".definition-header");
+
+definitionHeader.forEach((item) => {
+  item.addEventListener("click", () => {
+    item.nextElementSibling.classList.toggle("hidden");
+  });
+});
+
+const profileMenuItems = document
+  .querySelector("ul.nav-ul")
+  .querySelectorAll(".profile-edit");
 const definitionUl = document.querySelector(".sub-ul-definition");
 const termUl = document.querySelector(".sub-ul-termin");
 function closeDefinitionUL() {
-  if (!definitionUl.classList.contains('hidden')) {
-    definitionUl.classList.toggle('hidden');
+  if (!definitionUl.classList.contains("hidden")) {
+    definitionUl.classList.toggle("hidden");
   }
 }
 function closeTermUL() {
-  if (!termUl.classList.contains('hidden')) {
-    termUl.classList.toggle('hidden');
+  if (!termUl.classList.contains("hidden")) {
+    termUl.classList.toggle("hidden");
   }
 }
 
-
 profileMenuItems.forEach((item, index) => {
   itemSpan = item.children[0];
-  itemSpan.addEventListener('click', () => {
+  itemSpan.addEventListener("click", () => {
     const profileActiveItem = document.querySelector(".profile-active-nav");
-    const rightInnerActive = document.querySelector(".right-inner").querySelector('.active');
-    
-    profileActiveItem.classList.remove('profile-active-nav');
-    
-    item.children[0].classList.add('profile-active-nav');
+    const rightInnerActive = document
+      .querySelector(".right-inner")
+      .querySelector(".active");
+
+    profileActiveItem.classList.remove("profile-active-nav");
+
+    item.children[0].classList.add("profile-active-nav");
     if (index === 1 || index === 2) {
-      item.children[1].classList.remove('hidden');
-      
+      item.children[1].classList.remove("hidden");
     }
     if (index === 0) {
       closeDefinitionUL();
       closeTermUL();
-      const myTerms = document.querySelector(".right-inner").querySelector(".profile-edit");
-      rightInnerActive.classList.toggle('active');
-      rightInnerActive.classList.toggle('hidden');
-      
-      myTerms.classList.toggle('active');
-      myTerms.classList.toggle('hidden');
+      const myTerms = document
+        .querySelector(".right-inner")
+        .querySelector(".profile-edit");
+      rightInnerActive.classList.toggle("active");
+      rightInnerActive.classList.toggle("hidden");
+
+      myTerms.classList.toggle("active");
+      myTerms.classList.toggle("hidden");
     }
     if (index === 1) {
       closeTermUL();
-      rightInnerActive.classList.remove('active');
-      rightInnerActive.classList.toggle('hidden');
+      rightInnerActive.classList.remove("active");
+      rightInnerActive.classList.toggle("hidden");
       const myTerms = document.querySelector(".profile-termins-result");
-      myTerms.classList.toggle('hidden');
-      myTerms.classList.toggle('active');
+      myTerms.classList.toggle("hidden");
+      myTerms.classList.toggle("active");
     }
     if (index === 2) {
       closeDefinitionUL();
+      rightInnerActive.classList.remove("active");
+      rightInnerActive.classList.toggle("hidden");
+      const myTerms = document.querySelector(".my-terms");
+      myTerms.classList.toggle("hidden");
+      myTerms.classList.toggle("active");
     }
-  })
-})
+  });
+});
+// profile fields edit
+const saveButton = document.querySelector(".submit-profile-edit");
+console.log(saveButton);
+saveButton.addEventListener("click", () => {
+  const email = document.querySelector(".email-reg");
+  const phone = document.querySelector(".phone-reg");
+  const password = document.querySelector(".psw-reg");
+  const passwordRepeat = document.querySelector(".psw-repeat-reg");
 
+  if (email.value && !validateEmail(email.value)) {
+    email.nextElementSibling.classList.remove("hidden");
+  } else {
+    email.nextElementSibling.classList.add("hidden");
+  }
+  // if (phone.value && phone.value.length != 9) {
+  //   phone.nextElementSibling.classList.toggle('hidden');
+  // }
+  if (password.value && password.value.length < 8) {
+    password.nextElementSibling.classList.remove("hidden");
+  } else {
+    password.nextElementSibling.classList.add("hidden");
+  }
+  if (passwordRepeat.value && password.value !== passwordRepeat.value) {
+    passwordRepeat.nextElementSibling.classList.remove("hidden");
+  } else {
+    passwordRepeat.nextElementSibling.classList.add("hidden");
+  }
+});
+// change password input type
+const eyes = document.querySelectorAll(".show-password");
+eyes.forEach((item) => {
+  item.addEventListener("click", () => {
+    x = item.previousElementSibling;
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  });
+});
 // add photo
-function addPhoto(){
+function addPhoto() {
   const uploadBtn = document.getElementById("img-input");
   const uploadPhoto = document.querySelector(".my-photo");
   const headerPhoto = document.querySelector(".header-photo");
-  uploadBtn.onchange = evt =>{
-    const[file]=uploadBtn.files
-    if(file){
-      uploadPhoto.src=URL.createObjectURL(file);
-      headerPhoto.src=URL.createObjectURL(file);
+  uploadBtn.onchange = (evt) => {
+    const [file] = uploadBtn.files;
+    if (file) {
+      uploadPhoto.src = URL.createObjectURL(file);
+      headerPhoto.src = URL.createObjectURL(file);
     }
     uploadPhoto.classList.add("change-photo");
     headerPhoto.classList.add("image-size");
-  }
-  
+  };
 }
