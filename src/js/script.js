@@ -129,12 +129,23 @@ function changeAutoToRegistr() {
 }
 // -------- end of function --------
 
+// Email validation
+const validateEmail = (email) => {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
+
+
 // -------- Login Validation -------
 const loginBtn = document.querySelector(".submit-login");
 if (loginBtn) {
   loginBtn.addEventListener("click", () => {
     const usernameInput = document.querySelector(".username");
     const passwordInput = document.querySelector(".psw");
+    const emailErrorTxt = document.querySelector(".change-text-error");
     const emptyInput = [usernameInput, passwordInput].filter(
       (item) => !item.value
     );
@@ -148,21 +159,29 @@ if (loginBtn) {
     filledInput.forEach((item) => {
       item.classList.remove("errorBorder");
       item.nextSibling.nextSibling.classList.add("hidden");
+      if (usernameInput.value && !validateEmail(usernameInput.value)) {
+        emailErrorTxt.innerText = "ელ.ფოსტა არ არის ვალიდური";
+        item.classList.add("errorBorder");
+        item.nextSibling.nextSibling.classList.remove("hidden");
+      }
+      if (passwordInput.value && passwordInput.value.length < 8) {
+        passwordInput.nextSibling.nextSibling.children[0].children[1].innerText =
+          "შეიყვანეთ მინიმუმ 8 სიმბოლო";
+        passwordInput.classList.add("errorBorder");
+        pswRegInput.nextSibling.nextSibling.classList.remove("hidden");
+      }
     });
+    if(usernameInput.nextSibling.nextSibling.classList.contains("hidden")&&
+    passwordInput.nextSibling.nextSibling.classList.contains("hidden")){
+      loginBtn.onclick = location.href='profile.html';
+    }
   });
 }
-// Email validation
-const validateEmail = (email) => {
-  return String(email)
-    .toLowerCase()
-    .match(
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    );
-};
+
 // --------- Registration Validation ------------
 const registrationBtn = document.querySelector(".submit-registration");
 if (registrationBtn) {
-  registrationBtn.setAttribute("onclick", "location.href='success.html'");
+  // registrationBtn.setAttribute("onclick", "location.href='profile.html'");
   registrationBtn.addEventListener("click", () => {
     const emailRegInput = document.querySelector(".email-reg");
     const nameRegInput = document.querySelector(".name-reg");
@@ -199,21 +218,21 @@ if (registrationBtn) {
         emailErrorP.innerText = "ელ.ფოსტა არ არის ვალიდური";
         item.classList.add("errorBorder");
         item.nextSibling.nextSibling.classList.remove("hidden");
-        registrationBtn.removeAttribute("onclick");
+        // registrationBtn.removeAttribute("onclick");
       }
       if (phoneRegInput.value && phoneRegInput.value.length != 9) {
         phoneRegInput.nextSibling.nextSibling.children[0].children[1].innerText =
           "ნომერი არ არის ვალიდური";
         phoneRegInput.classList.add("errorBorder");
         phoneRegInput.nextSibling.nextSibling.classList.remove("hidden");
-        registrationBtn.removeAttribute("onclick");
+        // registrationBtn.removeAttribute("onclick");
       }
       if (pswRegInput.value && pswRegInput.value.length < 8) {
         pswRegInput.nextSibling.nextSibling.children[0].children[1].innerText =
           "შეიყვანეთ მინიმუმ 8 სიმბოლო";
         pswRegInput.classList.add("errorBorder");
         pswRegInput.nextSibling.nextSibling.classList.remove("hidden");
-        registrationBtn.removeAttribute("onclick");
+        // registrationBtn.removeAttribute("onclick");
       }
       if (
         pswRepeatRegInput.value &&
@@ -223,9 +242,16 @@ if (registrationBtn) {
           "პაროლები არ ემთხვევა";
         pswRepeatRegInput.classList.add("errorBorder");
         pswRepeatRegInput.nextSibling.nextSibling.classList.remove("hidden");
-        registrationBtn.removeAttribute("onclick");
+        // registrationBtn.removeAttribute("onclick");
       }
     });
+    if(emailRegInput.nextSibling.nextSibling.classList.contains("hidden")&&
+    nameRegInput.nextSibling.nextSibling.classList.contains("hidden")&&
+    phoneRegInput.nextSibling.nextSibling.classList.contains("hidden")&&
+    pswRegInput.nextSibling.nextSibling.classList.contains("hidden")&&
+    pswRepeatRegInput.nextSibling.nextSibling.classList.contains("hidden")){
+      registrationBtn.onclick = location.href='profile.html';
+    }
   });
 }
 
@@ -248,19 +274,24 @@ if (recoveryButton) {
     filledValue.forEach((item) => {
       item.classList.remove("errorBorder");
       item.nextSibling.nextSibling.classList.add("hidden");
+
+      if (recoverPass.value && recoverPass.value.length < 8) {
+        recoverPass.nextSibling.nextSibling.children[0].children[1].innerText =
+          "შეიყვანეთ მინიმუმ 8 სიმბოლო";
+        recoverPass.classList.add("errorBorder");
+        recoverPass.nextSibling.nextSibling.classList.remove("hidden");
+      }
+      if (recoveryPassRpt.value && recoverPass.value !== recoveryPassRpt.value) {
+        recoveryPassRpt.nextSibling.nextSibling.children[0].children[1].innerText =
+          "პაროლები არ ემთხვევა";
+        recoveryPassRpt.classList.add("errorBorder");
+        recoveryPassRpt.nextSibling.nextSibling.classList.remove("hidden");
+      }
     });
-    if (recoverPass.value && recoverPass.value.length < 8) {
-      recoverPass.nextSibling.nextSibling.children[0].children[1].innerText =
-        "შეიყვანეთ მინიმუმ 8 სიმბოლო";
-      recoverPass.classList.add("errorBorder");
-      recoverPass.nextSibling.nextSibling.classList.remove("hidden");
-    }
-    if (recoveryPassRpt.value && recoverPass.value !== recoveryPassRpt.value) {
-      recoveryPassRpt.nextSibling.nextSibling.children[0].children[1].innerText =
-        "პაროლები არ ემთხვევა";
-      recoveryPassRpt.classList.add("errorBorder");
-      recoveryPassRpt.nextSibling.nextSibling.classList.remove("hidden");
-    }
+    if(recoverPass.nextSibling.nextSibling.classList.contains("hidden")&&
+      recoveryPassRpt.nextSibling.nextSibling.classList.contains("hidden")){
+        recoveryButton.onclick = location.href='profile.html';
+      }
   });
 }
 // click text "პაროლის აღდგენა"
