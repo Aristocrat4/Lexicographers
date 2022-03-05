@@ -120,6 +120,11 @@ body {
           background: $terminsGrayBg;
           border-radius: 50px;
         }
+        .image-size {
+          width: 86px;
+          height: 86px;
+          border-radius: 50%;
+        }
       }
       .profile-menu {
         position: absolute;
@@ -137,6 +142,10 @@ body {
               font-family: $dejavu;
               color: $btnGray;
               font-size: 18px;
+              transition: all ease-in-out 0.2s;
+              &:hover {
+                color: $tagsyellow;
+              }
             }
           }
           :first-child {
@@ -808,7 +817,7 @@ body {
               font-family: $venuri;
               font-size: 40px;
               line-height: 45px;
-              color: $lightGray;
+              color: $darkBlue;
               margin-bottom: 45px;
             }
             .texts {
@@ -1125,6 +1134,19 @@ body {
               bottom: 10px;
               right: 20px;
             }
+            .image-upload > input {
+              display: none;
+            }
+            .image-upload {
+              img {
+                cursor: pointer;
+              }
+            }
+            .change-photo {
+              width: 230px;
+              height: 230px;
+              border-radius: 50%;
+            }
           }
           .text-nav {
             .user-name {
@@ -1158,6 +1180,11 @@ body {
                     margin-top: 10px;
                     cursor: pointer;
                   }
+                }
+                a {
+                  color: $black;
+                  font-family: $dejavu;
+                  font-size: 18px;
                 }
               }
             }
@@ -1240,6 +1267,16 @@ body {
             justify-content: center;
             align-items: flex-end;
             padding-top: 50px;
+            span {
+              color: red;
+              display: flex;
+              align-items: center;
+              align-self: flex-start;
+              margin-top: 5px;
+              img {
+                margin-right: 5px;
+              }
+            }
             input {
               background: none;
               border: $btnGray 1px solid;
@@ -1248,6 +1285,8 @@ body {
               width: 100%;
               padding: 23px 40px;
               margin-top: 20px;
+              font-size: 20px;
+              font-family: $dejavu;
               &:focus {
                 border: 3px solid;
               }
@@ -1257,11 +1296,22 @@ body {
                 color: $btnGray;
               }
             }
-            input::-webkit-outer-spin-button,
-            input::-webkit-inner-spin-button {
-              -webkit-appearance: none;
-              margin: 0;
+            .password-input{
+              width: 100%;
+              position: relative;
+              img{
+                position: absolute;
+                right: 20px;
+                top: 25px;
+                transform: translateY(50%);
+                cursor: pointer;
+              }
             }
+            // input::-webkit-outer-spin-button,
+            // input::-webkit-inner-spin-button {
+            //   -webkit-appearance: none;
+            //   margin: 0;
+            // }
             button {
               background: $btnGray;
               outline: none;
@@ -1278,6 +1328,73 @@ body {
                 background-color: $tagsyellow;
                 text-decoration: none;
                 color: $black;
+              }
+            }
+          }
+          .my-terms {
+            .term {
+              margin-bottom: 50px;
+              .title {
+                @include flex-jc-ai(space-between, center);
+                border-bottom: 1px solid $darkBlue;
+                margin-bottom: 16px;
+                .term-title {
+                  display: flex;
+                  align-items: center;
+                  h2 {
+                    font-family: "Quicksand", sans-serif;
+                    text-transform: uppercase;
+                    font-size: 40px;
+                  }
+                }
+                .social-fb {
+                  background: $btnGray;
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 50%;
+                  @include flex-jc-ai(center, center);
+                }
+              }
+              .definition {
+                .definition-header {
+                  cursor: pointer;
+                  margin-bottom: 16px;
+                  span {
+                    font-size: 18px;
+                    font-family: $dejavu;
+                    &::after {
+                      content: "";
+                      border: solid gray;
+                      border-width: 0 3px 3px 0;
+                      display: inline-block;
+                      padding: 3px;
+                      margin-left: 14px;
+                      transform: rotate(45deg);
+                    }
+                  }
+                }
+                .definition-box{
+                  background: $terminsGrayBg;
+                  font-family: $dejavu;
+                  padding: 20px;
+                  @include flex-jc-ai(space-between, flex-end);
+                  .definition-info{
+                    h2{
+                      font-size: 40px;
+                      margin-bottom: 9px;
+                    }
+                    span{
+                      font-size: 18px;
+                    }
+                  }
+                  .like{
+                    @include flex-jc-ai(center, center);
+                    span{
+                      font-size: 14px;
+                      color: $btnGray;
+                    }
+                  }
+                }
               }
             }
           }
