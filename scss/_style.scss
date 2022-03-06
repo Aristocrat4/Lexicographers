@@ -116,6 +116,7 @@ body {
           color: $darkBlue;
         }
         .image {
+          display: flex;
           width: 86px;
           height: 86px;
           background: $terminsGrayBg;

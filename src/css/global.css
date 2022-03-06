@@ -325,6 +325,9 @@ body header .container .profile h5.user {
 }
 
 body header .container .profile .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 86px;
   height: 86px;
   background: #e9e9ed;
