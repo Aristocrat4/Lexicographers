@@ -382,6 +382,7 @@ profileMenuItems.forEach((item, index) => {
 });
 // profile fields edit
 const saveButton = document.querySelector(".submit-profile-edit");
+
 console.log(saveButton);
 saveButton.addEventListener("click", () => {
   const email = document.querySelector(".email-reg");
@@ -408,6 +409,9 @@ saveButton.addEventListener("click", () => {
     passwordRepeat.nextElementSibling.classList.add("hidden");
   }
 });
+
+
+
 // change password input type
 const eyes = document.querySelectorAll(".show-password");
 eyes.forEach((item) => {
