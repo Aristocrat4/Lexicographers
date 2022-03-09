@@ -72,20 +72,29 @@ if (newTermInput) {
 // end of new term script
 
 // ------ function for success send message ---------
+// let msg = '';
 function callIsEmpty() {
   const nameEl = document.getElementById("name").value;
   const emailEl = document.getElementById("email").value;
   const messageEl = document.getElementById("message").value;
 
   if (nameEl !== "" && emailEl !== "" && messageEl !== "") {
-    const element = document.querySelector(".contact-info");
-    const element2 = document.querySelector(".form");
-    const element3 = document.querySelector(".success-msg");
-    element.classList.add("form-hide");
-    element2.classList.add("form-hide");
-    element3.classList.add("not-hide");
+    //TODO
+    // msg = "შეტყობინება წარმატებით გაიგზავნა";
+    // location.href = "success.html";
+    
   }
 }
+// const successMessageBody = document.getElementById('success-message-body');
+// if (successMessageBody) {
+//   console.log(msg);
+//   successMessageBody.onload = setSuccessMessage(msg);
+// }
+
+// function setSuccessMessage(msg) {
+//   const messageText = document.getElementById("success-message-text");
+//     messageText.innerText = msg;
+// }
 // -------- end of isEMpty() function --------
 
 // -------- toggle login and signup forms -------
@@ -153,11 +162,13 @@ if (loginBtn) {
 }
 // Email validation
 const validateEmail = (email) => {
-  return String(email)
-    .toLowerCase()
-    .match(
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    );
+  var re = /\S+@\S+\.\S+/;
+  return re.test(email);
+  // return String(email)
+  //   .toLowerCase()
+  //   .match(
+  //     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  //   );
 };
 // --------- Registration Validation ------------
 const registrationBtn = document.querySelector(".submit-registration");
@@ -289,94 +300,100 @@ definitionHeader.forEach((item) => {
   });
 });
 
-const profileMenuItems = document
-  .querySelector("ul.nav-ul")
-  .querySelectorAll(".profile-edit");
-const definitionUl = document.querySelector(".sub-ul-definition");
-const termUl = document.querySelector(".sub-ul-termin");
-function closeDefinitionUL() {
-  if (!definitionUl.classList.contains("hidden")) {
-    definitionUl.classList.toggle("hidden");
-  }
-}
-function closeTermUL() {
-  if (!termUl.classList.contains("hidden")) {
-    termUl.classList.toggle("hidden");
-  }
-}
+if (document.querySelector("ul.nav-ul")) {
+  const profileMenuItems = document
+    .querySelector("ul.nav-ul")
+    .querySelectorAll(".profile-edit");
 
-profileMenuItems.forEach((item, index) => {
-  itemSpan = item.children[0];
-  itemSpan.addEventListener("click", () => {
-    const profileActiveItem = document.querySelector(".profile-active-nav");
-    const rightInnerActive = document
-      .querySelector(".right-inner")
-      .querySelector(".active");
-
-    profileActiveItem.classList.remove("profile-active-nav");
-
-    item.children[0].classList.add("profile-active-nav");
-    if (index === 1 || index === 2) {
-      item.children[1].classList.remove("hidden");
+  const definitionUl = document.querySelector(".sub-ul-definition");
+  const termUl = document.querySelector(".sub-ul-termin");
+  function closeDefinitionUL() {
+    if (!definitionUl.classList.contains("hidden")) {
+      definitionUl.classList.toggle("hidden");
     }
-    if (index === 0) {
-      closeDefinitionUL();
-      closeTermUL();
-      const myTerms = document
+  }
+  function closeTermUL() {
+    if (!termUl.classList.contains("hidden")) {
+      termUl.classList.toggle("hidden");
+    }
+  }
+
+  profileMenuItems.forEach((item, index) => {
+    itemSpan = item.children[0];
+    itemSpan.addEventListener("click", () => {
+      const profileActiveItem = document.querySelector(".profile-active-nav");
+      const rightInnerActive = document
         .querySelector(".right-inner")
-        .querySelector(".profile-edit");
-      rightInnerActive.classList.toggle("active");
-      rightInnerActive.classList.toggle("hidden");
+        .querySelector(".active");
 
-      myTerms.classList.toggle("active");
-      myTerms.classList.toggle("hidden");
-    }
-    if (index === 1) {
-      closeTermUL();
-      rightInnerActive.classList.remove("active");
-      rightInnerActive.classList.toggle("hidden");
-      const myTerms = document.querySelector(".profile-termins-result");
-      myTerms.classList.toggle("hidden");
-      myTerms.classList.toggle("active");
-    }
-    if (index === 2) {
-      closeDefinitionUL();
-      rightInnerActive.classList.remove("active");
-      rightInnerActive.classList.toggle("hidden");
-      const myTerms = document.querySelector(".my-terms");
-      myTerms.classList.toggle("hidden");
-      myTerms.classList.toggle("active");
-    }
+      profileActiveItem.classList.remove("profile-active-nav");
+
+      item.children[0].classList.add("profile-active-nav");
+      if (index === 1 || index === 2) {
+        item.children[1].classList.remove("hidden");
+      }
+      if (index === 0) {
+        closeDefinitionUL();
+        closeTermUL();
+        const myTerms = document
+          .querySelector(".right-inner")
+          .querySelector(".profile-edit");
+        rightInnerActive.classList.toggle("active");
+        rightInnerActive.classList.toggle("hidden");
+
+        myTerms.classList.toggle("active");
+        myTerms.classList.toggle("hidden");
+      }
+      if (index === 1) {
+        closeTermUL();
+        rightInnerActive.classList.remove("active");
+        rightInnerActive.classList.toggle("hidden");
+        const myTerms = document.querySelector(".profile-termins-result");
+        myTerms.classList.toggle("hidden");
+        myTerms.classList.toggle("active");
+      }
+      if (index === 2) {
+        closeDefinitionUL();
+        rightInnerActive.classList.remove("active");
+        rightInnerActive.classList.toggle("hidden");
+        const myTerms = document.querySelector(".my-terms");
+        myTerms.classList.toggle("hidden");
+        myTerms.classList.toggle("active");
+      }
+    });
   });
-});
+}
 // profile fields edit
 const saveButton = document.querySelector(".submit-profile-edit");
-console.log(saveButton);
-saveButton.addEventListener("click", () => {
-  const email = document.querySelector(".email-reg");
-  const phone = document.querySelector(".phone-reg");
-  const password = document.querySelector(".psw-reg");
-  const passwordRepeat = document.querySelector(".psw-repeat-reg");
-
-  if (email.value && !validateEmail(email.value)) {
-    email.nextElementSibling.classList.remove("hidden");
-  } else {
+if (saveButton) {
+  saveButton.addEventListener("click", () => {
+    const email = document.querySelector(".email-reg");
+    const phone = document.querySelector(".phone-reg");
+    const password = document.querySelector(".psw-reg");
+    const passwordRepeat = document.querySelector(".psw-repeat-reg");
+  
     email.nextElementSibling.classList.add("hidden");
-  }
-  // if (phone.value && phone.value.length != 9) {
-  //   phone.nextElementSibling.classList.toggle('hidden');
-  // }
-  if (password.value && password.value.length < 8) {
-    password.nextElementSibling.classList.remove("hidden");
-  } else {
-    password.nextElementSibling.classList.add("hidden");
-  }
-  if (passwordRepeat.value && password.value !== passwordRepeat.value) {
-    passwordRepeat.nextElementSibling.classList.remove("hidden");
-  } else {
-    passwordRepeat.nextElementSibling.classList.add("hidden");
-  }
-});
+    phone.nextElementSibling.classList.add("hidden");
+    password.parentElement.nextElementSibling.classList.add("hidden");
+    passwordRepeat.parentElement.nextElementSibling.classList.add("hidden");
+
+    if (!email.value || !validateEmail(email.value)) {
+      email.nextElementSibling.classList.remove("hidden");
+
+    } 
+    if (!phone.value || !Number(phone.value)) {
+      phone.nextElementSibling.classList.remove("hidden");
+
+    } 
+    if (!password.value || password.value.length < 8) {
+      password.parentElement.nextElementSibling.classList.remove("hidden");
+    } 
+    if (!passwordRepeat.value || password.value != passwordRepeat.value) {
+      passwordRepeat.parentElement.nextElementSibling.classList.remove("hidden");
+    } 
+  });
+}
+
 // change password input type
 const eyes = document.querySelectorAll(".show-password");
 eyes.forEach((item) => {

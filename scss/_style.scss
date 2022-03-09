@@ -1296,10 +1296,10 @@ body {
                 color: $btnGray;
               }
             }
-            .password-input{
+            .password-input {
               width: 100%;
               position: relative;
-              img{
+              img {
                 position: absolute;
                 right: 20px;
                 top: 25px;
@@ -1373,23 +1373,23 @@ body {
                     }
                   }
                 }
-                .definition-box{
+                .definition-box {
                   background: $terminsGrayBg;
                   font-family: $dejavu;
                   padding: 20px;
                   @include flex-jc-ai(space-between, flex-end);
-                  .definition-info{
-                    h2{
+                  .definition-info {
+                    h2 {
                       font-size: 40px;
                       margin-bottom: 9px;
                     }
-                    span{
+                    span {
                       font-size: 18px;
                     }
                   }
-                  .like{
+                  .like {
                     @include flex-jc-ai(center, center);
-                    span{
+                    span {
                       font-size: 14px;
                       color: $btnGray;
                     }
@@ -1402,6 +1402,29 @@ body {
       }
 
       // end of profile page
+    }
+    // success page
+    section.success-message {
+      .container {
+        padding-top: 50px;
+        .success-msg {
+          display: block;
+          padding-top: 170px;
+          padding-bottom: 50px;
+          width: 100%;
+          text-align: center;
+          border-top: 1px solid $darkBlue;
+          div {
+            p {
+              font-size: 40px;
+              font-family: $venuri;
+              line-height: 45px;
+              color: $darkBlue;
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
     }
   }
   footer {

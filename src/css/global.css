@@ -2264,6 +2264,27 @@ body main .profile-section .container .right-inner .my-terms .term .definition .
   color: #798996;
 }
 
+body main section.success-message .container {
+  padding-top: 50px;
+}
+
+body main section.success-message .container .success-msg {
+  display: block;
+  padding-top: 170px;
+  padding-bottom: 50px;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #1d2933;
+}
+
+body main section.success-message .container .success-msg div p {
+  font-size: 40px;
+  font-family: "BPGVenuri2010";
+  line-height: 45px;
+  color: #1d2933;
+  margin-bottom: 30px;
+}
+
 body footer {
   width: 100%;
   padding: 90px 0;
