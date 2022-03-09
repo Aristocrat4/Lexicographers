@@ -72,7 +72,6 @@ if (newTermInput) {
 // end of new term script
 
 // ------ function for success send message ---------
-// let msg = '';
 function callIsEmpty() {
   const nameEl = document.getElementById("name").value;
   const emailEl = document.getElementById("email").value;
@@ -80,21 +79,31 @@ function callIsEmpty() {
 
   if (nameEl !== "" && emailEl !== "" && messageEl !== "") {
     //TODO
-    // msg = "შეტყობინება წარმატებით გაიგზავნა";
-    // location.href = "success.html";
+    localStorage.setItem("msg", "შეტყობინება წარმატებით გაიგზავნა");
+    location.href = "success.html";
     
   }
 }
-// const successMessageBody = document.getElementById('success-message-body');
-// if (successMessageBody) {
-//   console.log(msg);
-//   successMessageBody.onload = setSuccessMessage(msg);
-// }
+const addNewTerm = document.getElementById('addNewTerm');
+if (addNewTerm) {
+  addNewTerm.addEventListener('click', () => {
+    const newTerm = document.getElementById('new-term');
+    if (newTerm.value) {
+      localStorage.setItem("msg", "ტერმინი წარმატებით გაიგზავნა");
+      location.href = "success.html";
+    }
+  })
+}
+const successMessageBody = document.getElementById('success-message-body');
+if (successMessageBody) {
+  let msg = localStorage.getItem('msg');
+  successMessageBody.onload = setSuccessMessage(msg);
+}
 
-// function setSuccessMessage(msg) {
-//   const messageText = document.getElementById("success-message-text");
-//     messageText.innerText = msg;
-// }
+function setSuccessMessage(msg) {
+  const messageText = document.getElementById("success-message-text");
+    messageText.innerText = msg;
+}
 // -------- end of isEMpty() function --------
 
 // -------- toggle login and signup forms -------
