@@ -1405,6 +1405,29 @@ body {
 
       // end of profile page
     }
+    // // success page
+    section.success-message {
+      .container {
+        padding-top: 50px;
+        .success-msg {
+          display: block;
+          padding-top: 170px;
+          padding-bottom: 50px;
+          width: 100%;
+          text-align: center;
+          border-top: 1px solid $darkBlue;
+          div {
+            p {
+              font-size: 40px;
+              font-family: $venuri;
+              line-height: 45px;
+              color: $darkBlue;
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+    }
   }
   footer {
     width: 100%;
