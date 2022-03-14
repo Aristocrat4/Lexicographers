@@ -1,4 +1,7 @@
 // show more text function
+if (!localStorage.getItem('auth')) {
+  localStorage.setItem("auth", false);
+}
 const readMore = document.querySelector(".more-click");
 const text = document.querySelector(".text");
 
@@ -80,28 +83,39 @@ function callIsEmpty() {
   if (nameEl !== "" && emailEl !== "" && messageEl !== "") {
     localStorage.setItem("msg", "შეტყობინება წარმატებით გაიგზავნა");
     location.href = "success.html";
-    
   }
 }
-const addNewTerm = document.getElementById('addNewTerm');
+const addNewTerm = document.getElementById("addNewTerm");
 if (addNewTerm) {
-  addNewTerm.addEventListener('click', () => {
-    const newTerm = document.getElementById('new-term');
+  addNewTerm.addEventListener("click", () => {
+    const newTerm = document.getElementById("new-term");
     if (newTerm.value) {
       localStorage.setItem("msg", "ტერმინი წარმატებით გაიგზავნა");
       location.href = "success.html";
     }
-  })
+  });
 }
-const successMessageBody = document.getElementById('success-message-body');
+const addNewDefinition = document.getElementById("addNewDefinition");
+if (addNewDefinition) {
+  addNewDefinition.addEventListener("click", () => {
+    const newDefinition = document.getElementById("new-definition");
+    if (newDefinition.value) {
+      localStorage.setItem("msg", "განმარტება წარმატებით გაიგზავნა");
+      location.href = "success.html";
+    } else {
+      newDefinition.nextElementSibling.classList.remove("hidden");
+    }
+  });
+}
+const successMessageBody = document.getElementById("success-message-body");
 if (successMessageBody) {
-  let msg = localStorage.getItem('msg');
+  let msg = localStorage.getItem("msg");
   successMessageBody.onload = setSuccessMessage(msg);
 }
 
 function setSuccessMessage(msg) {
   const messageText = document.getElementById("success-message-text");
-    messageText.innerText = msg;
+  messageText.innerText = msg;
 }
 // -------- end of isEMpty() function --------
 
@@ -155,7 +169,6 @@ const validateEmail = (email) => {
     );
 };
 
-
 // -------- Login Validation -------
 const loginBtn = document.querySelector(".submit-login");
 if (loginBtn) {
@@ -188,9 +201,12 @@ if (loginBtn) {
         pswRegInput.nextSibling.nextSibling.classList.remove("hidden");
       }
     });
-    if(usernameInput.nextSibling.nextSibling.classList.contains("hidden")&&
-    passwordInput.nextSibling.nextSibling.classList.contains("hidden")){
-      loginBtn.onclick = location.href='profile.html';
+    if (
+      usernameInput.nextSibling.nextSibling.classList.contains("hidden") &&
+      passwordInput.nextSibling.nextSibling.classList.contains("hidden")
+    ) {
+      loginBtn.onclick = location.href = "profile.html";
+      localStorage.setItem("auth", true);
     }
   });
 }
@@ -262,12 +278,14 @@ if (registrationBtn) {
         // registrationBtn.removeAttribute("onclick");
       }
     });
-    if(emailRegInput.nextSibling.nextSibling.classList.contains("hidden")&&
-    nameRegInput.nextSibling.nextSibling.classList.contains("hidden")&&
-    phoneRegInput.nextSibling.nextSibling.classList.contains("hidden")&&
-    pswRegInput.nextSibling.nextSibling.classList.contains("hidden")&&
-    pswRepeatRegInput.nextSibling.nextSibling.classList.contains("hidden")){
-      registrationBtn.onclick = location.href='profile.html';
+    if (
+      emailRegInput.nextSibling.nextSibling.classList.contains("hidden") &&
+      nameRegInput.nextSibling.nextSibling.classList.contains("hidden") &&
+      phoneRegInput.nextSibling.nextSibling.classList.contains("hidden") &&
+      pswRegInput.nextSibling.nextSibling.classList.contains("hidden") &&
+      pswRepeatRegInput.nextSibling.nextSibling.classList.contains("hidden")
+    ) {
+      registrationBtn.onclick = location.href = "profile.html";
     }
   });
 }
@@ -298,17 +316,22 @@ if (recoveryButton) {
         recoverPass.classList.add("errorBorder");
         recoverPass.nextSibling.nextSibling.classList.remove("hidden");
       }
-      if (recoveryPassRpt.value && recoverPass.value !== recoveryPassRpt.value) {
+      if (
+        recoveryPassRpt.value &&
+        recoverPass.value !== recoveryPassRpt.value
+      ) {
         recoveryPassRpt.nextSibling.nextSibling.children[0].children[1].innerText =
           "პაროლები არ ემთხვევა";
         recoveryPassRpt.classList.add("errorBorder");
         recoveryPassRpt.nextSibling.nextSibling.classList.remove("hidden");
       }
     });
-    if(recoverPass.nextSibling.nextSibling.classList.contains("hidden")&&
-      recoveryPassRpt.nextSibling.nextSibling.classList.contains("hidden")){
-        recoveryButton.onclick = location.href='profile.html';
-      }
+    if (
+      recoverPass.nextSibling.nextSibling.classList.contains("hidden") &&
+      recoveryPassRpt.nextSibling.nextSibling.classList.contains("hidden")
+    ) {
+      recoveryButton.onclick = location.href = "profile.html";
+    }
   });
 }
 // click text "პაროლის აღდგენა"
@@ -409,7 +432,7 @@ if (saveButton) {
     const phone = document.querySelector(".phone-reg");
     const password = document.querySelector(".psw-reg");
     const passwordRepeat = document.querySelector(".psw-repeat-reg");
-  
+
     if (email.value && !validateEmail(email.value)) {
       email.nextElementSibling.classList.remove("hidden");
     } else {
@@ -430,8 +453,6 @@ if (saveButton) {
     }
   });
 }
-
-
 
 // change password input type
 const eyes = document.querySelectorAll(".show-password");
@@ -459,4 +480,18 @@ function addPhoto() {
     uploadPhoto.classList.add("change-photo");
     headerPhoto.classList.add("image-size");
   };
+}
+// definitions
+const terms = document.querySelectorAll(".block-div");
+if (terms) {
+  const auth = localStorage.getItem('auth');
+  terms.forEach((item) => {
+    item.children[0].addEventListener("click", () => {
+      if (auth==='true') {
+        item.children[0].href = 'src/pages/definition.html';
+      }else {
+        item.children[0].href = 'src/pages/sign_in.html';
+      }
+    });
+  });
 }
