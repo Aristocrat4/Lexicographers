@@ -1,15 +1,17 @@
 const myTerms = document.querySelector(".profile-termins-result");
 // gsap anymation
-const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-function animationFade(item) {
-  // aniamate scene
-  tl.fromTo(
-    item,
-    0.3,
-    { opacity: 0, transform: "translateY(-40px)" },
-    { opacity: 1, transform: "translateY(0)", stagger: 0.2 }
-  );
-  tl.play(); // animation execute
+if (myTerms) {
+  const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+  function animationFade(item) {
+    // aniamate scene
+    tl.fromTo(
+      item,
+      0.3,
+      { opacity: 0, transform: "translateY(-40px)" },
+      { opacity: 1, transform: "translateY(0)", stagger: 0.2 }
+    );
+    tl.play(); // animation execute
+  }
 }
 // data of definitions
 const dataMyDefinitions = [

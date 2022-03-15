@@ -65,9 +65,6 @@
     font-size: 16px;
     text-transform: capitalize;
     color: $darkBlue;
-    @media (max-width: 600px) {
-      font-size: 10px;
-    }
   }
 }
 
@@ -82,20 +79,7 @@ body {
       justify-content: space-between;
       align-items: center;
       position: relative;
-      @media (max-width: 600px) {
-        .main {
-          .logo {
-            margin-right: 12px;
-            img {
-              width: 12px;
-              height: 26px;
-            }
-          }
-          h2 {
-            font-size: 12px;
-          }
-        }
-      }
+
       nav {
         padding-left: 10px;
         display: flex;
@@ -122,9 +106,6 @@ body {
             margin-right: 0;
           }
         }
-        @media (max-width: 600px) {
-          display: none;
-        }
       }
       .sign-in-btn {
         a {
@@ -139,9 +120,6 @@ body {
             color: $black;
             border: none;
           }
-        }
-        @media (max-width: 600px) {
-          display: none;
         }
       }
 
@@ -206,10 +184,7 @@ body {
       display: flex;
       justify-content: center;
       background-color: $darkBlue;
-      @media (max-width: 600px) {
-        height: 262px;
-        margin-bottom: 35px;
-      }
+
       .container {
         display: flex;
         align-items: center;
@@ -219,25 +194,13 @@ body {
         .text {
           max-width: 469px;
           width: 100%;
-          @media (max-width: 600px) {
-            max-width: 114px;
-          }
+
           p {
             font-size: 66px;
             line-height: 76px;
             color: $lightYellow;
             font-family: $venuri;
-            @media (max-width: 600px) {
-              font-size: 16px;
-              line-height: 20px;
-            }
           }
-        }
-      }
-      @media (max-width: 600px) {
-        img {
-          width: 121px;
-          height: 92px;
         }
       }
     }
@@ -742,9 +705,6 @@ body {
           color: #1d2933;
           h2 {
             font-family: $venuri;
-            @media (max-width: 600px) {
-              font-size: 12px;
-            }
           }
         }
         .word-blocks {
@@ -760,27 +720,13 @@ body {
             background: $bgFrom;
             transition: all ease-in-out 0.5s;
             cursor: pointer;
-            @media (max-width: 600px) {
-              width: 260px;
-              margin: 9px 0;
-              height: 66px;
-              padding: 9px 0;
-              display: flex;
-              justify-content: center;
-            }
+
             a {
-              .block {
-                @media (max-width: 600px) {
-                }
-              }
               h2 {
                 color: #798996;
                 font-size: 46px;
                 text-transform: capitalize;
                 margin-bottom: 17px;
-                @media (max-width: 600px) {
-                  font-size: 16px;
-                }
               }
             }
             &:hover {
@@ -794,26 +740,17 @@ body {
       margin-top: 178px;
       margin-bottom: 134px;
       @include flex-jc(center);
-      @media (max-width: 600px) {
-        margin-top: 38px;
-        margin-bottom: 20px;
-      }
+
       .container {
         @include flex-ai(center);
         justify-content: space-between;
-        @media (max-width: 600px) {
-          justify-content: center;
-          width: 260px;
-        }
+
         .left-block {
           max-width: 768px;
           width: 100%;
           .about-project-text {
             border-left: 4px solid $tagsyellow;
             padding-left: 30px;
-            @media (max-width: 600px) {
-              padding-left: 20px;
-            }
 
             h5 {
               font-size: 40px;
@@ -822,10 +759,7 @@ body {
               color: $darkBlue;
               transition: all ease-in-out 0.2s;
               cursor: pointer;
-              @media (max-width: 600px) {
-                font-size: 14px;
-                line-height: 5px;
-              }
+
               &:hover {
                 color: $tagsyellow;
               }
@@ -837,11 +771,6 @@ body {
               font-size: 18px;
               color: $darkBlue;
               line-height: 26px;
-              @media (max-width: 600px) {
-                margin: 10px 0;
-                font-size: 8px;
-                line-height: 10px;
-              }
             }
           }
         }
@@ -855,11 +784,7 @@ body {
             height: 61px;
             background-color: $btnGray;
             transition: all 0.5s;
-            @media (max-width: 600px) {
-              width: 175px;
-              height: 28px;
-              margin-left: 25px;
-            }
+
             &:hover {
               background-color: $tagsyellow;
               p {
@@ -870,15 +795,7 @@ body {
               font-family: $dejavu;
               font-size: 18px;
               color: #ffffff;
-              @media (max-width: 600px) {
-                font-size: 9px;
-              }
             }
-          }
-        }
-        .image {
-          @media (max-width: 600px) {
-            display: none;
           }
         }
       }
@@ -888,9 +805,6 @@ body {
       position: fixed;
       bottom: 70px;
       right: 50px;
-      @media (max-width: 600px) {
-        display: none;
-      }
     }
 
     // Second page ----- abour project
@@ -905,9 +819,7 @@ body {
         .project {
           @include flex-jc(space-between);
           margin-right: 10%;
-          @media (max-width: 1500px) {
-            margin-right: 0;
-          }
+
           .text {
             max-width: 724px;
             width: 100%;
@@ -1676,34 +1588,13 @@ body {
     width: 100%;
     padding: 90px 0;
     box-shadow: 0px -3px 6px #00000029;
-    @media (max-width: 600px) {
-      padding: 20px 0;
-    }
+
     .container {
       @include flex-jc(space-between);
-      @media (max-width: 600px) {
-        flex-direction: column;
-        justify-content: center;
-        width: 200px;
-      }
+
       .left-block-social {
         a {
           color: $darkBlue;
-          h2 {
-            @media (max-width: 600px) {
-              font-size: 12px;
-              margin-left: -25px;
-              margin-right: 0px;
-            }
-          }
-          .logo {
-            img {
-              @media (max-width: 600px) {
-                width: 12px;
-                height: 26px;
-              }
-            }
-          }
           .logo-conc {
             @include flex-ai(center);
             display: flex;
@@ -1717,9 +1608,6 @@ body {
         .social-icons {
           display: flex;
           margin-top: 20px;
-          @media (max-width: 600px) {
-            justify-content: center;
-          }
 
           .circle {
             margin-right: 70px;
@@ -1730,11 +1618,7 @@ body {
             transition: all ease-in-out 0.3s;
             @include flex-jc-ai(center, center);
             cursor: pointer;
-            @media (max-width: 600px) {
-              width: 33px;
-              height: 33px;
-              margin-right: 0px;
-            }
+
             a {
               color: white;
               font-size: x-large;
@@ -1758,37 +1642,23 @@ body {
       .middle-block {
         display: flex;
         align-items: center;
-        @media (max-width: 600px) {
-          justify-content: center;
-        }
+
         .contact-info {
           p {
             font-size: 18px;
             font-family: $dejavu;
             transition: all ease-in-out 0.2s;
             cursor: pointer;
-            @media (max-width: 600px) {
-              font-size: 8px;
-              margin-top: 15px;
-              display: flex;
-              justify-content: center;
-            }
+
             &:hover {
               color: $tagsyellow;
             }
           }
           p:nth-child(1) {
             margin-bottom: 32px;
-            @media (max-width: 600px) {
-              margin-bottom: 7px;
-            }
           }
           p:nth-child(2) {
             font-weight: 600;
-            @media (max-width: 600px) {
-              margin-top: 7px;
-              margin-bottom: 12px;
-            }
           }
         }
       }
@@ -1800,10 +1670,7 @@ body {
           display: flex;
           flex-direction: column;
           align-items: flex-end;
-          @media (max-width: 600px) {
-            justify-content: center;
-            align-items: center;
-          }
+
           p {
             display: flex;
             font-size: 18px;
@@ -1811,9 +1678,7 @@ body {
             margin-bottom: 48px;
             transition: all ease-in-out 0.2s;
             cursor: pointer;
-            @media (max-width: 600px) {
-              display: none;
-            }
+
             &:hover {
               color: $tagsyellow;
             }
@@ -1826,10 +1691,6 @@ body {
               height: 46px;
               background-color: $btnGray;
               border-radius: 50%;
-              @media (max-width: 600px) {
-                width: 33px;
-                height: 33px;
-              }
             }
             :nth-child(2) {
               margin-left: 20px;
@@ -1837,6 +1698,119 @@ body {
             }
           }
         }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  body {
+    header {
+      .container {
+        min-width: 284px;
+        width: 90%;
+        margin: 0 auto;
+        .burger-bar {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          height: 15px;
+          border: none;
+          .line {
+            background-color: $darkBlue !important;
+            height: 1px;
+            width: 21px;
+          }
+        }
+        nav {
+          display: none;
+        }
+        .sign-in-btn {
+          display: none;
+        }
+        .logoStyle {
+          .main {
+            h2 {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+    main {
+      .chatbot {
+        display: none;
+      }
+      section.poster {
+        height: 192px;
+        .container {
+          min-width: 284px;
+          width: 90%;
+          margin: 0 auto;
+          img {
+            width: 120px;
+          }
+          .text {
+            width: 114px;
+            p {
+              font-size: 16px;
+              line-height: 18px;
+            }
+          }
+        }
+      }
+      section.words {
+        .container {
+          min-width: 262px;
+          width: 90%;
+          margin: 0 auto;
+          .words-title {
+            h2 {
+              font-size: 12px;
+            }
+          }
+          .word-blocks {
+            .block-div {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              .tags {
+                span {
+                  background-color: $tagsyellow;
+                  padding: 5px 10px;
+                  font-size: 16px;
+                  text-transform: capitalize;
+                  color: $darkBlue;
+                }
+              }
+              a {
+                h2 {
+                  color: #798996;
+                  font-size: 16px;
+                  text-transform: capitalize;
+                  margin-bottom: 17px;
+                }
+              }
+            }
+          }
+        }
+      }
+      section.about-project {
+        .container {
+          min-width: 260px;
+          width: 90%;
+          margin: 0 auto;
+          .image {
+            display: none;
+          }
+        }
+      }
+    }
+    footer {
+      .container {
+        flex-direction: column;
       }
     }
   }
