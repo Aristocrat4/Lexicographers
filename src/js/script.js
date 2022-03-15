@@ -1,3 +1,8 @@
+// burger icon
+
+
+
+
 // show more text function
 if (!localStorage.getItem('auth')) {
   localStorage.setItem("auth", false);
