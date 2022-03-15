@@ -1,4 +1,51 @@
+const myTerms = document.querySelector(".profile-termins-result");
+// gsap anymation
+if (myTerms) {
+  const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+  function animationFade(item) {
+    // aniamate scene
+    tl.fromTo(
+      item,
+      0.3,
+      { opacity: 0, transform: "translateY(-40px)" },
+      { opacity: 1, transform: "translateY(0)", stagger: 0.2 }
+    );
+    tl.play(); // animation execute
+  }
+}
+// data of definitions
+const dataMyDefinitions = [
+  {
+    id: 1,
+    termin: "LOREM IPSUM 1",
+    definition: "ათი შოკოლადი",
+    date: "3 კვირის წინ",
+  },
+  {
+    id: 2,
+    termin: "LOREM IPSUM 2",
+    definition: "ათი შოკოლადი",
+    date: "3 კვირის წინ",
+  },
+  {
+    id: 3,
+    termin: "LOREM IPSUM 3",
+    definition: "ათი შოკოლადი",
+    date: "3 კვირის წინ",
+  },
+  {
+    id: 4,
+    termin: "LOREM IPSUM 4",
+    definition: "ათი შოკოლადი",
+    date: "3 კვირის წინ",
+  },
+];
+
+// burger icon
 // show more text function
+if (!localStorage.getItem("auth")) {
+  localStorage.setItem("auth", false);
+}
 const readMore = document.querySelector(".more-click");
 const text = document.querySelector(".text");
 
@@ -78,13 +125,41 @@ function callIsEmpty() {
   const messageEl = document.getElementById("message").value;
 
   if (nameEl !== "" && emailEl !== "" && messageEl !== "") {
-    const element = document.querySelector(".contact-info");
-    const element2 = document.querySelector(".form");
-    const element3 = document.querySelector(".success-msg");
-    element.classList.add("form-hide");
-    element2.classList.add("form-hide");
-    element3.classList.add("not-hide");
+    localStorage.setItem("msg", "შეტყობინება წარმატებით გაიგზავნა");
+    location.href = "success.html";
   }
+}
+const addNewTerm = document.getElementById("addNewTerm");
+if (addNewTerm) {
+  addNewTerm.addEventListener("click", () => {
+    const newTerm = document.getElementById("new-term");
+    if (newTerm.value) {
+      localStorage.setItem("msg", "ტერმინი წარმატებით გაიგზავნა");
+      location.href = "success.html";
+    }
+  });
+}
+const addNewDefinition = document.getElementById("addNewDefinition");
+if (addNewDefinition) {
+  addNewDefinition.addEventListener("click", () => {
+    const newDefinition = document.getElementById("new-definition");
+    if (newDefinition.value) {
+      localStorage.setItem("msg", "განმარტება წარმატებით გაიგზავნა");
+      location.href = "success.html";
+    } else {
+      newDefinition.nextElementSibling.classList.remove("hidden");
+    }
+  });
+}
+const successMessageBody = document.getElementById("success-message-body");
+if (successMessageBody) {
+  let msg = localStorage.getItem("msg");
+  successMessageBody.onload = setSuccessMessage(msg);
+}
+
+function setSuccessMessage(msg) {
+  const messageText = document.getElementById("success-message-text");
+  messageText.innerText = msg;
 }
 // -------- end of isEMpty() function --------
 
@@ -129,12 +204,22 @@ function changeAutoToRegistr() {
 }
 // -------- end of function --------
 
+// Email validation
+const validateEmail = (email) => {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
+
 // -------- Login Validation -------
 const loginBtn = document.querySelector(".submit-login");
 if (loginBtn) {
   loginBtn.addEventListener("click", () => {
     const usernameInput = document.querySelector(".username");
     const passwordInput = document.querySelector(".psw");
+    const emailErrorTxt = document.querySelector(".change-text-error");
     const emptyInput = [usernameInput, passwordInput].filter(
       (item) => !item.value
     );
@@ -148,21 +233,32 @@ if (loginBtn) {
     filledInput.forEach((item) => {
       item.classList.remove("errorBorder");
       item.nextSibling.nextSibling.classList.add("hidden");
+      if (usernameInput.value && !validateEmail(usernameInput.value)) {
+        emailErrorTxt.innerText = "ელ.ფოსტა არ არის ვალიდური";
+        item.classList.add("errorBorder");
+        item.nextSibling.nextSibling.classList.remove("hidden");
+      }
+      if (passwordInput.value && passwordInput.value.length < 8) {
+        passwordInput.nextSibling.nextSibling.children[0].children[1].innerText =
+          "შეიყვანეთ მინიმუმ 8 სიმბოლო";
+        passwordInput.classList.add("errorBorder");
+        pswRegInput.nextSibling.nextSibling.classList.remove("hidden");
+      }
     });
+    if (
+      usernameInput.nextSibling.nextSibling.classList.contains("hidden") &&
+      passwordInput.nextSibling.nextSibling.classList.contains("hidden")
+    ) {
+      loginBtn.onclick = location.href = "profile.html";
+      localStorage.setItem("auth", true);
+    }
   });
 }
-// Email validation
-const validateEmail = (email) => {
-  return String(email)
-    .toLowerCase()
-    .match(
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    );
-};
+
 // --------- Registration Validation ------------
 const registrationBtn = document.querySelector(".submit-registration");
 if (registrationBtn) {
-  registrationBtn.setAttribute("onclick", "location.href='success.html'");
+  // registrationBtn.setAttribute("onclick", "location.href='profile.html'");
   registrationBtn.addEventListener("click", () => {
     const emailRegInput = document.querySelector(".email-reg");
     const nameRegInput = document.querySelector(".name-reg");
@@ -199,21 +295,21 @@ if (registrationBtn) {
         emailErrorP.innerText = "ელ.ფოსტა არ არის ვალიდური";
         item.classList.add("errorBorder");
         item.nextSibling.nextSibling.classList.remove("hidden");
-        registrationBtn.removeAttribute("onclick");
+        // registrationBtn.removeAttribute("onclick");
       }
       if (phoneRegInput.value && phoneRegInput.value.length != 9) {
         phoneRegInput.nextSibling.nextSibling.children[0].children[1].innerText =
           "ნომერი არ არის ვალიდური";
         phoneRegInput.classList.add("errorBorder");
         phoneRegInput.nextSibling.nextSibling.classList.remove("hidden");
-        registrationBtn.removeAttribute("onclick");
+        // registrationBtn.removeAttribute("onclick");
       }
       if (pswRegInput.value && pswRegInput.value.length < 8) {
         pswRegInput.nextSibling.nextSibling.children[0].children[1].innerText =
           "შეიყვანეთ მინიმუმ 8 სიმბოლო";
         pswRegInput.classList.add("errorBorder");
         pswRegInput.nextSibling.nextSibling.classList.remove("hidden");
-        registrationBtn.removeAttribute("onclick");
+        // registrationBtn.removeAttribute("onclick");
       }
       if (
         pswRepeatRegInput.value &&
@@ -223,9 +319,18 @@ if (registrationBtn) {
           "პაროლები არ ემთხვევა";
         pswRepeatRegInput.classList.add("errorBorder");
         pswRepeatRegInput.nextSibling.nextSibling.classList.remove("hidden");
-        registrationBtn.removeAttribute("onclick");
+        // registrationBtn.removeAttribute("onclick");
       }
     });
+    if (
+      emailRegInput.nextSibling.nextSibling.classList.contains("hidden") &&
+      nameRegInput.nextSibling.nextSibling.classList.contains("hidden") &&
+      phoneRegInput.nextSibling.nextSibling.classList.contains("hidden") &&
+      pswRegInput.nextSibling.nextSibling.classList.contains("hidden") &&
+      pswRepeatRegInput.nextSibling.nextSibling.classList.contains("hidden")
+    ) {
+      registrationBtn.onclick = location.href = "profile.html";
+    }
   });
 }
 
@@ -248,18 +353,28 @@ if (recoveryButton) {
     filledValue.forEach((item) => {
       item.classList.remove("errorBorder");
       item.nextSibling.nextSibling.classList.add("hidden");
+
+      if (recoverPass.value && recoverPass.value.length < 8) {
+        recoverPass.nextSibling.nextSibling.children[0].children[1].innerText =
+          "შეიყვანეთ მინიმუმ 8 სიმბოლო";
+        recoverPass.classList.add("errorBorder");
+        recoverPass.nextSibling.nextSibling.classList.remove("hidden");
+      }
+      if (
+        recoveryPassRpt.value &&
+        recoverPass.value !== recoveryPassRpt.value
+      ) {
+        recoveryPassRpt.nextSibling.nextSibling.children[0].children[1].innerText =
+          "პაროლები არ ემთხვევა";
+        recoveryPassRpt.classList.add("errorBorder");
+        recoveryPassRpt.nextSibling.nextSibling.classList.remove("hidden");
+      }
     });
-    if (recoverPass.value && recoverPass.value.length < 8) {
-      recoverPass.nextSibling.nextSibling.children[0].children[1].innerText =
-        "შეიყვანეთ მინიმუმ 8 სიმბოლო";
-      recoverPass.classList.add("errorBorder");
-      recoverPass.nextSibling.nextSibling.classList.remove("hidden");
-    }
-    if (recoveryPassRpt.value && recoverPass.value !== recoveryPassRpt.value) {
-      recoveryPassRpt.nextSibling.nextSibling.children[0].children[1].innerText =
-        "პაროლები არ ემთხვევა";
-      recoveryPassRpt.classList.add("errorBorder");
-      recoveryPassRpt.nextSibling.nextSibling.classList.remove("hidden");
+    if (
+      recoverPass.nextSibling.nextSibling.classList.contains("hidden") &&
+      recoveryPassRpt.nextSibling.nextSibling.classList.contains("hidden")
+    ) {
+      recoveryButton.onclick = location.href = "profile.html";
     }
   });
 }
@@ -282,101 +397,132 @@ if (profile) {
 
 // Profile menu
 const definitionHeader = document.querySelectorAll(".definition-header");
-
 definitionHeader.forEach((item) => {
   item.addEventListener("click", () => {
     item.nextElementSibling.classList.toggle("hidden");
   });
 });
 
-const profileMenuItems = document
-  .querySelector("ul.nav-ul")
-  .querySelectorAll(".profile-edit");
-const definitionUl = document.querySelector(".sub-ul-definition");
-const termUl = document.querySelector(".sub-ul-termin");
-function closeDefinitionUL() {
-  if (!definitionUl.classList.contains("hidden")) {
-    definitionUl.classList.toggle("hidden");
-  }
-}
-function closeTermUL() {
-  if (!termUl.classList.contains("hidden")) {
-    termUl.classList.toggle("hidden");
-  }
-}
+if (document.querySelector("ul.nav-ul")) {
+  const profileMenuItems = document
+    .querySelector("ul.nav-ul")
+    .querySelectorAll(".profile-edit");
 
-profileMenuItems.forEach((item, index) => {
-  itemSpan = item.children[0];
-  itemSpan.addEventListener("click", () => {
-    const profileActiveItem = document.querySelector(".profile-active-nav");
-    const rightInnerActive = document
-      .querySelector(".right-inner")
-      .querySelector(".active");
-
-    profileActiveItem.classList.remove("profile-active-nav");
-
-    item.children[0].classList.add("profile-active-nav");
-    if (index === 1 || index === 2) {
-      item.children[1].classList.remove("hidden");
+  const definitionUl = document.querySelector(".sub-ul-definition");
+  const termUl = document.querySelector(".sub-ul-termin");
+  function closeDefinitionUL() {
+    if (!definitionUl.classList.contains("hidden")) {
+      definitionUl.classList.toggle("hidden");
     }
-    if (index === 0) {
-      closeDefinitionUL();
-      closeTermUL();
-      const myTerms = document
+  }
+  function closeTermUL() {
+    if (!termUl.classList.contains("hidden")) {
+      termUl.classList.toggle("hidden");
+    }
+  }
+
+  profileMenuItems.forEach((item, index) => {
+    itemSpan = item.children[0];
+    itemSpan.addEventListener("click", () => {
+      const profileActiveItem = document.querySelector(".profile-active-nav");
+      const rightInnerActive = document
         .querySelector(".right-inner")
-        .querySelector(".profile-edit");
-      rightInnerActive.classList.toggle("active");
-      rightInnerActive.classList.toggle("hidden");
+        .querySelector(".active");
 
-      myTerms.classList.toggle("active");
-      myTerms.classList.toggle("hidden");
-    }
-    if (index === 1) {
-      closeTermUL();
-      rightInnerActive.classList.remove("active");
-      rightInnerActive.classList.toggle("hidden");
-      const myTerms = document.querySelector(".profile-termins-result");
-      myTerms.classList.toggle("hidden");
-      myTerms.classList.toggle("active");
-    }
-    if (index === 2) {
-      closeDefinitionUL();
-      rightInnerActive.classList.remove("active");
-      rightInnerActive.classList.toggle("hidden");
-      const myTerms = document.querySelector(".my-terms");
-      myTerms.classList.toggle("hidden");
-      myTerms.classList.toggle("active");
-    }
+      profileActiveItem.classList.remove("profile-active-nav");
+
+      item.children[0].classList.add("profile-active-nav");
+      if (index === 1 || index === 2) {
+        item.children[1].classList.remove("hidden");
+      }
+      if (index === 0) {
+        closeDefinitionUL();
+        closeTermUL();
+        const myTerms = document
+          .querySelector(".right-inner")
+          .querySelector(".profile-edit");
+        rightInnerActive.classList.toggle("active");
+        rightInnerActive.classList.toggle("hidden");
+
+        myTerms.classList.toggle("active");
+        myTerms.classList.toggle("hidden");
+      }
+      if (index === 1) {
+        console.log("hey");
+        dataMyDefinitions.forEach((el) => {
+          const postElement = document.createElement("div");
+          postElement.classList.add("result");
+          postElement.innerHTML = `
+          <div class="termin-tag-social">
+            <h2>${el.termin}</h2>
+            <div class="tagandsocial">
+              <div class="fb-icon">
+                <img src="../../assets/images/fb.svg" alt="fb" />
+              </div>
+            </div>
+          </div>
+          <div class="description">
+            <div class="like">
+              <img src="../../assets/images/chat.svg" alt="like" />
+            </div>
+            <h2>${el.definition}</h2>
+            <div class="spans">
+              <span class="date">${el.date}</span>
+            </div>
+          </div>
+          `;
+          animationFade(postElement);
+          myTerms.appendChild(postElement);
+          // animationFade(myDefRow);
+        });
+        closeTermUL();
+        rightInnerActive.classList.remove("active");
+        rightInnerActive.classList.toggle("hidden");
+        myTerms.classList.toggle("hidden");
+        myTerms.classList.toggle("active");
+      }
+      if (index === 2) {
+        closeDefinitionUL();
+        rightInnerActive.classList.remove("active");
+        rightInnerActive.classList.toggle("hidden");
+        const myTerms = document.querySelector(".my-terms");
+        myTerms.classList.toggle("hidden");
+        myTerms.classList.toggle("active");
+      }
+    });
   });
-});
+}
 // profile fields edit
 const saveButton = document.querySelector(".submit-profile-edit");
-console.log(saveButton);
-saveButton.addEventListener("click", () => {
-  const email = document.querySelector(".email-reg");
-  const phone = document.querySelector(".phone-reg");
-  const password = document.querySelector(".psw-reg");
-  const passwordRepeat = document.querySelector(".psw-repeat-reg");
 
-  if (email.value && !validateEmail(email.value)) {
-    email.nextElementSibling.classList.remove("hidden");
-  } else {
-    email.nextElementSibling.classList.add("hidden");
-  }
-  // if (phone.value && phone.value.length != 9) {
-  //   phone.nextElementSibling.classList.toggle('hidden');
-  // }
-  if (password.value && password.value.length < 8) {
-    password.nextElementSibling.classList.remove("hidden");
-  } else {
-    password.nextElementSibling.classList.add("hidden");
-  }
-  if (passwordRepeat.value && password.value !== passwordRepeat.value) {
-    passwordRepeat.nextElementSibling.classList.remove("hidden");
-  } else {
-    passwordRepeat.nextElementSibling.classList.add("hidden");
-  }
-});
+if (saveButton) {
+  saveButton.addEventListener("click", () => {
+    const email = document.querySelector(".email-reg");
+    const phone = document.querySelector(".phone-reg");
+    const password = document.querySelector(".psw-reg");
+    const passwordRepeat = document.querySelector(".psw-repeat-reg");
+
+    if (email.value && !validateEmail(email.value)) {
+      email.nextElementSibling.classList.remove("hidden");
+    } else {
+      email.nextElementSibling.classList.add("hidden");
+    }
+    // if (phone.value && phone.value.length != 9) {
+    //   phone.nextElementSibling.classList.toggle('hidden');
+    // }
+    if (password.value && password.value.length < 8) {
+      password.nextElementSibling.classList.remove("hidden");
+    } else {
+      password.nextElementSibling.classList.add("hidden");
+    }
+    if (passwordRepeat.value && password.value !== passwordRepeat.value) {
+      passwordRepeat.nextElementSibling.classList.remove("hidden");
+    } else {
+      passwordRepeat.nextElementSibling.classList.add("hidden");
+    }
+  });
+}
+
 // change password input type
 const eyes = document.querySelectorAll(".show-password");
 eyes.forEach((item) => {
@@ -403,4 +549,18 @@ function addPhoto() {
     uploadPhoto.classList.add("change-photo");
     headerPhoto.classList.add("image-size");
   };
+}
+// definitions
+const terms = document.querySelectorAll(".block-div");
+if (terms) {
+  const auth = localStorage.getItem("auth");
+  terms.forEach((item) => {
+    item.children[0].addEventListener("click", () => {
+      if (auth === "true") {
+        item.children[0].href = "src/pages/definition.html";
+      } else {
+        item.children[0].href = "src/pages/sign_in.html";
+      }
+    });
+  });
 }
