@@ -1,10 +1,47 @@
+const myTerms = document.querySelector(".profile-termins-result");
+// gsap anymation
+const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+function animationFade(item) {
+  // aniamate scene
+  tl.fromTo(
+    item,
+    0.3,
+    { opacity: 0, transform: "translateY(-40px)" },
+    { opacity: 1, transform: "translateY(0)", stagger: 0.2 }
+  );
+  tl.play(); // animation execute
+}
+// data of definitions
+const dataMyDefinitions = [
+  {
+    id: 1,
+    termin: "LOREM IPSUM 1",
+    definition: "ათი შოკოლადი",
+    date: "3 კვირის წინ",
+  },
+  {
+    id: 2,
+    termin: "LOREM IPSUM 2",
+    definition: "ათი შოკოლადი",
+    date: "3 კვირის წინ",
+  },
+  {
+    id: 3,
+    termin: "LOREM IPSUM 3",
+    definition: "ათი შოკოლადი",
+    date: "3 კვირის წინ",
+  },
+  {
+    id: 4,
+    termin: "LOREM IPSUM 4",
+    definition: "ათი შოკოლადი",
+    date: "3 კვირის წინ",
+  },
+];
+
 // burger icon
-
-
-
-
 // show more text function
-if (!localStorage.getItem('auth')) {
+if (!localStorage.getItem("auth")) {
   localStorage.setItem("auth", false);
 }
 const readMore = document.querySelector(".more-click");
@@ -358,7 +395,6 @@ if (profile) {
 
 // Profile menu
 const definitionHeader = document.querySelectorAll(".definition-header");
-
 definitionHeader.forEach((item) => {
   item.addEventListener("click", () => {
     item.nextElementSibling.classList.toggle("hidden");
@@ -410,10 +446,36 @@ if (document.querySelector("ul.nav-ul")) {
         myTerms.classList.toggle("hidden");
       }
       if (index === 1) {
+        console.log("hey");
+        dataMyDefinitions.forEach((el) => {
+          const postElement = document.createElement("div");
+          postElement.classList.add("result");
+          postElement.innerHTML = `
+          <div class="termin-tag-social">
+            <h2>${el.termin}</h2>
+            <div class="tagandsocial">
+              <div class="fb-icon">
+                <img src="../../assets/images/fb.svg" alt="fb" />
+              </div>
+            </div>
+          </div>
+          <div class="description">
+            <div class="like">
+              <img src="../../assets/images/chat.svg" alt="like" />
+            </div>
+            <h2>${el.definition}</h2>
+            <div class="spans">
+              <span class="date">${el.date}</span>
+            </div>
+          </div>
+          `;
+          animationFade(postElement);
+          myTerms.appendChild(postElement);
+          // animationFade(myDefRow);
+        });
         closeTermUL();
         rightInnerActive.classList.remove("active");
         rightInnerActive.classList.toggle("hidden");
-        const myTerms = document.querySelector(".profile-termins-result");
         myTerms.classList.toggle("hidden");
         myTerms.classList.toggle("active");
       }
@@ -489,13 +551,13 @@ function addPhoto() {
 // definitions
 const terms = document.querySelectorAll(".block-div");
 if (terms) {
-  const auth = localStorage.getItem('auth');
+  const auth = localStorage.getItem("auth");
   terms.forEach((item) => {
     item.children[0].addEventListener("click", () => {
-      if (auth==='true') {
-        item.children[0].href = 'src/pages/definition.html';
-      }else {
-        item.children[0].href = 'src/pages/sign_in.html';
+      if (auth === "true") {
+        item.children[0].href = "src/pages/definition.html";
+      } else {
+        item.children[0].href = "src/pages/sign_in.html";
       }
     });
   });

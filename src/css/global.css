@@ -2082,6 +2082,7 @@ body main .profile-section .container .right-inner {
 }
 
 body main .profile-section .container .right-inner .profile-termins-result .result {
+  opacity: 0;
   padding-top: 50px;
   width: 100%;
   display: -webkit-box;
