@@ -1716,6 +1716,7 @@ body {
       padding: 10px 0;
       position: relative;
       .burger-navigation {
+        display: block;
         position: fixed;
         background-color: $bgcolor;
         width: 100%;
@@ -1745,6 +1746,7 @@ body {
         width: 90%;
         margin: 0 auto;
         .burger-bar {
+          display: block;
           border: none;
           color: $darkBlue;
         }

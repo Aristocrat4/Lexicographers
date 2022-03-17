@@ -2721,6 +2721,7 @@ body footer .container .right-block-partners .partners .partners-logo :nth-child
     position: relative;
   }
   body header .burger-navigation {
+    display: block;
     position: fixed;
     background-color: #f9f7f5;
     width: 100%;
@@ -2759,6 +2760,7 @@ body footer .container .right-block-partners .partners .partners-logo :nth-child
     margin: 0 auto;
   }
   body header .container .burger-bar {
+    display: block;
     border: none;
     color: #1d2933;
   }
