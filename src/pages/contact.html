@@ -29,26 +29,52 @@
           <ul>
             <li><a href="./about.html">პროექტის შესახებ</a></li>
             <li><a href="./termins_bank.html">ტერმინების ბანკი</a></li>
-            <li><a href="./new_term.html">შემოგვთავაზე შენი ტერმინი</a></li>
-            <li><a href="./contact.html" class="activeNav">კონტაქტი</a></li>
+            <li>
+              <a href="./new_term.html">შემოგვთავაზე შენი ტერმინი</a>
+            </li>
+            <li><a href="./contact.html">კონტაქტი</a></li>
           </ul>
         </nav>
         <div class="sign-in-btn">
-          <a href="sign_in.html">შესვლა</a>
+          <a href="./sign_in.html">შესვლა</a>
+        </div>
+        <div class="burger-bar">
+          <img
+            class="open-burger"
+            src="/assets/images/burger.svg"
+            alt="burger"
+          />
+          <img
+            class="close-burger hidden"
+            src="/assets/images/closeX.svg"
+            alt="closeBurger"
+          />
         </div>
         <div class="profile hidden" id="profile">
           <h5 class="user">თეკლა</h5>
           <div class="image"></div>
-          
         </div>
         <div class="profile-menu hidden" id="profile-menu">
           <ul>
             <li><a href="#">პროფილის რედაქტირება</a></li>
             <li><a href="#">ჩემი განმარტებები</a></li>
             <li><a href="#">ჩემი ტერმინები</a></li>
-            <li><a href="../../index.html">გამოსვლა</a></li>
+            <li><a href="index.html">გამოსვლა></a></li>
           </ul>
         </div>
+      </div>
+      <div class="burger-navigation">
+        <nav>
+          <ul>
+            <li><a href="src/pages/sign_in.html"></a>შესვლა</li>
+            <li><a href="src/pages/about.html"></a> პროექტის შესახებ</li>
+            <li><a href="src/pages/termins_bank.html"></a>ტერმინების ბანკი</li>
+            <li>
+              <a href="src/pages/new_term.html"></a>შემოგვთავაზე შენი ტერმინი
+            </li>
+            <li><a href="src/pages/contact.html"></a> კონტაქტი</li>
+          </ul>
+        </nav>
       </div>
     </header>
     <main>
@@ -61,27 +87,48 @@
           </div>
           <div class="form">
             <form>
-              <input type="text" placeholder="სახელი*" id="name"/>
-              <span class="error hidden"><div><img src="../../assets/images/error-svg.svg" alt="error"><p>სახელი სავალდებულოა</p></div></span>
+              <input type="text" placeholder="სახელი*" id="name" />
+              <span class="error hidden"
+                ><div>
+                  <img src="../../assets/images/error-svg.svg" alt="error" />
+                  <p>სახელი სავალდებულოა</p>
+                </div></span
+              >
 
-
-              <input type="email" placeholder="ელ.ფოსტა*" id="email"/>
-              <span class="error hidden"><div><img src="../../assets/images/error-svg.svg" alt="error"><p>ელ.ფოსტა სავალდებულოა</p></div></span>
-
+              <input type="email" placeholder="ელ.ფოსტა*" id="email" />
+              <span class="error hidden"
+                ><div>
+                  <img src="../../assets/images/error-svg.svg" alt="error" />
+                  <p>ელ.ფოსტა სავალდებულოა</p>
+                </div></span
+              >
 
               <input type="text" placeholder="თემა" />
 
-
-              <textarea cols="30" placeholder="შეტყობინება*" id="message"></textarea>
-              <span class="error hidden"><div><img src="../../assets/images/error-svg.svg" alt="error"><p>შეტყობინება სავალდებულოა</p></div></span>
-              <input type="button" value="გაგზავნა" id="sendButton" onclick="callIsEmpty()"/>
+              <textarea
+                cols="30"
+                placeholder="შეტყობინება*"
+                id="message"
+              ></textarea>
+              <span class="error hidden"
+                ><div>
+                  <img src="../../assets/images/error-svg.svg" alt="error" />
+                  <p>შეტყობინება სავალდებულოა</p>
+                </div></span
+              >
+              <input
+                type="button"
+                value="გაგზავნა"
+                id="sendButton"
+                onclick="callIsEmpty()"
+              />
             </form>
           </div>
-         
+
           <div class="success-msg">
             <div>
               <p>შეტყობინება წარმატებით გაიგზავნა</p>
-              <img src="../../assets/images/tick-mark.svg" alt="tick-mark">
+              <img src="../../assets/images/tick-mark.svg" alt="tick-mark" />
             </div>
           </div>
         </div>
@@ -100,14 +147,14 @@
           </a>
           <div class="social-icons">
             <div class="circle insta">
-                <a href="#"><i class="fa fa-instagram"></i></a>
-              </div>
-              <div class="circle twitter">
-                <a href="#"><i class="fa fa-twitter"></i></a>
-              </div>
-              <div class="circle fb">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-              </div>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+            <div class="circle twitter">
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+            <div class="circle fb">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+            </div>
           </div>
         </div>
         <div class="middle-block">

@@ -1,4 +1,24 @@
 const myTerms = document.querySelector(".profile-termins-result");
+// burger navigation
+const main = document.getElementById("menu");
+const burgerNavigation = document.querySelector(".burger-navigation");
+const burgerOpenIcon = document.querySelector(".open-burger");
+const burgerCloseIcon = document.querySelector(".close-burger");
+if (burgerOpenIcon) {
+  burgerOpenIcon.addEventListener("click", () => {
+    burgerNavigation.classList.add("clicked");
+    burgerOpenIcon.classList.add("hidden");
+    burgerCloseIcon.classList.remove("hidden");
+    main.classList.add("hidden");
+  });
+  burgerCloseIcon.addEventListener("click", () => {
+    burgerNavigation.classList.remove("clicked");
+    burgerCloseIcon.classList.add("hidden");
+    burgerOpenIcon.classList.remove("hidden");
+    main.classList.remove("hidden");
+  });
+}
+// end of burger navigation
 // gsap anymation
 if (myTerms) {
   const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
