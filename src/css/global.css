@@ -517,10 +517,13 @@ body main section.bank-section .container .alphabets-search .double .left-alphab
           align-items: center;
 }
 
+body main section.bank-section .container .alphabets-search .double .left-alphabet .en-alphabet img {
+  display: none;
+}
+
 body main section.bank-section .container .alphabets-search .double .left-alphabet .en-alphabet .collect-letters {
   width: 85%;
   height: 25px;
-  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -538,18 +541,18 @@ body main section.bank-section .container .alphabets-search .double .left-alphab
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
+body main section.bank-section .container .alphabets-search .double .left-alphabet .ge-alphabet img {
+  display: none;
+}
+
 body main section.bank-section .container .alphabets-search .double .left-alphabet .ge-alphabet .collect-letters {
   width: 85%;
   height: 25px;
-  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -557,6 +560,7 @@ body main section.bank-section .container .alphabets-search .double .left-alphab
       -ms-flex-align: center;
           align-items: center;
   overflow-x: auto;
+  margin-left: 0;
 }
 
 body main section.bank-section .container .alphabets-search .double .left-alphabet .ge-alphabet .collect-letters::-webkit-scrollbar {
@@ -3024,6 +3028,17 @@ body footer .container .right-block-partners .partners .partners-logo :nth-child
   }
   body main section.bank-section .container .alphabets-search .double .left-alphabet {
     width: 100%;
+  }
+  body main section.bank-section .container .alphabets-search .double .left-alphabet .ge-alphabet {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body main section.bank-section .container .alphabets-search .double .left-alphabet .ge-alphabet img {
+    display: block;
+  }
+  body main section.bank-section .container .alphabets-search .double .left-alphabet .en-alphabet img {
+    display: block;
   }
   body main section.bank-section .container .alphabets-search .double .right-search {
     margin-top: 10px;

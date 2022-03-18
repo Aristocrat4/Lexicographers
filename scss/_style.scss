@@ -247,10 +247,12 @@ body {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                img {
+                  display: none;
+                }
                 .collect-letters {
                   width: 85%;
                   height: 25px;
-                  margin: auto;
                   display: flex;
                   align-items: center;
                   overflow-x: auto;
@@ -261,15 +263,17 @@ body {
               }
               .ge-alphabet {
                 display: flex;
-                justify-content: center;
                 align-items: center;
+                img {
+                  display: none;
+                }
                 .collect-letters {
                   width: 85%;
                   height: 25px;
-                  margin: auto;
                   display: flex;
                   align-items: center;
                   overflow-x: auto;
+                  margin-left: 0;
                   &::-webkit-scrollbar {
                     display: none;
                   }
@@ -1989,6 +1993,17 @@ body {
               flex-direction: column;
               .left-alphabet {
                 width: 100%;
+                .ge-alphabet {
+                  justify-content: space-between;
+                  img {
+                    display: block;
+                  }
+                }
+                .en-alphabet {
+                  img {
+                    display: block;
+                  }
+                }
               }
               .right-search {
                 margin-top: 10px;
