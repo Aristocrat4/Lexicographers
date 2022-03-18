@@ -241,15 +241,39 @@ body {
             @include flex-jc-ai(space-between, flex-start);
             margin: 17px 0 30px 0;
             .left-alphabet {
-              width: 75%;
+              width: 100%;
               .en-alphabet {
                 margin: 15px 0 25px 0;
                 display: flex;
-                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                .collect-letters {
+                  width: 85%;
+                  height: 25px;
+                  margin: auto;
+                  display: flex;
+                  align-items: center;
+                  overflow-x: auto;
+                  &::-webkit-scrollbar {
+                    display: none;
+                  }
+                }
               }
               .ge-alphabet {
                 display: flex;
-                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                .collect-letters {
+                  width: 85%;
+                  height: 25px;
+                  margin: auto;
+                  display: flex;
+                  align-items: center;
+                  overflow-x: auto;
+                  &::-webkit-scrollbar {
+                    display: none;
+                  }
+                }
               }
               span {
                 font-family: $venuri;
@@ -1963,6 +1987,9 @@ body {
             }
             .double {
               flex-direction: column;
+              .left-alphabet {
+                width: 100%;
+              }
               .right-search {
                 margin-top: 10px;
                 width: 96%;

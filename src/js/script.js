@@ -595,3 +595,9 @@ if (terms) {
     });
   });
 }
+// scroll alphabet
+const prevLetter = document.querySelectorAll(".letters-left");
+const nextLetter = document.querySelectorAll(".letters-right");
+const letter = document
+  .querySelector(".collect-letters")
+  .getElementsByTagName("span");
