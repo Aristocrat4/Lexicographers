@@ -160,6 +160,11 @@ a {
   margin: 0 auto;
 }
 
+.rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .active-tab {
   border-top: 3px solid #eed370 !important;
   background-color: transparent !important;
@@ -2217,6 +2222,18 @@ body main .profile-section .container .right-inner .my-terms .term .title .socia
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+body main .profile-section .container .right-inner .my-terms .term .active {
+  height: 141px !important;
+  overflow: auto !important;
+}
+
+body main .profile-section .container .right-inner .my-terms .term .definition {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  height: 18px;
+  overflow: hidden;
 }
 
 body main .profile-section .container .right-inner .my-terms .term .definition .definition-header {

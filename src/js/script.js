@@ -419,7 +419,13 @@ if (profile) {
 const definitionHeader = document.querySelectorAll(".definition-header");
 definitionHeader.forEach((item) => {
   item.addEventListener("click", () => {
-    item.nextElementSibling.classList.toggle("hidden");
+    if (!item.parentElement.classList.contains("active")) {
+      item.parentElement.classList.add("active");
+      item.lastElementChild.classList.toggle("rotate");
+    } else {
+      item.parentElement.classList.remove("active");
+      item.lastElementChild.classList.toggle("rotate");
+    }
   });
 });
 
@@ -530,21 +536,20 @@ if (saveButton) {
     passwordRepeat.parentElement.nextElementSibling.classList.add("hidden");
     if (!email.value || !validateEmail(email.value)) {
       email.nextElementSibling.classList.remove("hidden");
-
-    } 
-    if (!name.value ) {
-      name.nextElementSibling.classList.remove("hidden");
-
     }
-    if (!phone.value ) {
+    if (!name.value) {
+      name.nextElementSibling.classList.remove("hidden");
+    }
+    if (!phone.value) {
       phone.nextElementSibling.classList.remove("hidden");
-
-    } 
+    }
     if (!password.value || password.value.length < 8) {
       password.parentElement.nextElementSibling.classList.remove("hidden");
-    } 
+    }
     if (!passwordRepeat.value || password.value != passwordRepeat.value) {
-      passwordRepeat.parentElement.nextElementSibling.classList.remove("hidden");
+      passwordRepeat.parentElement.nextElementSibling.classList.remove(
+        "hidden"
+      );
     }
   });
 }
