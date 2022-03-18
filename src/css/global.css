@@ -725,9 +725,30 @@ body main section.bank-results .container .pagination {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
-body main section.bank-results .container .pagination div {
+body main section.bank-results .container .pagination .left-arrow {
+  display: none;
+}
+
+body main section.bank-results .container .pagination .right-arrow {
+  display: none;
+}
+
+body main section.bank-results .container .pagination .page-numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main section.bank-results .container .pagination .page-numbers .page-num {
   cursor: pointer;
   margin-right: 3px;
   width: 40px;
@@ -747,7 +768,7 @@ body main section.bank-results .container .pagination div {
           align-items: center;
 }
 
-body main section.bank-results .container .pagination div:first-child {
+body main section.bank-results .container .pagination .page-numbers .page-num:first-child {
   background-color: #eed370;
 }
 
@@ -2963,6 +2984,11 @@ body footer .container .right-block-partners .partners .partners-logo :nth-child
     margin-top: 10px;
     width: 96%;
   }
+  body main section.bank-section .container .alphabets-search .bank-tags {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   body main section.bank-section .container .alphabets-search .bank-tags div {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2973,11 +2999,13 @@ body footer .container .right-block-partners .partners .partners-logo :nth-child
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 90px;
+    width: 100px;
     height: 40px;
+    padding: 8px 10px;
+    margin-right: 0;
   }
   body main section.bank-section .container .alphabets-search .bank-tags div a {
-    font-size: 15px;
+    font-size: 17px;
   }
   body main section.bank-results .container .result .termin-tag-social h2 {
     font-size: 22px;
@@ -2996,7 +3024,30 @@ body footer .container .right-block-partners .partners .partners-logo :nth-child
     width: 25px;
     height: 25px;
   }
-  body main section.bank-results .container .pagination div {
+  body main section.bank-results .container .pagination {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  body main section.bank-results .container .pagination .left-arrow {
+    display: block;
+  }
+  body main section.bank-results .container .pagination .right-arrow {
+    display: block;
+  }
+  body main section.bank-results .container .pagination .page-numbers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main section.bank-results .container .pagination .page-numbers .page-num {
     font-size: 18px;
     width: 30px;
     height: 30px;

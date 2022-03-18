@@ -378,18 +378,28 @@ body {
         }
         .pagination {
           @include flex-jc-ai(center, center);
-          div {
-            cursor: pointer;
-            margin-right: 3px;
-            width: 40px;
-            height: 40px;
-            color: $darkBlue;
-            background-color: transparent;
-            font-size: 30px;
-            font-family: $dejavu;
+          width: 100%;
+          .left-arrow {
+            display: none;
+          }
+          .right-arrow {
+            display: none;
+          }
+          .page-numbers {
             @include flex-jc-ai(center, center);
-            &:first-child {
-              background-color: $tagsyellow;
+            .page-num {
+              cursor: pointer;
+              margin-right: 3px;
+              width: 40px;
+              height: 40px;
+              color: $darkBlue;
+              background-color: transparent;
+              font-size: 30px;
+              font-family: $dejavu;
+              @include flex-jc-ai(center, center);
+              &:first-child {
+                background-color: $tagsyellow;
+              }
             }
           }
         }
@@ -1959,12 +1969,15 @@ body {
               }
             }
             .bank-tags {
+              justify-content: space-between;
               div {
                 @include flex-jc-ai(center, center);
-                width: 90px;
+                width: 100px;
                 height: 40px;
+                padding: 8px 10px;
+                margin-right: 0;
                 a {
-                  font-size: 15px;
+                  font-size: 17px;
                 }
               }
             }
@@ -2001,10 +2014,21 @@ body {
             }
           }
           .pagination {
-            div {
-              font-size: 18px;
-              width: 30px;
-              height: 30px;
+            justify-content: space-between;
+            width: 100%;
+            .left-arrow {
+              display: block;
+            }
+            .right-arrow {
+              display: block;
+            }
+            .page-numbers {
+              @include flex-jc-ai(center, center);
+              .page-num {
+                font-size: 18px;
+                width: 30px;
+                height: 30px;
+              }
             }
           }
         }
