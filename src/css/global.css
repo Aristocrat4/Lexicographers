@@ -2817,6 +2817,10 @@ body footer .container .right-block-partners .partners .partners-logo :nth-child
             align-items: center;
     margin-right: 0;
   }
+  body main section.about-project-section .container .project .text {
+    border-left: 2px solid #eed370;
+    padding-left: 10px;
+  }
   body main section.about-project-section .container .project .text h5 {
     font-size: 22px;
     line-height: 25px;

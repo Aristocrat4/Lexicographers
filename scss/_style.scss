@@ -1802,6 +1802,8 @@ body {
             align-items: center;
             margin-right: 0;
             .text {
+              border-left: 2px solid $tagsyellow;
+              padding-left: 10px;
               h5 {
                 font-size: 22px;
                 line-height: 25px;
