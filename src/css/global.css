@@ -2283,6 +2283,7 @@ body main .profile-section .container .right-inner .my-terms .term .definition .
 
 body main section.success-message .container {
   padding-top: 50px;
+  min-height: 500px;
 }
 
 body main section.success-message .container .success-msg {

@@ -518,27 +518,33 @@ const saveButton = document.querySelector(".submit-profile-edit");
 if (saveButton) {
   saveButton.addEventListener("click", () => {
     const email = document.querySelector(".email-reg");
+    const name = document.querySelector(".name-reg");
     const phone = document.querySelector(".phone-reg");
     const password = document.querySelector(".psw-reg");
     const passwordRepeat = document.querySelector(".psw-repeat-reg");
 
-    if (email.value && !validateEmail(email.value)) {
+    email.nextElementSibling.classList.add("hidden");
+    name.nextElementSibling.classList.add("hidden");
+    phone.nextElementSibling.classList.add("hidden");
+    password.parentElement.nextElementSibling.classList.add("hidden");
+    passwordRepeat.parentElement.nextElementSibling.classList.add("hidden");
+    if (!email.value || !validateEmail(email.value)) {
       email.nextElementSibling.classList.remove("hidden");
-    } else {
-      email.nextElementSibling.classList.add("hidden");
+
+    } 
+    if (!name.value ) {
+      name.nextElementSibling.classList.remove("hidden");
+
     }
-    // if (phone.value && phone.value.length != 9) {
-    //   phone.nextElementSibling.classList.toggle('hidden');
-    // }
-    if (password.value && password.value.length < 8) {
-      password.nextElementSibling.classList.remove("hidden");
-    } else {
-      password.nextElementSibling.classList.add("hidden");
-    }
-    if (passwordRepeat.value && password.value !== passwordRepeat.value) {
-      passwordRepeat.nextElementSibling.classList.remove("hidden");
-    } else {
-      passwordRepeat.nextElementSibling.classList.add("hidden");
+    if (!phone.value ) {
+      phone.nextElementSibling.classList.remove("hidden");
+
+    } 
+    if (!password.value || password.value.length < 8) {
+      password.parentElement.nextElementSibling.classList.remove("hidden");
+    } 
+    if (!passwordRepeat.value || password.value != passwordRepeat.value) {
+      passwordRepeat.parentElement.nextElementSibling.classList.remove("hidden");
     }
   });
 }
