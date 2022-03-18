@@ -1383,15 +1383,6 @@ body {
                   span {
                     font-size: 18px;
                     font-family: $dejavu;
-                    &::after {
-                      content: "";
-                      border: solid gray;
-                      border-width: 0 3px 3px 0;
-                      display: inline-block;
-                      padding: 3px;
-                      margin-left: 14px;
-                      transform: rotate(45deg);
-                    }
                   }
                 }
                 .definition-box {

@@ -2229,17 +2229,6 @@ body main .profile-section .container .right-inner .my-terms .term .definition .
   font-family: "DejaVuSans";
 }
 
-body main .profile-section .container .right-inner .my-terms .term .definition .definition-header span::after {
-  content: "";
-  border: solid gray;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  margin-left: 14px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
 body main .profile-section .container .right-inner .my-terms .term .definition .definition-box {
   background: #e9e9ed;
   font-family: "DejaVuSans";
