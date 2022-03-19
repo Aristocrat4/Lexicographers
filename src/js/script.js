@@ -1,4 +1,24 @@
 const myTerms = document.querySelector(".profile-termins-result");
+// burger navigation
+const main = document.getElementById("menu");
+const burgerNavigation = document.querySelector(".burger-navigation");
+const burgerOpenIcon = document.querySelector(".open-burger");
+const burgerCloseIcon = document.querySelector(".close-burger");
+if (burgerOpenIcon) {
+  burgerOpenIcon.addEventListener("click", () => {
+    burgerNavigation.classList.add("clicked");
+    burgerOpenIcon.classList.add("hidden");
+    burgerCloseIcon.classList.remove("hidden");
+    main.classList.add("hidden");
+  });
+  burgerCloseIcon.addEventListener("click", () => {
+    burgerNavigation.classList.remove("clicked");
+    burgerCloseIcon.classList.add("hidden");
+    burgerOpenIcon.classList.remove("hidden");
+    main.classList.remove("hidden");
+  });
+}
+// end of burger navigation
 // gsap anymation
 if (myTerms) {
   const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
@@ -399,7 +419,13 @@ if (profile) {
 const definitionHeader = document.querySelectorAll(".definition-header");
 definitionHeader.forEach((item) => {
   item.addEventListener("click", () => {
-    item.nextElementSibling.classList.toggle("hidden");
+    if (!item.parentElement.classList.contains("active")) {
+      item.parentElement.classList.add("active");
+      item.lastElementChild.classList.toggle("rotate");
+    } else {
+      item.parentElement.classList.remove("active");
+      item.lastElementChild.classList.toggle("rotate");
+    }
   });
 });
 
@@ -498,27 +524,32 @@ const saveButton = document.querySelector(".submit-profile-edit");
 if (saveButton) {
   saveButton.addEventListener("click", () => {
     const email = document.querySelector(".email-reg");
+    const name = document.querySelector(".name-reg");
     const phone = document.querySelector(".phone-reg");
     const password = document.querySelector(".psw-reg");
     const passwordRepeat = document.querySelector(".psw-repeat-reg");
 
-    if (email.value && !validateEmail(email.value)) {
+    email.nextElementSibling.classList.add("hidden");
+    name.nextElementSibling.classList.add("hidden");
+    phone.nextElementSibling.classList.add("hidden");
+    password.parentElement.nextElementSibling.classList.add("hidden");
+    passwordRepeat.parentElement.nextElementSibling.classList.add("hidden");
+    if (!email.value || !validateEmail(email.value)) {
       email.nextElementSibling.classList.remove("hidden");
-    } else {
-      email.nextElementSibling.classList.add("hidden");
     }
-    // if (phone.value && phone.value.length != 9) {
-    //   phone.nextElementSibling.classList.toggle('hidden');
-    // }
-    if (password.value && password.value.length < 8) {
-      password.nextElementSibling.classList.remove("hidden");
-    } else {
-      password.nextElementSibling.classList.add("hidden");
+    if (!name.value) {
+      name.nextElementSibling.classList.remove("hidden");
     }
-    if (passwordRepeat.value && password.value !== passwordRepeat.value) {
-      passwordRepeat.nextElementSibling.classList.remove("hidden");
-    } else {
-      passwordRepeat.nextElementSibling.classList.add("hidden");
+    if (!phone.value) {
+      phone.nextElementSibling.classList.remove("hidden");
+    }
+    if (!password.value || password.value.length < 8) {
+      password.parentElement.nextElementSibling.classList.remove("hidden");
+    }
+    if (!passwordRepeat.value || password.value != passwordRepeat.value) {
+      passwordRepeat.parentElement.nextElementSibling.classList.remove(
+        "hidden"
+      );
     }
   });
 }
@@ -564,3 +595,9 @@ if (terms) {
     });
   });
 }
+// scroll alphabet
+const prevLetter = document.querySelectorAll(".letters-left");
+const nextLetter = document.querySelectorAll(".letters-right");
+const letter = document
+  .querySelector(".collect-letters")
+  .getElementsByTagName("span");

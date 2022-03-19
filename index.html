@@ -39,19 +39,17 @@
           <a href="src/pages/sign_in.html">შესვლა</a>
         </div>
         <div class="burger-bar">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
+          <img
+            class="open-burger"
+            src="/assets/images/burger.svg"
+            alt="burger"
+          />
+          <img
+            class="close-burger hidden"
+            src="/assets/images/closeX.svg"
+            alt="closeBurger"
+          />
         </div>
-        <!-- <div id="nav-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div> -->
-
         <div class="profile hidden" id="profile">
           <h5 class="user">თეკლა</h5>
           <div class="image"></div>
@@ -65,9 +63,21 @@
           </ul>
         </div>
       </div>
+      <div class="burger-navigation">
+        <nav>
+          <ul>
+            <li><a href="src/pages/sign_in.html"></a>შესვლა</li>
+            <li><a href="src/pages/about.html"></a> პროექტის შესახებ</li>
+            <li><a href="src/pages/termins_bank.html"></a>ტერმინების ბანკი</li>
+            <li>
+              <a href="src/pages/new_term.html"></a>შემოგვთავაზე შენი ტერმინი
+            </li>
+            <li><a href="src/pages/contact.html"></a> კონტაქტი</li>
+          </ul>
+        </nav>
+      </div>
     </header>
-
-    <main>
+    <main id="menu" class="">
       <section class="poster">
         <div class="container">
           <img src="assets/images/light-search.svg" alt="light-ball" />
