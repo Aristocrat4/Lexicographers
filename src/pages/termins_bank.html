@@ -28,34 +28,56 @@
         <nav>
           <ul>
             <li><a href="./about.html">პროექტის შესახებ</a></li>
+            <li><a href="./termins_bank.html">ტერმინების ბანკი</a></li>
             <li>
-              <a href="./termins_bank.html" class="activeNav"
-                >ტერმინების ბანკი</a
-              >
+              <a href="./new_term.html">შემოგვთავაზე შენი ტერმინი</a>
             </li>
-            <li><a href="./new_term.html">შემოგვთავაზე შენი ტერმინი</a></li>
             <li><a href="./contact.html">კონტაქტი</a></li>
           </ul>
         </nav>
         <div class="sign-in-btn">
-          <a href="sign_in.html">შესვლა</a>
+          <a href="./sign_in.html">შესვლა</a>
+        </div>
+        <div class="burger-bar">
+          <img
+            class="open-burger"
+            src="/assets/images/burger.svg"
+            alt="burger"
+          />
+          <img
+            class="close-burger hidden"
+            src="/assets/images/closeX.svg"
+            alt="closeBurger"
+          />
         </div>
         <div class="profile hidden" id="profile">
           <h5 class="user">თეკლა</h5>
           <div class="image"></div>
-          
         </div>
         <div class="profile-menu hidden" id="profile-menu">
           <ul>
             <li><a href="#">პროფილის რედაქტირება</a></li>
             <li><a href="#">ჩემი განმარტებები</a></li>
             <li><a href="#">ჩემი ტერმინები</a></li>
-            <li><a href="../../index.html">გამოსვლა</a></li>
+            <li><a href="index.html">გამოსვლა></a></li>
           </ul>
         </div>
       </div>
+      <div class="burger-navigation">
+        <nav>
+          <ul>
+            <li><a href="src/pages/sign_in.html"></a>შესვლა</li>
+            <li><a href="src/pages/about.html"></a> პროექტის შესახებ</li>
+            <li><a href="src/pages/termins_bank.html"></a>ტერმინების ბანკი</li>
+            <li>
+              <a href="src/pages/new_term.html"></a>შემოგვთავაზე შენი ტერმინი
+            </li>
+            <li><a href="src/pages/contact.html"></a> კონტაქტი</li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <main>
+    <main id="menu">
       <section class="bank-section">
         <div class="container">
           <div class="alphabets-search">
@@ -65,24 +87,48 @@
             <div class="double">
               <div class="left-alphabet">
                 <div class="en-alphabet">
-                  <span>a</span><span>b</span><span>c</span><span>d</span
-                  ><span>e</span><span>f</span><span>g</span><span>h</span
-                  ><span>i</span><span>j</span><span>k</span><span>l</span
-                  ><span>m</span><span>n</span><span>o</span><span>p</span
-                  ><span>q</span><span>r</span><span>s</span><span>t</span
-                  ><span>u</span><span>v</span><span>w</span><span>x</span
-                  ><span>y</span><span>z</span>
+                  <img
+                    class="letters-left"
+                    src="../../assets/images/alphabet-arrow-left.svg"
+                    alt="goleft"
+                  />
+                  <div class="collect-letters">
+                    <span>a</span><span>b</span><span>c</span><span>d</span
+                    ><span>e</span><span>f</span><span>g</span><span>h</span
+                    ><span>i</span><span>j</span><span>k</span><span>l</span
+                    ><span>m</span><span>n</span><span>o</span><span>p</span
+                    ><span>q</span><span>r</span><span>s</span><span>t</span
+                    ><span>u</span><span>v</span><span>w</span><span>x</span
+                    ><span>y</span><span>z</span>
+                  </div>
+                  <img
+                    class="letters-right"
+                    src="../../assets/images/alphabet-arrow-right.svg"
+                    alt="goright"
+                  />
                 </div>
                 <div class="ge-alphabet">
-                  <span>ა</span><span>ბ</span><span>გ</span><span>დ</span
-                  ><span>ე</span><span>ვ</span><span>ზ</span><span>თ</span
-                  ><span>ი</span><span>კ</span><span>ლ</span><span>მ</span
-                  ><span>ნ</span><span>ო</span><span>პ</span><span>ჟ</span
-                  ><span>რ</span><span>ს</span><span>ტ</span><span>უ</span
-                  ><span>ფ</span><span>ქ</span><span>ღ</span><span>ყ</span
-                  ><span>შ</span><span>ჩ</span><span>ც</span><span>ძ</span
-                  ><span>წ</span><span>ჭ</span><span>ხ</span><span>ჯ</span
-                  ><span>ჰ</span>
+                  <img
+                    class="letters-left"
+                    src="../../assets/images/alphabet-arrow-left.svg"
+                    alt="goleft"
+                  />
+                  <div class="collect-letters">
+                    <span>ა</span><span>ბ</span><span>გ</span><span>დ</span
+                    ><span>ე</span><span>ვ</span><span>ზ</span><span>თ</span
+                    ><span>ი</span><span>კ</span><span>ლ</span><span>მ</span
+                    ><span>ნ</span><span>ო</span><span>პ</span><span>ჟ</span
+                    ><span>რ</span><span>ს</span><span>ტ</span><span>უ</span
+                    ><span>ფ</span><span>ქ</span><span>ღ</span><span>ყ</span
+                    ><span>შ</span><span>ჩ</span><span>ც</span><span>ძ</span
+                    ><span>წ</span><span>ჭ</span><span>ხ</span><span>ჯ</span
+                    ><span>ჰ</span>
+                  </div>
+                  <img
+                    class="letters-right"
+                    src="../../assets/images/alphabet-arrow-right.svg"
+                    alt="goright"
+                  />
                 </div>
               </div>
               <div class="right-search">
@@ -120,7 +166,7 @@
             </div>
             <div class="description">
               <div class="like">
-                <img src="../../assets/images/chat.svg" alt="like" />
+                <img src="../../assets/images/like-icon.svg" alt="like" />
               </div>
               <h2>ათი შოკოლადი</h2>
               <div class="spans">
@@ -143,7 +189,7 @@
             </div>
             <div class="description">
               <div class="like">
-                <img src="../../assets/images/chat.svg" alt="like" />
+                <img src="../../assets/images/like-icon.svg" alt="like" />
               </div>
               <h2>ათი შოკოლადი</h2>
               <div class="spans">
@@ -166,7 +212,7 @@
             </div>
             <div class="description">
               <div class="like">
-                <img src="../../assets/images/chat.svg" alt="like" />
+                <img src="../../assets/images/like-icon.svg" alt="like" />
               </div>
               <h2>ათი შოკოლადი</h2>
               <div class="spans">
@@ -189,7 +235,7 @@
             </div>
             <div class="description">
               <div class="like">
-                <img src="../../assets/images/chat.svg" alt="like" />
+                <img src="../../assets/images/like-icon.svg" alt="like" />
               </div>
               <h2>ათი შოკოლადი</h2>
               <div class="spans">
@@ -212,7 +258,7 @@
             </div>
             <div class="description">
               <div class="like">
-                <img src="../../assets/images/chat.svg" alt="like" />
+                <img src="../../assets/images/like-icon.svg" alt="like" />
               </div>
               <h2>ათი შოკოლადი</h2>
               <div class="spans">
@@ -222,11 +268,25 @@
             </div>
           </div>
           <div class="pagination">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>...</div>
-            <div>46</div>
+            <div class="left-arrow">
+              <img
+                src="../../assets/images/left-arrow-termins.svg"
+                alt="left"
+              />
+            </div>
+            <div class="page-numbers">
+              <div class="page-num">1</div>
+              <div class="page-num">2</div>
+              <div class="page-num">3</div>
+              <div class="page-num">...</div>
+              <div class="page-num">46</div>
+            </div>
+            <div class="right-arrow">
+              <img
+                src="../../assets/images/right-arrow-termins.svg"
+                alt="right"
+              />
+            </div>
           </div>
         </div>
       </section>
