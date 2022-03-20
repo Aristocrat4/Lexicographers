@@ -1439,7 +1439,6 @@ body {
                   }
                 }
                 .definition-box {
-                  
                   background: $terminsGrayBg;
                   font-family: $dejavu;
                   padding: 20px;
@@ -1751,7 +1750,7 @@ body {
           }
         }
       }
-      .tablet-responsive{
+      .tablet-responsive {
         display: none;
       }
     }
@@ -1761,7 +1760,6 @@ body {
   left: 0 !important;
   opacity: 1 !important;
 }
-
 
 // tablet responsive
 @media only screen and (max-width: 1300px) {
@@ -1907,7 +1905,6 @@ body {
             }
           }
         }
-        
       }
       section.words {
         .container {
@@ -1975,10 +1972,9 @@ body {
             }
           }
           .image {
-            img{
+            img {
               width: 300px;
             }
-            
           }
         }
       }
@@ -1998,18 +1994,18 @@ body {
                   justify-content: space-between;
                   img {
                     display: block;
-                    @media(min-width:1100px){
+                    @media (min-width: 1100px) {
                       display: none;
                     }
                   }
-                  .collect-letters{
+                  .collect-letters {
                     width: 100%;
                   }
                 }
                 .en-alphabet {
                   img {
                     display: block;
-                    @media(min-width:980px){
+                    @media (min-width: 980px) {
                       display: none;
                     }
                   }
@@ -2087,33 +2083,32 @@ body {
         }
       }
       // your termin
-      section.definition-offer{
-        .container{
-          .definition-header{
-            .definition-title{
-              h1{
-                @media(min-width: 700px){
+      section.definition-offer {
+        .container {
+          .definition-header {
+            .definition-title {
+              h1 {
+                @media (min-width: 700px) {
                   font-size: 32px;
                 }
-                
               }
             }
-            .eng-def{
+            .eng-def {
               font-size: 18px;
             }
-            .ka-def{
+            .ka-def {
               font-size: 18px;
               margin-top: 20px;
             }
           }
-          .other-terms{
-            .description{
+          .other-terms {
+            .description {
               margin-bottom: 20px;
-              .info{
-                h2{
+              .info {
+                h2 {
                   font-size: 26px;
                 }
-                .author{
+                .author {
                   font-size: 12px;
                 }
               }
@@ -2121,14 +2116,14 @@ body {
           }
         }
       }
-      section.contact-form{
-        .container{
+      section.contact-form {
+        .container {
           flex-direction: column;
           width: 90%;
-          .contact-info{
+          .contact-info {
             margin: 0;
           }
-          .form{
+          .form {
             width: 100%;
           }
         }
@@ -2167,21 +2162,21 @@ body {
           }
         }
         .middle-block {
-          @media(min-width: 768px){
+          @media (min-width: 768px) {
             display: none;
           }
         }
         .right-block-partners {
-          @media(min-width: 768px){
+          @media (min-width: 768px) {
             display: none;
           }
         }
-        .tablet-responsive{
-          @media(min-width: 768px){
+        .tablet-responsive {
+          @media (min-width: 768px) {
             display: block;
-            .contact-info{
+            .contact-info {
               margin-top: 30px;
-              p{
+              p {
                 display: flex;
                 justify-content: flex-end;
                 font-size: 18px;
@@ -2189,34 +2184,32 @@ body {
                 transition: 0.5s;
                 cursor: pointer;
                 font-weight: bold;
-                &:hover{
+                &:hover {
                   color: $tagsyellow;
                 }
-                &:nth-child(2){
+                &:nth-child(2) {
                   margin-top: 10px;
                 }
               }
-              .partners-logo{
+              .partners-logo {
                 margin-top: 10px;
                 display: flex;
                 justify-content: flex-end;
-                .div-logo{
+                .div-logo {
                   width: 43px;
                   height: 43px;
-                  background-color: #E9E9ED;
+                  background-color: #e9e9ed;
                   border-radius: 50%;
                   margin-left: 30px;
                 }
               }
             }
           }
-          
         }
       }
     }
   }
 }
-
 
 // mobile
 @media only screen and (max-width: 767px) {
@@ -2536,30 +2529,30 @@ body {
           }
         }
       }
-      section.definition-offer{
-        .container{
-          .definition-header{
-            .definition-title{
-              h1{
+      section.definition-offer {
+        .container {
+          .definition-header {
+            .definition-title {
+              h1 {
                 font-size: 22px;
               }
             }
-            .eng-def{
+            .eng-def {
               font-size: 18px;
             }
-            .ka-def{
+            .ka-def {
               font-size: 18px;
               margin-top: 20px;
             }
           }
-          .other-terms{
-            .description{
+          .other-terms {
+            .description {
               margin-bottom: 20px;
-              .info{
-                h2{
+              .info {
+                h2 {
                   font-size: 16px;
                 }
-                .author{
+                .author {
                   font-size: 12px;
                 }
               }
@@ -2567,11 +2560,11 @@ body {
           }
         }
       }
-      section.contact-form .container .contact-info{
-        h3{
+      section.contact-form .container .contact-info {
+        h3 {
           font-size: 100%;
         }
-        h5{
+        h5 {
           font-size: 80%;
         }
       }
@@ -2632,4 +2625,3 @@ body {
     }
   }
 }
-
