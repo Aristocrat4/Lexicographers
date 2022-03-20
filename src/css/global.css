@@ -2303,6 +2303,10 @@ body main .profile-section .container .right-inner .my-terms .term .definition {
   overflow: hidden;
 }
 
+body main .profile-section .container .right-inner .my-terms .term .definition::-webkit-scrollbar {
+  display: none;
+}
+
 body main .profile-section .container .right-inner .my-terms .term .definition .definition-header {
   cursor: pointer;
   margin-bottom: 16px;
