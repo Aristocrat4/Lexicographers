@@ -2009,9 +2009,7 @@ body {
                   justify-content: space-between;
                   img {
                     display: block;
-                    @media (min-width: 1100px) {
-                      display: none;
-                    }
+                    
                   }
                   .collect-letters {
                     width: 100%;
@@ -2020,9 +2018,7 @@ body {
                 .en-alphabet {
                   img {
                     display: block;
-                    @media (min-width: 980px) {
-                      display: none;
-                    }
+                    
                   }
                 }
               }
@@ -2477,6 +2473,28 @@ body {
               flex-direction: column;
               .left-alphabet {
                 width: 100%;
+                .cont {
+                  display: flex;
+                  .mySwiper,
+                  .mySwiper2 {
+                    width: 80%;
+                    .swiper-wrapper {
+                      width: 90%;
+                      margin-bottom: 20px;
+                      .swiper-slide {
+                        margin-right: 0px;
+                        text-align: center;
+                        font-size: 18px;
+                        display: flex;
+
+                        justify-content: center;
+
+                        align-items: center;
+                      }
+                    }
+                  }
+                }
+
                 .ge-alphabet {
                   justify-content: space-between;
                   img {

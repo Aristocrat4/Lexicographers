@@ -3018,30 +3018,12 @@ body footer .container .tablet-responsive {
   body main section.bank-section .container .alphabets-search .double .left-alphabet .ge-alphabet img {
     display: block;
   }
-}
-
-@media only screen and (max-width: 1300px) and (min-width: 1100px) {
-  body main section.bank-section .container .alphabets-search .double .left-alphabet .ge-alphabet img {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 1300px) {
   body main section.bank-section .container .alphabets-search .double .left-alphabet .ge-alphabet .collect-letters {
     width: 100%;
   }
   body main section.bank-section .container .alphabets-search .double .left-alphabet .en-alphabet img {
     display: block;
   }
-}
-
-@media only screen and (max-width: 1300px) and (min-width: 980px) {
-  body main section.bank-section .container .alphabets-search .double .left-alphabet .en-alphabet img {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 1300px) {
   body main section.bank-section .container .alphabets-search .double .right-search {
     margin-top: 10px;
     width: 100%;
@@ -3486,6 +3468,35 @@ body footer .container .tablet-responsive {
   }
   body main section.bank-section .container .alphabets-search .double .left-alphabet {
     width: 100%;
+  }
+  body main section.bank-section .container .alphabets-search .double .left-alphabet .cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body main section.bank-section .container .alphabets-search .double .left-alphabet .cont .mySwiper,
+  body main section.bank-section .container .alphabets-search .double .left-alphabet .cont .mySwiper2 {
+    width: 80%;
+  }
+  body main section.bank-section .container .alphabets-search .double .left-alphabet .cont .mySwiper .swiper-wrapper,
+  body main section.bank-section .container .alphabets-search .double .left-alphabet .cont .mySwiper2 .swiper-wrapper {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  body main section.bank-section .container .alphabets-search .double .left-alphabet .cont .mySwiper .swiper-wrapper .swiper-slide,
+  body main section.bank-section .container .alphabets-search .double .left-alphabet .cont .mySwiper2 .swiper-wrapper .swiper-slide {
+    margin-right: 0px;
+    text-align: center;
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   body main section.bank-section .container .alphabets-search .double .left-alphabet .ge-alphabet {
     -webkit-box-pack: justify;
