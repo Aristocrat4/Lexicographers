@@ -1785,13 +1785,44 @@ body {
         text-align: right;
         nav {
           min-width: 284px;
-          width: 90%;
+          width: 100%;
           margin: 0 auto;
-          ul li {
-            margin-top: 25px;
-            font-size: 22px;
-            font-family: $dejavu;
-            color: $darkBlue;
+          ul {
+            li {
+              margin-top: 25px;
+              font-size: 22px;
+              font-family: $dejavu;
+              color: $darkBlue;
+
+              a {
+                font-size: 22px;
+                font-family: $dejavu;
+                color: $darkBlue;
+                padding-right: 5%;
+              }
+            }
+            .shesvla {
+              display: none;
+            }
+            .profile-weird {
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              background-color: $btnGray;
+              padding: 10px 0;
+              a {
+                display: flex;
+                align-items: center;
+                font-size: 22px;
+                font-family: $dejavu;
+                color: $darkBlue;
+                img {
+                  width: 60px;
+                  height: 60px;
+                  margin-left: 15px;
+                }
+              }
+            }
           }
         }
       }
@@ -2288,13 +2319,44 @@ body {
         text-align: right;
         nav {
           min-width: 284px;
-          width: 90%;
+          width: 100%;
           margin: 0 auto;
-          ul li {
-            margin-top: 25px;
-            font-size: 22px;
-            font-family: $dejavu;
-            color: $darkBlue;
+          ul {
+            li {
+              margin-top: 25px;
+              font-size: 22px;
+              font-family: $dejavu;
+              color: $darkBlue;
+
+              a {
+                font-size: 22px;
+                font-family: $dejavu;
+                color: $darkBlue;
+                padding-right: 5%;
+              }
+            }
+            .shesvla {
+              display: none;
+            }
+            .profile-weird {
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              background-color: $btnGray;
+              padding: 10px 0;
+              a {
+                display: flex;
+                align-items: center;
+                font-size: 22px;
+                font-family: $dejavu;
+                color: $darkBlue;
+                img {
+                  width: 60px;
+                  height: 60px;
+                  margin-left: 15px;
+                }
+              }
+            }
           }
         }
       }
