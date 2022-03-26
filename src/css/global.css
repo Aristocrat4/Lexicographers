@@ -2832,7 +2832,7 @@ body footer .container .tablet-responsive {
   }
   body header .burger-navigation nav {
     min-width: 284px;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
   body header .burger-navigation nav ul li {
@@ -2840,6 +2840,44 @@ body footer .container .tablet-responsive {
     font-size: 22px;
     font-family: "DejaVuSans";
     color: #1d2933;
+  }
+  body header .burger-navigation nav ul li a {
+    font-size: 22px;
+    font-family: "DejaVuSans";
+    color: #1d2933;
+    padding-right: 5%;
+  }
+  body header .burger-navigation nav ul .shesvla {
+    display: none;
+  }
+  body header .burger-navigation nav ul .profile-weird {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    background-color: #798996;
+    padding: 10px 0;
+  }
+  body header .burger-navigation nav ul .profile-weird a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 22px;
+    font-family: "DejaVuSans";
+    color: #1d2933;
+  }
+  body header .burger-navigation nav ul .profile-weird a img {
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
   }
   body header .container {
     min-width: 284px;
@@ -3298,7 +3336,7 @@ body footer .container .tablet-responsive {
   }
   body header .burger-navigation nav {
     min-width: 284px;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
   body header .burger-navigation nav ul li {
@@ -3306,6 +3344,44 @@ body footer .container .tablet-responsive {
     font-size: 22px;
     font-family: "DejaVuSans";
     color: #1d2933;
+  }
+  body header .burger-navigation nav ul li a {
+    font-size: 22px;
+    font-family: "DejaVuSans";
+    color: #1d2933;
+    padding-right: 5%;
+  }
+  body header .burger-navigation nav ul .shesvla {
+    display: none;
+  }
+  body header .burger-navigation nav ul .profile-weird {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    background-color: #798996;
+    padding: 10px 0;
+  }
+  body header .burger-navigation nav ul .profile-weird a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 22px;
+    font-family: "DejaVuSans";
+    color: #1d2933;
+  }
+  body header .burger-navigation nav ul .profile-weird a img {
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
   }
   body header .container {
     min-width: 284px;
