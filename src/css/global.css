@@ -2866,6 +2866,48 @@ body footer .container .tablet-responsive {
   body main .chatbot {
     display: none;
   }
+  body main section.profile-section .container {
+    width: 90%;
+    margin: 0 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main section.profile-section .container .profile-nav {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main section.profile-section .container .right-inner {
+    width: 100%;
+  }
+  body main section.signup-login .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  body main section.signup-login .container .toggle-form .remember-psw .rec-text {
+    font-size: 16px !important;
+  }
+  body main section.signup-login .container .toggle-form .remember-psw .check-remember #remember {
+    width: 19px !important;
+  }
+  body main section.signup-login .container .toggle-form .titles .btn-signup {
+    display: none;
+  }
+  body main section.signup-login .container .toggle-form .titles .btn-login {
+    width: 100%;
+    font-size: 30px;
+  }
+  body main section.signup-login .container .toggle-form .titles .active-tab {
+    border-top: none !important;
+  }
   body main section.new-term .container {
     min-width: 262px;
     width: 90%;
@@ -3018,30 +3060,12 @@ body footer .container .tablet-responsive {
   body main section.bank-section .container .alphabets-search .double .left-alphabet .ge-alphabet img {
     display: block;
   }
-}
-
-@media only screen and (max-width: 1300px) and (min-width: 1100px) {
-  body main section.bank-section .container .alphabets-search .double .left-alphabet .ge-alphabet img {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 1300px) {
   body main section.bank-section .container .alphabets-search .double .left-alphabet .ge-alphabet .collect-letters {
     width: 100%;
   }
   body main section.bank-section .container .alphabets-search .double .left-alphabet .en-alphabet img {
     display: block;
   }
-}
-
-@media only screen and (max-width: 1300px) and (min-width: 980px) {
-  body main section.bank-section .container .alphabets-search .double .left-alphabet .en-alphabet img {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 1300px) {
   body main section.bank-section .container .alphabets-search .double .right-search {
     margin-top: 10px;
     width: 100%;
@@ -3308,6 +3332,29 @@ body footer .container .tablet-responsive {
   body main .chatbot {
     display: none;
   }
+  body main section.profile-section .container {
+    width: 90%;
+    margin: 0 auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body main section.profile-section .container .profile-nav .user-photo {
+    width: 110px;
+    height: 110px;
+  }
+  body main section.profile-section .container .profile-nav .user-photo img {
+    width: 110px;
+  }
+  body main section.profile-section .container .profile-nav .user-photo .image-upload {
+    width: 20px;
+  }
+  body main section.profile-section .container .profile-nav .user-photo .image-upload input {
+    width: 20px;
+  }
+  body main section.profile-section .container .profile-nav .user-photo .image-upload label img {
+    width: 20px;
+  }
   body main section.new-term .container {
     min-width: 262px;
     width: 90%;
@@ -3486,6 +3533,35 @@ body footer .container .tablet-responsive {
   }
   body main section.bank-section .container .alphabets-search .double .left-alphabet {
     width: 100%;
+  }
+  body main section.bank-section .container .alphabets-search .double .left-alphabet .cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body main section.bank-section .container .alphabets-search .double .left-alphabet .cont .mySwiper,
+  body main section.bank-section .container .alphabets-search .double .left-alphabet .cont .mySwiper2 {
+    width: 80%;
+  }
+  body main section.bank-section .container .alphabets-search .double .left-alphabet .cont .mySwiper .swiper-wrapper,
+  body main section.bank-section .container .alphabets-search .double .left-alphabet .cont .mySwiper2 .swiper-wrapper {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  body main section.bank-section .container .alphabets-search .double .left-alphabet .cont .mySwiper .swiper-wrapper .swiper-slide,
+  body main section.bank-section .container .alphabets-search .double .left-alphabet .cont .mySwiper2 .swiper-wrapper .swiper-slide {
+    margin-right: 0px;
+    text-align: center;
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   body main section.bank-section .container .alphabets-search .double .left-alphabet .ge-alphabet {
     -webkit-box-pack: justify;
