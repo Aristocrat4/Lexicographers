@@ -285,6 +285,12 @@ body {
                 margin-right: 15px;
                 text-transform: uppercase;
               }
+              .cont{
+                display: none;
+              }
+              .desktop-alphabet{
+                margin-bottom: 10px
+              }
             }
             .right-search {
               @include flex-jc-ai(center, center);
@@ -2094,6 +2100,27 @@ body {
                     display: block;
                   }
                 }
+                .desktop-alphabet{
+                  display: none;
+                }
+                .cont {
+                  display: flex;
+                  .mySwiper,
+                  .mySwiper2 {
+                    width: 80%;
+                    .swiper-wrapper {
+                      width: 90%;
+                      .swiper-slide {
+                        margin-right: 0px;
+                        text-align: center;
+                        font-size: 18px;
+                        line-height: 20px;
+                        display: flex;
+                        align-items: center;
+                      }
+                    }
+                  }
+                }
               }
               .right-search {
                 margin-top: 10px;
@@ -2604,27 +2631,24 @@ body {
               flex-direction: column;
               .left-alphabet {
                 width: 100%;
-                .cont {
-                  display: flex;
-                  .mySwiper,
-                  .mySwiper2 {
-                    width: 80%;
-                    .swiper-wrapper {
-                      width: 90%;
-                      margin-bottom: 20px;
-                      .swiper-slide {
-                        margin-right: 0px;
-                        text-align: center;
-                        font-size: 18px;
-                        display: flex;
-
-                        justify-content: center;
-
-                        align-items: center;
-                      }
-                    }
-                  }
-                }
+                // .cont {
+                //   display: flex;
+                //   .mySwiper,
+                //   .mySwiper2 {
+                //     width: 80%;
+                //     .swiper-wrapper {
+                //       width: 90%;
+                //       .swiper-slide {
+                //         margin-right: 0px;
+                //         text-align: center;
+                //         font-size: 18px;
+                //         line-height: 20px;
+                //         display: flex;
+                //         align-items: center;
+                //       }
+                //     }
+                //   }
+                // }
 
                 .ge-alphabet {
                   justify-content: space-between;

@@ -99,6 +99,73 @@
             </div>
             <div class="double">
               <div class="left-alphabet">
+                <div class="desktop-alphabet ">
+                  <div class="letters">
+                    <span>A</span>
+                    <span>B</span>
+                    <span>C</span>
+                    <span>D</span>
+                    <span>E</span>
+                    <span>F</span>
+                    <span>G</span>
+                    <span>H</span>
+                    <span>I</span>
+                    <span>J</span>
+                    <span>K</span>
+                    <span>L</span>
+                    <span>M</span>
+                    <span>N</span>
+                    <span>O</span>
+                    <span>P</span>
+                    <span>Q</span>
+                    <span>R</span>
+                    <span>S</span>
+                    <span>T</span>
+                    <span>U</span>
+                    <span>V</span>
+                    <span>W</span>
+                    <span>X</span>
+                    <span>Y</span>
+                    <span>Z</span>
+                  </div>
+                </div>
+                <div class="desktop-alphabet">
+                  <div class="letters">
+                    <span class="swiper-slide">ა</span>
+                      <span class="swiper-slide">ბ</span>
+                      <span class="swiper-slide">გ</span>
+                      <span class="swiper-slide">დ</span>
+                      <span class="swiper-slide">ე</span>
+                      <span class="swiper-slide">ვ</span>
+                      <span class="swiper-slide">ზ</span>
+                      <span class="swiper-slide">თ</span>
+                      <span class="swiper-slide">ი</span>
+                      <span class="swiper-slide">კ</span>
+                      <span class="swiper-slide">ლ</span>
+                      <span class="swiper-slide">მ</span>
+                      <span class="swiper-slide">ნ</span>
+                      <span class="swiper-slide">ო</span>
+                      <span class="swiper-slide">პ</span>
+                      <span class="swiper-slide">ჟ</span>
+                      <span class="swiper-slide">რ</span>
+                      <span class="swiper-slide">ს</span>
+                      <span class="swiper-slide">ტ</span>
+                      <span class="swiper-slide">უ</span>
+                      <span class="swiper-slide">ფ</span>
+                      <span class="swiper-slide">ქ</span>
+                      <span class="swiper-slide">ღ</span>
+                      <span class="swiper-slide">ყ</span>
+                      <span class="swiper-slide">შ</span>
+                      <span class="swiper-slide">ჩ</span>
+                      <span class="swiper-slide">ც</span>
+                      <span class="swiper-slide">ძ</span>
+                      <span class="swiper-slide">წ</span>
+                      <span class="swiper-slide">ჭ</span>
+                      <span class="swiper-slide">ხ</span>
+                      <span class="swiper-slide">ჯ</span>
+                      <span class="swiper-slide">ჰ</span>
+                  </div>
+                </div>
                 <div class="cont en-alphabet">
                   <img
                     class="letters-left-en"
@@ -141,7 +208,7 @@
                     alt="goright"
                   />
                 </div>
-                <div class="cont en-alphabet">
+                <div class="cont ge-alphabet">
                   <img
                     class="letters-left"
                     src="../../assets/images/alphabet-arrow-left.svg"
@@ -405,55 +472,8 @@
     </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-      const wid = window.innerWidth;
-      if (wid > 1300) {
-        const con = document.querySelectorAll(".cont");
-        con[0].children[1].classList.remove("swiper");
-        con[0].children[1].classList.remove("mySwiper2");
-        con[0].children[1].children[0].classList.remove("swiper-wrapper");
-
-        con[1].children[1].classList.remove("swiper");
-        con[1].children[1].classList.remove("mySwiper");
-        con[1].children[1].children[0].classList.remove("swiper-wrapper");
-      }
-      if (wid < 1300) {
-        const con = document.querySelectorAll(".cont");
-        con[0].children[1].classList.add("swiper");
-        con[0].children[1].classList.add("mySwiper2");
-        con[0].children[1].children[0].classList.add("swiper-wrapper");
-
-        con[1].children[1].classList.add("swiper");
-        con[1].children[1].classList.add("mySwiper");
-        con[1].children[1].children[0].classList.add("swiper-wrapper");
-      }
-      window.addEventListener("resize", function () {
-        const wid = window.innerWidth;
-        if (wid > 1300) {
-          const con = document.querySelectorAll(".cont");
-          con[0].children[1].classList.remove("swiper");
-          con[0].children[1].classList.remove("mySwiper2");
-          con[0].children[1].children[0].classList.remove("swiper-wrapper");
-
-          con[1].children[1].classList.remove("swiper");
-          con[1].children[1].classList.remove("mySwiper");
-          con[1].children[1].children[0].classList.remove("swiper-wrapper");
-        }
-        if (wid < 1300) {
-          const con = document.querySelectorAll(".cont");
-          con[0].children[1].classList.add("swiper");
-          con[0].children[1].classList.add("mySwiper2");
-          con[0].children[1].children[0].classList.add("swiper-wrapper");
-
-          con[1].children[1].classList.add("swiper");
-          con[1].children[1].classList.add("mySwiper");
-          con[1].children[1].children[0].classList.add("swiper-wrapper");
-        }
-      });
-
-      console.log(window.screen.width);
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 13,
-        spaceBetween: 25,
         slidesPerGroup: 13,
         loop: false,
         loopFillGroupWithBlank: false,
@@ -464,7 +484,6 @@
       });
       var swiper2 = new Swiper(".mySwiper2", {
         slidesPerView: 13,
-        spaceBetween: 25,
         slidesPerGroup: 13,
         loop: false,
         loopFillGroupWithBlank: false,
