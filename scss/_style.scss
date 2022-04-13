@@ -71,7 +71,30 @@
     color: $darkBlue;
   }
 }
-
+#project{
+  margin-bottom: 100px;
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    .inner-cont{
+      width: 280px;
+      border-right: 4px solid #EED370;
+      padding-right: 4rem;
+      h3{
+        font-family: $venuri;
+        font-size: 20px;
+        margin-bottom: 0.3rem;
+      }
+      p{
+        font-family: $dejavu;
+        font-size: 15px;
+        font-weight: normal;
+        color: #798996;
+      }
+    }
+  }
+}
 body {
   background-color: $bgcolor;
   header {
