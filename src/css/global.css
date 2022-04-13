@@ -252,6 +252,38 @@ a {
   color: #1d2933;
 }
 
+#project {
+  margin-bottom: 100px;
+}
+
+#project .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 4rem;
+}
+
+#project .container .inner-cont {
+  width: 280px;
+  border-right: 4px solid #EED370;
+  padding-right: 4rem;
+}
+
+#project .container .inner-cont h3 {
+  font-family: "BPGVenuri2010";
+  font-size: 20px;
+  margin-bottom: 0.3rem;
+}
+
+#project .container .inner-cont p {
+  font-family: "DejaVuSans";
+  font-size: 15px;
+  font-weight: normal;
+  color: #798996;
+}
+
 body {
   background-color: #f9f7f5;
 }
